@@ -35,15 +35,9 @@ function govcms_parkes_form_alter(&$form, &$form_state, $form_id) {
  * Implements THEME_preprocess_html().
  */
 function govcms_parkes_preprocess_html(&$variables) {
-
-  // Add full width rules
-  // @todo
-  // _govcms_parkes_full_width_styling($variables);
-
   // Add some body classes to get the body styling and grid
   $variables['classes_array'][] = 'uikit-body';
   $variables['classes_array'][] = 'uikit-grid';
-
 }
 
 /**
@@ -605,6 +599,19 @@ function govcms_parkes_fieldset($variables) {
   return $output;
 }
 
+/**
+ * Implements THEME_item_list().
+ */
+function govcms_parkes_item_list(&$variables) {
+  // Add uikit-link-list class to TOC link list
+  if ($variables['attributes']['class'] == 'toc-filter-links') {
+    $variables['attributes']['class'] = array('toc-filter-links', 'uikit-link-list');
+  }
+
+  // Pass through to normal theme function
+  return theme_item_list($variables);
+}
+
 
 /** Contrib Theme functions ***************************************************/
 
@@ -613,8 +620,8 @@ function govcms_parkes_fieldset($variables) {
  */
 function govcms_parkes_toc_filter($variables) {
   $output = '';
-  $output .= '<nav class="index-links">';
-  $output .= '<h2 id="index-links">' . t('Contents') . '</h2>';
+  $output .= '<nav class="uikit-inpage-nav-links">';
+  $output .= '<h2 id="uikit-inpage-nav-links__heading uikit-display-5">' . t('Contents') . '</h2>';
   $output .= $variables['content'];
   $output .= '</nav>';
   return $output;
@@ -624,7 +631,7 @@ function govcms_parkes_toc_filter($variables) {
  * Implements THEME_toc_filter_back_to_top().
  */
 function govcms_parkes_toc_filter_back_to_top($variables) {
-  return '<span class="back-to-index-link"><a href="#index-links">' . t('Back to contents ↑') . '</a></span>';
+  return '<a class="uikit-direction-link uikit-direction-link--up" href="#">' . t('Back to contents') . '</a>';
 }
 
 
@@ -905,21 +912,4 @@ function _govcms_parkes_prepare_panel_layout_array_extract_layout($rows_cols) {
   }
 
   return $retval;
-}
-
-/**
- * Adds a class to make .main-content full width on user specified paths.
- *
- * @param array $variables
- *
- * @see govcms_parkes_preprocess_html().
- */
-function _govcms_parkes_full_width_styling(&$variables) {
-  $paths = trim(theme_get_setting('full_width_pages'));
-  if (
-    drupal_match_path(current_path(), $paths)
-    || drupal_match_path(drupal_get_path_alias(), $paths)
-  ) {
-    $variables['classes_array'][] = 'full-width-page';
-  }
 }

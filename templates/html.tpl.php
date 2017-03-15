@@ -53,8 +53,9 @@
   <?php print $scripts; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-  <nav id="skip-link" class="skip-to">
-    <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>
+  <nav class="uikit-skip-link">
+    <a class="uikit-skip-link__link" href="#content"><?php print t('Skip to main content'); ?></a>
+    <a class="uikit-skip-link__link" href="#nav"><?php print t('Skip to main navigation'); ?></a>
   </nav>
   <?php print $page_top; ?>
   <?php print $page; ?>
