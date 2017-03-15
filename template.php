@@ -605,6 +605,19 @@ function govcms_parkes_fieldset($variables) {
   return $output;
 }
 
+/**
+ * Implements THEME_item_list().
+ */
+function govcms_parkes_item_list(&$variables) {
+  // Add uikit-link-list class to TOC link list
+  if ($variables['attributes']['class'] == 'toc-filter-links') {
+    $variables['attributes']['class'] = array('toc-filter-links', 'uikit-link-list');
+  }
+
+  // Pass through to normal theme function
+  return theme_item_list($variables);
+}
+
 
 /** Contrib Theme functions ***************************************************/
 
@@ -615,9 +628,7 @@ function govcms_parkes_toc_filter($variables) {
   $output = '';
   $output .= '<nav class="uikit-inpage-nav-links">';
   $output .= '<h2 id="uikit-inpage-nav-links__heading uikit-display-5">' . t('Contents') . '</h2>';
-  $output .= '<ul class="uikit-link-list">';
-  $output .= '<li>' . $variables['content'] . '</li>';
-  $output .= '</ul>';
+  $output .= $variables['content'];
   $output .= '</nav>';
   return $output;
 }
