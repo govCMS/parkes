@@ -1,5 +1,7 @@
 /* @gov.au/core v0.1.0 */
 
-@import "/Users/alex.page/Sites/govcms-parkes/docroot/sites/all/themes/parkes/node_modules/@gov.au/core/lib/sass/_module.scss";
+@import "/Users/alex.page/Sites/govcms_parkes/docroot/sites/all/themes/govcms_parkes/node_modules/sass-versioning/dist/_index.scss";
+
+@import "/Users/alex.page/Sites/govcms_parkes/docroot/sites/all/themes/govcms_parkes/node_modules/@gov.au/core/lib/sass/_module.scss";
 
 @include versioning-check();
