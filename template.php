@@ -613,9 +613,11 @@ function govcms_parkes_fieldset($variables) {
  */
 function govcms_parkes_toc_filter($variables) {
   $output = '';
-  $output .= '<nav class="index-links">';
-  $output .= '<h2 id="index-links">' . t('Contents') . '</h2>';
-  $output .= $variables['content'];
+  $output .= '<nav class="uikit-inpage-nav-links">';
+  $output .= '<h2 id="uikit-inpage-nav-links__heading uikit-display-5">' . t('Contents') . '</h2>';
+  $output .= '<ul class="uikit-link-list">';
+  $output .= '<li>' . $variables['content'] . '</li>';
+  $output .= '</ul>';
   $output .= '</nav>';
   return $output;
 }
@@ -624,7 +626,7 @@ function govcms_parkes_toc_filter($variables) {
  * Implements THEME_toc_filter_back_to_top().
  */
 function govcms_parkes_toc_filter_back_to_top($variables) {
-  return '<span class="back-to-index-link"><a href="#index-links">' . t('Back to contents ↑') . '</a></span>';
+  return '<a class="uikit-direction-link uikit-direction-link--up" href="#">' . t('Back to contents') . '</a>';
 }
 
 
