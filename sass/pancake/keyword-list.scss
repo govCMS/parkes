@@ -1,7 +1,8 @@
 /* @gov.au/keyword-list v0.1.0 */
 
-@import "/Users/alex.page/Sites/drupal7/docroot/sites/all/themes/parkes/node_modules/@gov.au/core/lib/sass/_module.scss";
-@import "/Users/alex.page/Sites/drupal7/docroot/sites/all/themes/parkes/node_modules/@gov.au/link-list/lib/sass/_module.scss";
-@import "/Users/alex.page/Sites/drupal7/docroot/sites/all/themes/parkes/node_modules/@gov.au/keyword-list/lib/sass/_module.scss";
+@import "/Users/alex.page/Sites/govcms-parkes/docroot/sites/all/themes/parkes/node_modules/@gov.au/core/lib/sass/_module.scss";
+@import "/Users/alex.page/Sites/govcms-parkes/docroot/sites/all/themes/parkes/node_modules/@gov.au/body/lib/sass/_module.scss";
+@import "/Users/alex.page/Sites/govcms-parkes/docroot/sites/all/themes/parkes/node_modules/@gov.au/link-list/lib/sass/_module.scss";
+@import "/Users/alex.page/Sites/govcms-parkes/docroot/sites/all/themes/parkes/node_modules/@gov.au/keyword-list/lib/sass/_module.scss";
 
 @include versioning-check();

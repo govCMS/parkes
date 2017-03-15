@@ -1,31 +1,4 @@
 @charset "UTF-8";
-/*! typey | GPLv2 License | https://github.com/jptaranto/typey */
-* {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 100%;
-  line-height: 1.5em;
-  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  min-height: 100%;
-}
-
-@media print {
-  html {
-    font-size: 12pt;
-  }
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  color: #000;
-  background-color: #fff;
-}
-
 /* @gov.au/core v0.1.0 */
 /*! @gov.au/core v0.1.0 */
 /**
@@ -600,1802 +573,5827 @@ body {
   margin-bottom: 1.6em;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-progress {
-  vertical-align: baseline;
-}
-
-template,
-[hidden] {
-  display: none;
-}
-
-a {
-  color: #0072b9;
-  -webkit-text-decoration-skip: objects;
-}
-
-:visited {
-  color: #003353;
-}
-
-a:active {
-  color: #c00;
-}
-
-a:active:not(.button) {
-  background-color: transparent;
-}
-
-a:active,
-a:hover {
-  outline-width: 0;
-}
-
+/* @gov.au/breadcrumbs v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/body v0.1.0 */
 @media print {
-  :link,
-  :visited {
+  .uikit-body * {
+    text-shadow: none !important;
+    color: #000 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    border-color: #000 !important;
+  }
+  .uikit-body a,
+  .uikit-body a:visited {
     text-decoration: underline;
   }
-  a[href]:after {
+  .uikit-body a[href]:after {
     content: " (" attr(href) ")";
-    font-weight: normal;
-    font-size: 16px;
-    text-decoration: none;
   }
-  a[href^='javascript:']:after,
-  a[href^='#']:after {
-    content: '';
-  }
-}
-
-h1,
-.header__site-name {
-  font-size: 2rem;
-  line-height: 3rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  line-height: 2.25rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-h3 {
-  font-size: 1.25rem;
-  line-height: 2.25rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-h4 {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-h5 {
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-h6 {
-  font-size: 0.625rem;
-  line-height: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-abbr[title] {
-  border-bottom: 0;
-  text-decoration: underline;
-  text-decoration: underline dotted;
-}
-
-@media print {
-  abbr[title]:after {
+  .uikit-body abbr[title]:after {
     content: " (" attr(title) ")";
   }
+  .uikit-body a[href^="javascript:"]:after,
+  .uikit-body a[href^="#"]:after {
+    content: "";
+  }
+  .uikit-body a[rel~='external']:after {
+    display: none !important;
+  }
+  .uikit-body pre,
+  .uikit-body blockquote {
+    border: 1px solid #000;
+    padding: 6px;
+    page-break-inside: avoid;
+  }
+  .uikit-body thead {
+    display: table-header-group;
+  }
+  .uikit-body tr,
+  .uikit-body img {
+    page-break-inside: avoid;
+  }
+  .uikit-body img {
+    max-width: 100% !important;
+  }
+  .uikit-body p,
+  .uikit-body h2,
+  .uikit-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  .uikit-body h2,
+  .uikit-body h3 {
+    page-break-after: avoid;
+  }
+  .uikit-body p a {
+    word-wrap: break-word;
+  }
+  .uikit-body select {
+    background: #fff !important;
+  }
 }
 
-b,
-strong {
-  font-weight: inherit;
+.uikit-body {
+  margin: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131;
+  /**
+	 * Text selection and `mark` styling.
+	 */
+  /**
+	 * Vertical spacing of common text elements.
+	 */
+  /**
+	 * Emphasis and alt. voice/mood/diff. from prose text.
+	 */
+  /**
+	 * Important (leaving `b` out for now (and `u` also)).
+	 */
+  /**
+	 * `small`: for less important information (not stylistic purposes).
+	 */
+  /**
+	 * `s`: represents contents no longer accurate/relevant.
+	 */
+  /**
+	 * `del` & `ins`: editorial markup.
+	 *
+	 */
+  /**
+	 * Defining definition of a term.
+	 *
+	 * The paragraph, description list group, or section that is the nearest
+	 * ancestor of the `dfn` element must also contain the definition(s) for the term
+	 * given by the `dfn` element.
+	 *
+	 * Note: `abbr` can be nested inside `dfn`.
+	 */
+  /**
+	 * Abbreviations/acronyms.
+	 *
+	 * This styling removes any custom casing (mixing of u&lc chars in the `abbr`).
+	 *
+	 * Todo: test font stack fallbacks with the font-size adj.
+	 */
+  /**
+	 * Variables, eg. as used in mathematical expressions.
+	 *
+	 * We also provide semantic support for nested vars, and things like indices.
+	 */
+  /**
+	 * Code snippets and code blocks.
+	 */
+  /**
+	 * Pre-formatted text set by typographic characters.
+	 */
+  /**
+	 * Keyboard strokes.
+	 */
+  /**
+	 * Horizontal rule, used for paragraph-level thematic breaks.
+	 */
 }
 
-strong,
-b {
-  font-weight: bolder;
+.uikit-body a {
+  -webkit-text-decoration-skip: objects;
+  color: #313131;
+  text-decoration: none;
+  border-bottom: solid 1px #18788D;
+  -webkit-transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 
-pre,
-code,
-kbd,
-samp,
-var {
-  font-family: Menlo, "DejaVu Sans Mono", "Ubuntu Mono", Courier, "Courier New", monospace, sans-serif;
-  font-size: 1em;
+.uikit-body a:hover, .uikit-body a:focus {
+  background-color: #5bcbe3;
+  border-color: transparent;
 }
 
-dfn {
+.uikit-body a[rel~='external']:after {
+  content: ' ';
+  display: inline-block;
+  width: 0.7em;
+  height: 0.8em;
+  margin: 0 0.1em 0 0.25em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%2318788D' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%2318788D' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position-y: 0.12em;
+}
+
+.ie8 .uikit-body a[rel~='external']:after,
+.lt-ie8 .uikit-body a[rel~='external']:after {
+  content: '⇗';
+  color: #18788D;
+}
+
+.uikit-body mark,
+.uikit-body ::-moz-selection {
+  background-color: rgba(229, 172, 102, 0.5);
+}
+
+.uikit-body mark,
+.uikit-body ::selection {
+  background-color: rgba(229, 172, 102, 0.5);
+}
+
+.uikit-body mark {
+  box-shadow: 0 0 1px rgba(49, 49, 49, 0.4);
+}
+
+.uikit-body p {
+  max-width: 42em;
+}
+
+.uikit-body p,
+.uikit-body ul,
+.uikit-body ol,
+.uikit-body dl,
+.uikit-body pre {
+  margin-top: 0;
+  margin-bottom: 1.6em;
+}
+
+.uikit-body ul,
+.uikit-body ol,
+.uikit-body dd {
+  margin-left: 0;
+  padding-left: 1.6em;
+}
+
+.uikit-body ul > li,
+.uikit-body ol > li {
+  margin-bottom: 0.4em;
+}
+
+.uikit-body ul > li > ul,
+.uikit-body ul > li > ol,
+.uikit-body ol > li > ul,
+.uikit-body ol > li > ol {
+  margin-top: 0.4em;
+  margin-bottom: 0.8em;
+}
+
+.uikit-body ul > ul,
+.uikit-body ol > ul {
+  list-style-type: disc;
+}
+
+.uikit-body dl > dd {
+  margin-bottom: 1.6em;
+}
+
+.uikit-body dl > dt {
+  font-weight: bold;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.uikit-body dl > dt:first-of-type {
+  margin-top: 0;
+}
+
+.uikit-body em,
+.uikit-body i {
   font-style: italic;
 }
 
-mark {
-  background-color: #fd0;
-  color: #000;
+.uikit-body strong {
+  font-weight: bold;
 }
 
-small {
-  font-size: 0.875rem;
+.uikit-body small {
+  font-size: 87.5%;
+  color: #464646;
 }
 
-sub,
-sup {
-  font-size: 0.625rem;
+.uikit-body s {
+  text-decoration: line-through;
+}
+
+.uikit-body del {
+  text-decoration: line-through;
+  color: #5a5a5a;
+}
+
+.uikit-body ins {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
+}
+
+.uikit-body dfn {
+  font-style: normal;
+}
+
+.uikit-body abbr,
+.uikit-body abbr[title] {
+  font-size: 18px;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-bottom: 1px dotted #555;
+  cursor: help;
+}
+
+.uikit-body a abbr {
+  padding-bottom: 1px;
+}
+
+.uikit-body var {
+  padding: 0 1px;
+  font-style: italic;
+  font-family: serif;
+}
+
+.uikit-body var sup,
+.uikit-body var sub {
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
+  font-style: normal;
+  padding: 0 1px;
+}
+
+.uikit-body sub,
+.uikit-body sup {
+  font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
-sub {
-  bottom: -.25em;
+.uikit-body sub {
+  bottom: -0.25em;
 }
 
-sup {
-  top: -.5em;
+.uikit-body sup {
+  top: -0.5em;
 }
 
-.divider,
-hr {
-  margin: 1.5rem 0;
-  border: 0;
-  border-top: 1px solid #cccccc;
+.uikit-body code,
+.uikit-body kbd,
+.uikit-body pre {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
 }
 
-.divider > :first-child, hr > :first-child {
-  margin-top: 1.5rem;
+.uikit-body pre code,
+.uikit-body pre samp,
+.uikit-body pre kbd {
+  font-size: 14px;
 }
 
-blockquote {
-  margin: 1.5rem 2rem;
-}
-
-dl,
-menu,
-ol,
-ul {
-  margin: 1.5rem 0;
-}
-
-ol ol,
-ol ul,
-ul ol,
-ul ul {
-  margin: 0;
-}
-
-dd {
-  margin: 0 0 0 32px;
-}
-
-[dir="rtl"] dd {
-  margin: 0 32px 0 0;
-}
-
-menu,
-ol,
-ul {
-  padding: 0 0 0 32px;
-}
-
-[dir="rtl"] menu, [dir="rtl"]
-ol, [dir="rtl"]
-ul {
-  padding: 0 32px 0 0;
-}
-
-figure {
-  margin: 1.5rem 0;
-}
-
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-
-p,
-pre {
-  margin: 1.5rem 0;
-}
-
-img {
-  border-style: none;
-}
-
-img,
-svg {
-  max-width: 100%;
-  height: auto;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  box-sizing: border-box;
-  max-width: 100%;
-  font: inherit;
-  margin: 0;
-}
-
-button {
-  overflow: visible;
-}
-
-button,
-select {
-  text-transform: none;
-}
-
-input {
-  overflow: visible;
-}
-
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
-  height: auto;
-}
-
-[type='search'] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-
-[type='search']::-webkit-search-cancel-button, [type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: .54;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
-
-.button,
-button,
-html [type='button'],
-[type='reset'],
-[type='submit'] {
-  -moz-appearance: button;
-  -webkit-appearance: button;
-}
-
-.button,
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+.uikit-body kbd {
   display: inline-block;
-  padding: 2px 6px;
-  line-height: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  color: #000;
-}
-
-.button::-moz-focus-inner,
-button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-
-.button:-moz-focusring,
-button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-.button:hover, .button:focus, .button:active,
-button:hover,
-button:focus,
-button:active,
-[type='button']:hover,
-[type='button']:focus,
-[type='button']:active,
-[type='reset']:hover,
-[type='reset']:focus,
-[type='reset']:active,
-[type='submit']:hover,
-[type='submit']:focus,
-[type='submit']:active {
-  text-decoration: none;
-  color: #000;
-}
-
-[disabled].button,
-button[disabled],
-[disabled][type='button'],
-[disabled][type='reset'],
-[disabled][type='submit'] {
-  cursor: default;
-  color: #999999;
-}
-
-[disabled].button:hover,
-button[disabled]:hover,
-[disabled][type='button']:hover,
-[disabled][type='reset']:hover,
-[disabled][type='submit']:hover, [disabled].button:focus,
-button[disabled]:focus,
-[disabled][type='button']:focus,
-[disabled][type='reset']:focus,
-[disabled][type='submit']:focus, [disabled].button:active,
-button[disabled]:active,
-[disabled][type='button']:active,
-[disabled][type='reset']:active,
-[disabled][type='submit']:active {
-  color: #999999;
-}
-
-[type='checkbox'],
-[type='radio'] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-fieldset {
-  padding: 0.525rem 0.9375rem 0.975rem;
-  border: 1px solid #cccccc;
+  font-size: 14px;
+  border: solid 1px #8cbcc6;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 #00bfe9;
+  background-color: #fefefe;
+  text-align: center;
+  padding: 0 0.8em;
   margin: 0 2px;
 }
 
-legend {
-  box-sizing: border-box;
-  display: table;
-  max-width: 100%;
-  white-space: normal;
-  color: inherit;
-  margin-left: -5px;
-  padding: 0 5px;
+.uikit-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: none;
+  border-top: 1px solid #bbbbbb;
+  margin-bottom: 1.6em;
 }
 
-label {
+/*! @gov.au/link-list v0.1.0 */
+/**
+ * Block of links.
+ */
+.uikit-link-list {
   display: block;
-  font-weight: bold;
-}
-
-optgroup {
-  font-weight: bold;
-}
-
-textarea {
-  overflow: auto;
-}
-
-table {
-  margin: 1.5rem 0;
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-}
-
-td,
-th {
-  padding: 0;
-}
-
-.layout-3col {
-  margin-left: -20px;
-  margin-right: -20px;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.layout-3col:before {
-  content: "";
-  display: table;
-}
-
-.layout-3col:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.layout-3col__full, .layout-3col__left-content, .layout-3col__right-content, .layout-3col__left-sidebar, .layout-3col__right-sidebar, .layout-3col__first-left-sidebar, .layout-3col__second-left-sidebar, .layout-3col__col-1, .layout-3col__col-2, .layout-3col__col-3, .layout-3col__col-4, .layout-3col__col-x {
-  clear: both;
-  padding-left: 20px;
-  padding-right: 20px;
-  float: left;
-  width: 100%;
-  margin-left: 0%;
-  margin-right: -100%;
-}
-
-[dir="rtl"] .layout-3col__full, [dir="rtl"] .layout-3col__left-content, [dir="rtl"] .layout-3col__right-content, [dir="rtl"] .layout-3col__left-sidebar, [dir="rtl"] .layout-3col__right-sidebar, [dir="rtl"] .layout-3col__first-left-sidebar, [dir="rtl"] .layout-3col__second-left-sidebar, [dir="rtl"] .layout-3col__col-1, [dir="rtl"] .layout-3col__col-2, [dir="rtl"] .layout-3col__col-3, [dir="rtl"] .layout-3col__col-4, [dir="rtl"] .layout-3col__col-x {
-  float: right;
-  margin-right: 0%;
-  margin-left: -100%;
-}
-
-@media (min-width: 777px) {
-  .layout-3col {
-    margin-left: -12px;
-    margin-right: -13px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .layout-3col:before {
-    content: "";
-    display: table;
-  }
-  .layout-3col:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  [dir="rtl"] .layout-3col {
-    margin-left: -13px;
-    margin-right: -12px;
-  }
-  .layout-3col__full, .layout-3col__left-content, .layout-3col__right-content, .layout-3col__left-sidebar, .layout-3col__right-sidebar {
-    float: left;
-    width: 100%;
-    margin-left: 0%;
-    margin-right: -100%;
-    padding-left: 12px;
-    padding-right: 13px;
-  }
-  [dir="rtl"] .layout-3col__full, [dir="rtl"] .layout-3col__left-content, [dir="rtl"] .layout-3col__right-content, [dir="rtl"] .layout-3col__left-sidebar, [dir="rtl"] .layout-3col__right-sidebar {
-    float: right;
-    margin-right: 0%;
-    margin-left: -100%;
-  }
-  [dir="rtl"] .layout-3col__full, [dir="rtl"] .layout-3col__left-content, [dir="rtl"] .layout-3col__right-content, [dir="rtl"] .layout-3col__left-sidebar, [dir="rtl"] .layout-3col__right-sidebar {
-    padding-left: 13px;
-    padding-right: 12px;
-  }
-  .layout-3col__first-left-sidebar, .layout-3col__col-1, .layout-3col__col-3, .layout-3col__col-x:nth-child(2n + 1) {
-    float: left;
-    width: 50%;
-    margin-left: 0%;
-    margin-right: -100%;
-    padding-left: 12px;
-    padding-right: 13px;
-  }
-  [dir="rtl"] .layout-3col__first-left-sidebar, [dir="rtl"] .layout-3col__col-1, [dir="rtl"] .layout-3col__col-3, [dir="rtl"] .layout-3col__col-x:nth-child(2n + 1) {
-    float: right;
-    margin-right: 0%;
-    margin-left: -100%;
-  }
-  [dir="rtl"] .layout-3col__first-left-sidebar, [dir="rtl"] .layout-3col__col-1, [dir="rtl"] .layout-3col__col-3, [dir="rtl"] .layout-3col__col-x:nth-child(2n + 1) {
-    padding-left: 13px;
-    padding-right: 12px;
-  }
-  .layout-3col__second-left-sidebar, .layout-3col__col-2, .layout-3col__col-4, .layout-3col__col-x:nth-child(2n) {
-    clear: none;
-    float: left;
-    width: 50%;
-    margin-left: 50%;
-    margin-right: -100%;
-    padding-left: 12px;
-    padding-right: 13px;
-  }
-  [dir="rtl"] .layout-3col__second-left-sidebar, [dir="rtl"] .layout-3col__col-2, [dir="rtl"] .layout-3col__col-4, [dir="rtl"] .layout-3col__col-x:nth-child(2n) {
-    float: right;
-    margin-right: 50%;
-    margin-left: -100%;
-  }
-  [dir="rtl"] .layout-3col__second-left-sidebar, [dir="rtl"] .layout-3col__col-2, [dir="rtl"] .layout-3col__col-4, [dir="rtl"] .layout-3col__col-x:nth-child(2n) {
-    padding-left: 13px;
-    padding-right: 12px;
-  }
-}
-
-@media (min-width: 999px) {
-  .layout-3col__full {
-    float: left;
-    width: 100%;
-    margin-left: 0%;
-    margin-right: -100%;
-  }
-  [dir="rtl"] .layout-3col__full {
-    float: right;
-    margin-right: 0%;
-    margin-left: -100%;
-  }
-  .layout-3col__left-content {
-    float: left;
-    width: 66.66667%;
-    margin-left: 0%;
-    margin-right: -100%;
-  }
-  [dir="rtl"] .layout-3col__left-content {
-    float: right;
-    margin-right: 0%;
-    margin-left: -100%;
-  }
-  .layout-3col__right-content {
-    float: left;
-    width: 66.66667%;
-    margin-left: 33.33333%;
-    margin-right: -100%;
-  }
-  [dir="rtl"] .layout-3col__right-content {
-    float: right;
-    margin-right: 33.33333%;
-    margin-left: -100%;
-  }
-  .layout-3col__left-sidebar, .layout-3col__first-left-sidebar, .layout-3col__second-left-sidebar {
-    clear: right;
-    float: right;
-    width: 33.33333%;
-    margin-right: 66.66667%;
-    margin-left: -100%;
-  }
-  [dir="rtl"] .layout-3col__left-sidebar, [dir="rtl"] .layout-3col__first-left-sidebar, [dir="rtl"] .layout-3col__second-left-sidebar {
-    clear: left;
-  }
-  [dir="rtl"] .layout-3col__left-sidebar, [dir="rtl"] .layout-3col__first-left-sidebar, [dir="rtl"] .layout-3col__second-left-sidebar {
-    float: left;
-    margin-left: 66.66667%;
-    margin-right: -100%;
-  }
-  .layout-3col__right-sidebar {
-    clear: right;
-    float: right;
-    width: 33.33333%;
-    margin-right: 0%;
-    margin-left: -100%;
-  }
-  [dir="rtl"] .layout-3col__right-sidebar {
-    clear: left;
-  }
-  [dir="rtl"] .layout-3col__right-sidebar {
-    float: left;
-    margin-left: 0%;
-    margin-right: -100%;
-  }
-  .layout-3col__col-1, .layout-3col__col-x:nth-child(3n+1) {
-    clear: both;
-    float: left;
-    width: 33.33333%;
-    margin-left: 0%;
-    margin-right: -100%;
-  }
-  [dir="rtl"] .layout-3col__col-1, [dir="rtl"] .layout-3col__col-x:nth-child(3n+1) {
-    float: right;
-    margin-right: 0%;
-    margin-left: -100%;
-  }
-  .layout-3col__col-2, .layout-3col__col-x:nth-child(3n+2) {
-    clear: none;
-    float: left;
-    width: 33.33333%;
-    margin-left: 33.33333%;
-    margin-right: -100%;
-  }
-  [dir="rtl"] .layout-3col__col-2, [dir="rtl"] .layout-3col__col-x:nth-child(3n+2) {
-    float: right;
-    margin-right: 33.33333%;
-    margin-left: -100%;
-  }
-  .layout-3col__col-3, .layout-3col__col-x:nth-child(3n) {
-    clear: none;
-    float: left;
-    width: 33.33333%;
-    margin-left: 66.66667%;
-    margin-right: -100%;
-  }
-  [dir="rtl"] .layout-3col__col-3, [dir="rtl"] .layout-3col__col-x:nth-child(3n) {
-    float: right;
-    margin-right: 66.66667%;
-    margin-left: -100%;
-  }
-  .layout-3col__col-4 {
-    display: none;
-  }
-}
-
-.layout-3col__grid-item-container {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.layout-3col__grid-item-container:before {
-  content: "";
-  display: table;
-}
-
-.layout-3col__grid-item-container:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.layout-center {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
-  max-width: 1165px;
-}
-
-@media (min-width: 777px) {
-  .layout-center {
-    padding-left: 12px;
-    padding-right: 13px;
-  }
-  [dir="rtl"] .layout-center {
-    padding-left: 13px;
-    padding-right: 12px;
-  }
-}
-
-.layout-center--shared-grid,
-.layout-center.layout-3col {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.layout-swap {
-  position: relative;
-}
-
-@media (min-width: 555px) {
-  .layout-swap {
-    padding-top: 48px;
-  }
-}
-
-@media (min-width: 555px) {
-  .layout-swap__top {
-    position: absolute;
-    top: 0;
-    height: 48px;
-    width: 100%;
-  }
-}
-
-.box {
-  margin-bottom: 1.5rem;
-  border: 5px solid #cccccc;
-  padding: 1em;
-}
-
-.box__title {
-  margin: 0;
-}
-
-.box:focus, .box:hover, .box.is-focus, .box--is-focus {
-  border-color: #000;
-}
-
-.box--highlight {
-  border-color: #0072b9;
-}
-
-.clearfix:before,
-.header:before,
-.tabs:before {
-  content: '';
-  display: table;
-}
-
-.clearfix:after,
-.header:after,
-.tabs:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-
-.comment__section,
-.comments {
-  margin: 1.5rem 0;
-}
-
-.comment__title {
-  margin: 0;
-}
-
-.comment__permalink {
-  text-transform: uppercase;
-  font-size: 75%;
-}
-
-.comment--preview,
-.comment-preview {
-  background-color: #fffadb;
-}
-
-.comment--nested,
-.indented {
-  margin-left: 32px;
-}
-
-[dir="rtl"] .comment--nested,
-[dir="rtl"] .indented {
-  margin-left: 0;
-  margin-right: 32px;
-}
-
-.header__logo {
-  float: left;
-  margin: 0 10px 0 0;
-  padding: 0;
-}
-
-[dir="rtl"] .header__logo {
-  float: right;
-  margin: 0 0 0 10px;
-}
-
-.header__logo-image {
-  vertical-align: bottom;
-}
-
-.header__name-and-slogan {
-  float: left;
-}
-
-.header__site-name {
-  margin: 0;
-}
-
-.header__site-link:link, .header__site-link:visited {
-  color: #000;
-  text-decoration: none;
-}
-
-.header__site-link:hover, .header__site-link:focus {
-  text-decoration: underline;
-}
-
-.header__site-slogan {
-  margin: 0;
-}
-
-.header__secondary-menu {
-  float: right;
-}
-
-[dir="rtl"] .header__secondary-menu {
-  float: left;
-}
-
-.header__region {
-  clear: both;
-}
-
-.hidden,
-html.js .js-hidden,
-html.js .element-hidden,
-html.js .js-hide {
-  display: none;
-}
-
-.highlight-mark,
-.new,
-.update {
-  color: #c00;
-  background-color: transparent;
-}
-
-.inline-links,
-.inline.links {
-  padding: 0;
-}
-
-.inline-links__item,
-.inline.links li {
-  display: inline;
   list-style-type: none;
-  padding: 0 1em 0 0;
 }
 
-[dir="rtl"] .inline-links__item,
-[dir="rtl"] .inline.links li,
-.inline.links [dir="rtl"] li {
+.uikit-body .uikit-link-list {
+  margin: 0;
+  padding: 0.4em 0;
+}
+
+.uikit-link-list > li {
+  display: block;
+  margin: 0.4em;
+}
+
+.uikit-link-list.uikit-link-list--inline {
   display: inline-block;
-  padding: 0 0 0 1em;
 }
 
-.inline-sibling,
-.field-label-inline .field-label,
-span.field-label {
-  display: inline;
-  margin-right: 10px;
+.uikit-link-list.uikit-link-list--inline > li {
+  display: inline-block;
 }
 
-[dir="rtl"] .inline-sibling,
-[dir="rtl"] .field-label-inline .field-label,
-.field-label-inline [dir="rtl"] .field-label,
-[dir="rtl"] span.field-label {
-  margin-right: 0;
-  margin-left: 10px;
+.uikit-link-list.uikit-link-list--inverted {
+  background-color: #313131;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.inline-sibling__child,
-.inline-sibling *, .field-label-inline .field-label *, span.field-label * {
-  display: inline;
+.uikit-link-list.uikit-link-list--inverted > li > a {
+  color: #fff;
+  border-color: #5bcbe3;
+  -webkit-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
 }
 
-.inline-sibling__adjacent,
-.inline-sibling + *,
-.inline-sibling + * > :first-child,
-.inline-sibling + * > :first-child > :first-child, .field-label-inline .field-label + *, span.field-label + *, .field-label-inline .field-label + * > :first-child, span.field-label + * > :first-child, .field-label-inline .field-label + * > :first-child > :first-child, span.field-label + * > :first-child > :first-child {
-  display: inline;
+.uikit-link-list.uikit-link-list--inverted > li > a:hover, .uikit-link-list.uikit-link-list--inverted > li > a:focus {
+  background-color: #5bcbe3;
+  color: #313131;
 }
 
-.field-label-inline .field-label,
-.field-label-inline .field-items {
-  float: none;
-}
-
-.messages,
-.messages--status {
-  margin: 1.5rem 0;
-  position: relative;
-  padding: 10px 10px 10px 44px;
-  border: 1px solid #0072b9;
-}
-
-[dir="rtl"] .messages,
-[dir="rtl"] .messages--status {
-  padding: 10px 44px 10px 10px;
-  background-position: 99% 8px;
-}
-
-.messages__icon {
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  height: 24px;
-  width: 24px;
-  margin-top: -12px;
-  line-height: 1;
-}
-
-[dir="rtl"] .messages__icon {
-  left: auto;
-  right: 0;
-}
-
-.messages__icon path {
-  fill: #0072b9;
-}
-
-.messages__highlight,
-.messages--error .error,
-.messages.error .error {
-  color: #000;
-}
-
-.messages__list {
-  margin: 0;
-}
-
-.messages__item {
-  list-style-image: none;
-}
-
-.messages--ok-color,
-.messages,
-.messages--status,
-.ok,
-.revision-current {
-  background-color: #f6fcff;
-  color: #0072b9;
-}
-
-.messages--warning-color,
-.messages--warning,
-.messages.warning,
-.warning {
-  background-color: #fffce6;
-  color: #000;
-}
-
-.messages--error-color,
-.messages--error,
-.messages.error,
-.error {
-  background-color: #fff0f0;
-  color: #c00;
-}
-
-.messages--warning,
-.messages.warning {
-  border-color: #fd0;
-}
-
-.messages--warning path, .messages.warning path {
-  fill: #fd0;
-}
-
-.messages--error,
-.messages.error {
-  border-color: #c00;
-}
-
-.messages--error path, .messages.error path {
-  fill: #c00;
-}
-
+/*! @gov.au/breadcrumbs v0.1.0 */
 @media print {
-  .print-none,
-  .toolbar,
-  .action-links,
-  .links,
-  .book-navigation,
-  .forum-topic-navigation,
-  .feed-icons {
-    display: none;
+  .uikit-breadcrumbs > .uikit-link-list > li:after {
+    border-color: #000 !important;
   }
 }
 
-.responsive-video,
-.media-youtube-video,
-.media-vimeo-preview-wrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
-  height: 0;
-}
-
-.responsive-video__embed,
-.responsive-video iframe,
-.media-youtube-video iframe,
-.media-vimeo-preview-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+.uikit-breadcrumbs {
+  display: none;
   width: 100%;
-  height: 100%;
+  margin: 0;
+  color: #313131;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-.responsive-video--4-3 {
-  padding-bottom: 75%;
-}
-
-.visually-hidden,
-.element-invisible,
-.element-focusable,
-.breadcrumb__title,
-.main-navigation .block-menu .block__title,
-.main-navigation .block-menu-block .block__title {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  word-wrap: normal;
-}
-
-.visually-hidden--off,
-.visually-hidden--focusable:active,
-.visually-hidden--focusable:focus,
-.element-focusable:active,
-.element-focusable:focus {
-  position: static !important;
-  clip: auto;
-  height: auto;
-  width: auto;
-  overflow: visible;
-}
-
-.watermark {
-  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: block;
-  height: 0;
-  overflow: visible;
-  background-color: transparent;
-  color: #eeeeee;
-  font-size: 75px;
-  line-height: 1;
-  text-align: center;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-  word-wrap: break-word;
-}
-
-@media print {
-  .breadcrumb {
-    display: none;
+@media (min-width: 768px) {
+  .uikit-breadcrumbs {
+    display: inline-block;
   }
 }
 
-.breadcrumb__list {
-  margin: 0;
-  padding: 0;
-}
-
-.breadcrumb__item {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.more-link,
-.more-help-link {
-  text-align: right;
-}
-
-[dir="rtl"] .more-link,
-[dir="rtl"] .more-help-link {
-  text-align: left;
-}
-
-.more-link__help-icon,
-.more-help-link a {
-  padding: 1px 0 1px 20px;
-  background-image: url(../sass/navigation/more-link/more-link__help-icon.svg);
-  background-position: 0 50%;
-  background-repeat: no-repeat;
-}
-
-[dir="rtl"] .more-link__help-icon,
-[dir="rtl"] .more-help-link a,
-.more-help-link [dir="rtl"] a {
-  padding: 1px 20px 1px 0;
-  background-position: 100% 50%;
-}
-
-.nav-menu__item,
-.menu__item {
-  list-style-image: url(../sass/navigation/nav-menu/leaf.svg);
-  list-style-type: square;
-}
-
-.nav-menu__item.is-expanded, .nav-menu__item--is-expanded,
-.is-expanded.menu__item,
-.menu__item.is-expanded {
-  list-style-image: url(../sass/navigation/nav-menu/expanded.svg);
-  list-style-type: circle;
-}
-
-.nav-menu__item.is-collapsed, .nav-menu__item--is-collapsed,
-.is-collapsed.menu__item,
-.menu__item.is-collapsed {
-  list-style-image: url(../sass/navigation/nav-menu/collapsed.svg);
-  list-style-type: disc;
-}
-
-[dir="rtl"] .nav-menu__item.is-collapsed, [dir="rtl"] .nav-menu__item--is-collapsed,
-[dir="rtl"] .is-collapsed.menu__item,
-[dir="rtl"] .menu__item.is-collapsed {
-  list-style-image: url(../sass/navigation/nav-menu/collapsed-rtl.svg);
-}
-
-.nav-menu__link.is-active, .nav-menu__link--is-active,
-.menu a.active {
-  color: #000;
-}
-
-.navbar,
-.main-navigation .links,
-.main-navigation .menu {
-  margin: 0;
-  padding: 0;
-  text-align: left;
-}
-
-[dir="rtl"] .navbar,
-[dir="rtl"] .main-navigation .links,
-.main-navigation [dir="rtl"] .links,
-[dir="rtl"]
-.main-navigation .menu,
-.main-navigation [dir="rtl"] .menu {
-  text-align: right;
-}
-
-.navbar__item,
-.navbar li, .main-navigation .links li,
-.main-navigation .menu li {
-  float: left;
-  padding: 0 10px 0 0;
-  list-style-type: none;
-  list-style-image: none;
-}
-
-[dir="rtl"] .navbar__item, [dir="rtl"]
-.navbar li, [dir="rtl"] .main-navigation .links li, .main-navigation [dir="rtl"] .links li, [dir="rtl"]
-.main-navigation .menu li,
-.main-navigation [dir="rtl"] .menu li {
-  float: right;
-  padding: 0 0 0 10px;
-}
-
-.pager {
-  clear: both;
-  padding: 0;
-  text-align: center;
-}
-
-@media print {
-  .pager {
-    display: none;
-  }
-}
-
-.pager__item,
-.pager__current-item,
-.pager-current,
-.pager-item,
-.pager-first,
-.pager-previous,
-.pager-next,
-.pager-last,
-.pager-ellipsis {
-  display: inline;
-  padding: 0 .5em;
-  list-style-type: none;
-  background-image: none;
-}
-
-.pager__current-item,
-.pager-current {
-  font-weight: bold;
-}
-
-.skip-link {
-  display: block;
-  padding: 2px 0 3px;
-  text-align: center;
-}
-
-.skip-link:link, .skip-link:visited {
-  background-color: #666666;
-  color: #fff;
-}
-
-.skip-link__wrapper {
+.uikit-breadcrumbs > .uikit-link-list > li {
   margin: 0;
 }
 
-@media print {
-  .skip-link__wrapper {
-    display: none;
-  }
+.uikit-breadcrumbs > .uikit-link-list > li:after {
+  content: ' ';
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin: 0 0.8em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%23555' d='M128 64l-64 64-16-16 64-64'/%3E\a    %3Cpath fill='%23555' d='M128 64l-16 16-64-64L64 0'/%3E\a    %3C/svg%3E");
 }
 
-.tabs {
-  margin: 1.125rem 0 0;
-  line-height: 1.875rem;
-  border-bottom: 1px solid #cccccc \0/ie;
-  background-image: -webkit-linear-gradient(bottom, #cccccc 1px, transparent 1px);
-  background-image: linear-gradient(to top, #cccccc 1px, transparent 1px);
-  padding: 0 2px;
-  list-style: none;
-  white-space: nowrap;
-}
-
-@media print {
-  .tabs {
-    display: none;
-  }
-}
-
-.tabs__tab {
-  float: left;
-  margin: 0 3px;
-  border: 1px solid #cccccc;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  border-bottom-color: transparent;
-  border-bottom: 0 \0/ie;
-  overflow: hidden;
-  background: #dddddd;
-}
-
-[dir="rtl"] .tabs__tab {
-  float: right;
-}
-
-.tabs__tab.is-active {
-  border-bottom-color: #fff;
-}
-
-.tabs__tab-link {
-  padding: 0 1.5rem;
-  display: block;
-  text-decoration: none;
-  -webkit-transition: color .3s, background .3s, border .3s;
-  transition: color .3s, background .3s, border .3s;
-  text-shadow: #fff 0 1px 0;
-  color: #000;
-  background: #dddddd;
-  letter-spacing: 1px;
-}
-
-.tabs__tab-link:focus, .tabs__tab-link:hover {
-  background: #eaeaea;
-}
-
-.tabs__tab-link:active, .tabs__tab-link.is-active, .tabs__tab-link--is-active {
-  background: #fff;
-  text-shadow: none;
-}
-
-.tabs--off,
-.views-displays .secondary {
-  margin: 0;
-  border-bottom: 0;
-  padding: 0;
-  background-image: none;
-}
-
-.tabs--secondary {
-  margin-top: 1.5rem;
-  font-size: 0.875rem;
-  background-image: none;
-}
-
-.tabs + .tabs--secondary {
-  margin-top: 0;
-  background-image: -webkit-linear-gradient(bottom, #cccccc 1px, transparent 1px);
-  background-image: linear-gradient(to top, #cccccc 1px, transparent 1px);
-}
-
-.tabs--secondary .tabs__tab {
-  margin: 0.5625rem 0.1875rem;
-  border: 0;
-  background: transparent;
-}
-
-[dir="rtl"] .tabs--secondary .tabs__tab {
-  float: right;
-}
-
-.tabs--secondary .tabs__tab.is-active {
-  border-bottom-color: transparent;
-}
-
-.tabs--secondary .tabs__tab-link {
-  border: 1px solid #cccccc;
-  border-radius: 24px;
-  color: #666666;
-  background: #f1f1f1;
-  letter-spacing: normal;
-}
-
-.tabs--secondary .tabs__tab-link:focus, .tabs--secondary .tabs__tab-link:hover {
-  color: #333333;
-  background: #dddddd;
-  border-color: #999999;
-}
-
-.tabs--secondary .tabs__tab-link:active, .tabs--secondary .tabs__tab-link.is-active, .tabs--secondary .tabs__tab-link--is-active {
-  color: white;
-  text-shadow: #333333 0 1px 0;
-  background: #666666;
-  border-color: black;
-}
-
-.autocomplete,
-.form-autocomplete {
-  background-image: url(../sass/forms/autocomplete/throbber-inactive.png);
-  background-position: 100% center;
-  background-repeat: no-repeat;
-}
-
-[dir="rtl"] .autocomplete,
-[dir="rtl"] .form-autocomplete {
-  background-position: 0% center;
-}
-
-.autocomplete__list-wrapper,
-#autocomplete {
-  border: 1px solid;
-  overflow: hidden;
-  position: absolute;
-  z-index: 100;
-}
-
-.autocomplete__list,
-#autocomplete ul {
-  list-style: none;
-  list-style-image: none;
-  margin: 0;
-  padding: 0;
-}
-
-.autocomplete__list-item,
-#autocomplete li {
-  background: #fff;
-  color: #000;
-  cursor: default;
-  white-space: pre;
-}
-
-.autocomplete__list-item.is-selected, .autocomplete__list-item--is-selected,
-#autocomplete li.is-selected,
-#autocomplete .selected {
-  background: #0072b9;
-  color: #fff;
-}
-
-.autocomplete.is-throbbing, .autocomplete--is-throbbing,
-.is-throbbing.form-autocomplete,
-.form-autocomplete.throbbing {
-  background-image: url(../sass/forms/autocomplete/throbber-active.gif);
-}
-
-.collapsible-fieldset,
-.collapsible {
-  position: relative;
-}
-
-.collapsible-fieldset__legend,
-.collapsible .fieldset-legend {
-  display: block;
-  padding-left: 15px;
-  background-image: url(../sass/forms/collapsible-fieldset/expanded.svg);
-  background-position: 4px 50%;
-  background-repeat: no-repeat;
-}
-
-[dir="rtl"] .collapsible-fieldset__legend,
-[dir="rtl"] .collapsible .fieldset-legend,
-.collapsible [dir="rtl"] .fieldset-legend {
-  padding-left: 0;
-  padding-right: 15px;
-  background-position: right 4px top 50%;
-}
-
-.collapsible-fieldset__summary,
-.collapsible .fieldset-legend .summary {
-  color: #999999;
-  font-size: .9em;
-  margin-left: .5em;
-}
-
-.collapsible-fieldset.is-collapsed, .collapsible-fieldset--is-collapsed,
-.is-collapsed.collapsible,
-.collapsible.collapsed {
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-right-width: 0;
-  height: 1em;
-}
-
-.collapsible-fieldset.is-collapsed .collapsible-fieldset__wrapper, .collapsible-fieldset--is-collapsed__wrapper, .is-collapsed.collapsible .collapsible-fieldset__wrapper,
-.collapsible.collapsed .fieldset-wrapper {
+.uikit-breadcrumbs > .uikit-link-list > li:last-child:after {
   display: none;
 }
 
-.collapsible-fieldset.is-collapsed .collapsible-fieldset__legend, .collapsible-fieldset--is-collapsed__legend, .is-collapsed.collapsible .collapsible-fieldset__legend,
-.collapsible.collapsed .fieldset-legend,
-.collapsible-fieldset.is-collapsed .collapsible .fieldset-legend,
-.collapsible .collapsible-fieldset.is-collapsed .fieldset-legend,
-.is-collapsed.collapsible .fieldset-legend {
-  background-image: url(../sass/forms/collapsible-fieldset/collapsed.svg);
-  background-position: 4px 50%;
+.ie8 .uikit-breadcrumbs > .uikit-link-list > li:after,
+.lt-ie8 .uikit-breadcrumbs > .uikit-link-list > li:after {
+  content: ' > ';
+  display: inline-block;
+  border: none;
 }
 
-[dir="rtl"] .collapsible-fieldset.is-collapsed .collapsible-fieldset__legend, [dir="rtl"] .collapsible-fieldset--is-collapsed__legend, [dir="rtl"] .is-collapsed.collapsible .collapsible-fieldset__legend,
-[dir="rtl"] .collapsible.collapsed .fieldset-legend,
-.collapsible.collapsed [dir="rtl"] .fieldset-legend,
-[dir="rtl"] .collapsible-fieldset.is-collapsed .collapsible .fieldset-legend,
-.collapsible [dir="rtl"] .collapsible-fieldset.is-collapsed .fieldset-legend,
-[dir="rtl"] .is-collapsed.collapsible .fieldset-legend {
-  background-image: url(../sass/forms/collapsible-fieldset/collapsed-rtl.svg);
-  background-position: right 4px top 50%;
+.uikit-breadcrumbs.uikit-breadcrumbs--inverted {
+  color: #fff;
 }
 
-.form-item {
-  margin: 1.5rem 0;
+.uikit-breadcrumbs.uikit-breadcrumbs--inverted > .uikit-link-list > li:not(:last-child):after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%23fff' d='M128 64l-64 64-16-16 64-64'/%3E\a    %3Cpath fill='%23fff' d='M128 64l-16 16-64-64L64 0'/%3E\a    %3C/svg%3E");
 }
 
-.form-item__required,
-.form-required {
-  color: #c00;
+/* @gov.au/buttons v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/buttons v0.1.0 */
+@media print {
+  .uikit-btn {
+    background-color: #fff !important;
+    border: 2px solid #000 !important;
+    color: #000 !important;
+  }
+  .uikit-btn:disabled {
+    background-color: #ccc !important;
+  }
 }
 
-.form-item__description,
-.form-item .description {
-  font-size: 0.875rem;
-}
-
-.form-item--inline div,
-.form-item--inline label, .container-inline .form-item div, .container-inline .form-item label {
-  display: inline;
-}
-
-.form-item--inline__exception,
-.container-inline .fieldset-wrapper {
-  display: block;
-}
-
-.form-item--tight,
-.form-item--radio,
-.form-type-radio,
-.form-type-checkbox,
-.password-parent,
-.confirm-parent,
-table .form-item {
-  margin: 0;
-}
-
-.form-item--radio .form-item__label, .form-item--radio__label, .form-type-radio .form-item__label,
-.form-type-checkbox .form-item__label,
-label.option {
-  display: inline;
-  font-weight: normal;
-}
-
-.form-item--radio .form-item__description, .form-item--radio__description, .form-type-radio .form-item__description,
-.form-type-checkbox .form-item__description,
-.form-type-radio .description,
-.form-type-checkbox .description,
-.form-item--radio .form-item .description,
-.form-item .form-item--radio .description,
-.form-type-radio .form-item .description,
-.form-item .form-type-radio .description,
-.form-type-checkbox .form-item .description,
-.form-item
-.form-type-checkbox .description {
-  margin-left: 1.4em;
-}
-
-.form-item.is-error .form-item__widget, .form-item--is-error__widget,
-.form-item.is-error input,
-.form-item.is-error textarea,
-.form-item.is-error select,
-.form-item--is-error input,
-.form-item--is-error textarea,
-.form-item--is-error select,
-.form-item input.error,
-.form-item textarea.error,
-.form-item select.error {
-  border: 1px solid #c00;
-}
-
-.form-table__sticky-header,
-.sticky-header {
-  position: fixed;
-  visibility: hidden;
-  margin-top: 0;
-  background-color: #fff;
-}
-
-.form-table__sticky-header.is-sticky, .form-table__sticky-header--is-sticky,
-.is-sticky.sticky-header {
-  visibility: visible;
-}
-
-.form-table__header,
-.form-table th,
-form table th {
-  border-bottom: 3px solid #cccccc;
-  padding-right: 1em;
-  text-align: left;
-}
-
-[dir="rtl"] .form-table__header,
-[dir="rtl"] .form-table th,
-.form-table [dir="rtl"] th,
-[dir="rtl"] form table th,
-form table [dir="rtl"] th {
-  text-align: right;
-  padding-left: 1em;
-  padding-right: 0;
-}
-
-.form-table__body,
-.form-table tbody,
-form table tbody {
-  border-top: 1px solid #cccccc;
-}
-
-.form-table__row,
-.form-table tbody tr,
-form table tbody tr {
-  padding: .1em .6em;
-  border-bottom: 1px solid #cccccc;
-  background-color: #eeeeee;
-}
-
-.form-table__row:nth-child(even),
-.form-table tbody tr:nth-child(even),
-form table tbody tr:nth-child(even) {
-  background-color: #fff;
-}
-
-.form-table__row.is-active, .form-table__row--is-active,
-.form-table tbody tr.is-active,
-form table tbody tr.is-active,
-td.active {
-  background-color: #dddddd;
-}
-
-.form-table__row.is-disabled, .form-table__row--is-disabled,
-.form-table tbody tr.is-disabled,
-form table tbody tr.is-disabled,
-td.menu-disabled {
-  background: #cccccc;
-}
-
-.form-table__row.is-selected, .form-table__row--is-selected,
-.form-table tbody tr.is-selected,
-form table tbody tr.is-selected,
-tr.selected td {
-  background: #fffdf0;
-}
-
-.form-table__list,
-.form-table ul,
-form table ul {
-  margin: 0;
-}
-
-.form-table__narrow-column,
-.form-table th.form-table__narrow-column,
-form table th.form-table__narrow-column,
-td .checkbox,
-th .checkbox {
-  width: -moz-min-content;
-  width: -webkit-min-content;
-  text-align: center;
-}
-
-.progress-bar,
-.progress {
+.uikit-btn {
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  font-size: 17px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: bold;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #18788D;
+  height: 48px;
+  padding: 0 1.2em;
+  cursor: pointer;
+  -webkit-transition: background 0.1s ease;
+  transition: background 0.1s ease;
 }
 
-.progress-bar__bar,
-.progress .bar {
-  border-radius: 3px;
-  margin: 0 .2em;
-  border: 1px solid #666666;
+.uikit-btn:focus, .uikit-btn:hover {
+  background-color: #115463;
+}
+
+.uikit-btn:disabled {
+  background-color: #cccccc;
+  font-weight: normal;
+  color: #313131;
+  border: none;
+  cursor: not-allowed;
+}
+
+.uikit-btn:disabled:focus, .uikit-btn:disabled:hover {
   background-color: #cccccc;
 }
 
-.progress-bar__fill,
-.progress .filled {
-  height: 1.5em;
-  width: 5px;
-  background: #0072b9 url(../sass/forms/progress-bar/progress-bar.gif) repeat 0 0;
+/**
+ * SECONDARY
+ */
+.uikit-btn--secondary {
+  background-color: #313131;
 }
 
-.progress-bar__percentage,
-.progress .percentage {
-  float: right;
+.uikit-btn--secondary:focus, .uikit-btn--secondary:hover {
+  background-color: #222222;
 }
 
-[dir="rtl"] .progress-bar__percentage,
-[dir="rtl"] .progress .percentage,
-.progress [dir="rtl"] .percentage {
-  float: left;
+/**
+ * TERTIARY
+ */
+.uikit-btn--tertiary {
+  background-color: #fff;
+  color: #313131;
+  border: 1px solid #18788D;
 }
 
-.progress-bar--inline,
-.ajax-progress-bar {
-  width: 16em;
+.uikit-btn--tertiary:focus, .uikit-btn--tertiary:hover {
+  background-color: #e8f2f4;
+}
+
+/* @gov.au/callout v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/callout v0.1.0 */
+@media print {
+  .uikit-callout {
+    border-top: 1px solid #000 !important;
+    border-right: 1px solid #000 !important;
+    border-bottom: 1px solid #000 !important;
+  }
+}
+
+/**
+ * The generic callout.
+ */
+.uikit-callout {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131;
+  line-height: 1.6;
+  margin: 1.6em 0.4em;
+  padding: 1.2em 1.2em 1.2em 0.8em;
+  border-left: 6px solid #00bfe9;
+  border-radius: 3px;
+  box-shadow: 0 0 8px rgba(49, 49, 49, 0.4);
+  max-width: 42em;
+}
+
+.uikit-callout :first-child {
+  margin-top: 0;
+}
+
+.uikit-callout :last-child {
+  margin-bottom: 0;
+}
+
+.ie8 .uikit-callout,
+.lt-ie8 .uikit-callout {
+  border-top: 1px solid #bbbbbb;
+  border-right: 1px solid #bbbbbb;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+/**
+ * The calendar event callout
+ */
+.uikit-callout--calendar-event {
+  background-color: #f0f3f5;
+}
+
+.ie8 .uikit-callout--calendar-event,
+.lt-ie8 .uikit-callout--calendar-event {
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.uikit-callout--calendar-event__lede,
+.uikit-callout--calendar-event__time,
+.uikit-callout--calendar-event__name {
+  display: block;
+}
+
+.uikit-callout--calendar-event__lede,
+.uikit-callout--calendar-event__time,
+.uikit-callout--calendar-event__name {
+  margin-bottom: 0.8em;
+}
+
+.uikit-callout--calendar-event__lede {
+  font-size: 18px;
+}
+
+.uikit-callout--calendar-event__time,
+.uikit-callout--calendar-event__name {
+  font-size: 32px;
+}
+
+.uikit-callout--calendar-event__time {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+/* @gov.au/control-input v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/control-input v0.1.0 */
+@media print {
+  .uikit-control-input__text:after {
+    display: none !important;
+  }
+}
+
+.uikit-control-input {
   display: inline-block;
+  position: relative;
 }
 
-[dir="rtl"] .progress-bar--inline,
-[dir="rtl"] .ajax-progress-bar {
-  float: right;
-}
-
-.progress-throbber,
-.ajax-progress {
+.uikit-control-input__input {
   display: inline-block;
+  line-height: 1.6;
+  margin: 0 0px 0 7px;
 }
 
-[dir="rtl"] .progress-throbber,
-[dir="rtl"] .ajax-progress {
-  float: right;
+.uikit-control-input__input:hover {
+  cursor: pointer;
 }
 
-.progress-throbber__widget,
-.ajax-progress .throbber {
-  background: url(../sass/forms/progress-throbber/progress-throbber.gif) no-repeat 0 -18px transparent;
-  float: left;
-  height: 15px;
-  margin: 2px;
-  width: 15px;
+.uikit-control-input__input:hover + .uikit-control-input__text {
+  cursor: pointer;
 }
 
-[dir="rtl"] .progress-throbber__widget,
-[dir="rtl"] .ajax-progress .throbber,
-.ajax-progress [dir="rtl"] .throbber {
-  float: right;
+.uikit-control-input__input[type=checkbox] + .uikit-control-input__text:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%23313131' d='M0 0h128v128H0z'/%3E\a    %3Cpath fill='%23fff' d='M8 8h112v112H8z'/%3E\a   %3C/svg%3E");
 }
 
-.progress-throbber__widget-in-tr,
-tr .ajax-progress .throbber {
+.uikit-control-input__input[type=checkbox]:checked + .uikit-control-input__text:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%23313131' d='M0 0h128v128H0z'/%3E\a    %3Cpath fill='%23fff' d='M8 8h112v112H8z'/%3E\a    %3Cpath fill='%23313131' d='M16 16h96v96H16z'/%3E\a    %3Cpath fill='%23fff' d='M102.59 45.41c.778-.778.782-2.038-.002-2.822l-9.176-9.176c-.78-.78-2.052-.772-2.823 0L56 68 41.42\a    53.42c-.784-.784-2.048-.792-2.832-.008l-9.176 9.176c-.78.78-.775 2.05-.004 2.82l25.184 25.184c.778.778 2.04.775 2.82-.003l45.177-45.18z'/%3E\a   %3C/svg%3E");
+}
+
+.uikit-control-input--full > .uikit-control-input__input[type=checkbox] + .uikit-control-input__text:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%23313131' d='M0 0h128v128H0z'/%3E\a    %3Cpath fill='%23fff' d='M8 8h112v112H8z'/%3E\a    %3C/svg%3E");
+}
+
+.uikit-control-input--full > .uikit-control-input__input[type=checkbox]:checked + .uikit-control-input__text:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%23313131' d='M0 0h128v128H0z'/%3E\a    %3Cpath fill='%23fff' d='M8 8h112v112H8z'/%3E\a    %3Cpath fill='%23313131' d='M16 16h96v96H16z'/%3E\a    %3C/svg%3E");
+}
+
+.uikit-control-input__input[type=radio] + .uikit-control-input__text:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Ccircle fill='%23313131' cx='64' cy='64' r='64'/%3E\a    %3Ccircle fill='%23fff' cx='64' cy='64' r='56'/%3E\a   %3C/svg%3E");
+}
+
+.uikit-control-input__input[type=radio]:checked + .uikit-control-input__text:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Ccircle fill='%23313131' cx='64' cy='64' r='64'/%3E\a    %3Ccircle fill='%23fff' cx='64' cy='64' r='56'/%3E\a    %3Ccircle fill='%23313131' cx='64' cy='64' r='44'/%3E\a    %3Cpath fill='%23fff' fill-rule='nonzero' d='M94.588 53.412c.78-.78.784-2.04 0-2.824l-9.176-9.176c-.78-.78-2.05-.775-2.82-.004L56 68 45.412\a    57.412c-.78-.78-2.04-.784-2.824 0l-9.176 9.176c-.78.78-.782 2.042 0 2.824l21.176 21.176c.78.78 2.04.784 2.824 0l37.176-37.176z'/%3E\a   %3C/svg%3E");
+}
+
+.uikit-control-input--full > .uikit-control-input__input[type=radio] + .uikit-control-input__text:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Ccircle fill='%23313131' cx='64' cy='64' r='64'/%3E\a    %3Ccircle fill='%23fff' cx='64' cy='64' r='56'/%3E\a   %3C/svg%3E");
+}
+
+.uikit-control-input--full > .uikit-control-input__input[type=radio]:checked + .uikit-control-input__text:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Ccircle fill='%23313131' cx='64' cy='64' r='64'/%3E\a    %3Ccircle fill='%23fff' cx='64' cy='64' r='56'/%3E\a    %3Ccircle fill='%23313131' cx='64' cy='64' r='44'/%3E\a   %3C/svg%3E");
+}
+
+.uikit-control-input__input:checked + .uikit-control-input__text {
+  font-weight: bold;
+}
+
+.uikit-control-input__input:focus + .uikit-control-input__text {
+  outline: 2px solid #000;
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.uikit-control-input__input:disabled + .uikit-control-input__text {
+  color: #989898;
+}
+
+.uikit-control-input__input:disabled + .uikit-control-input__text:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='rgba(255, 255, 255, 0.3)' d='M0 0h128v128H0z'/%3E\a   %3C/svg%3E");
+  z-index: 2;
+}
+
+.uikit-control-input__input:disabled:hover {
+  cursor: not-allowed;
+}
+
+.uikit-control-input__input:disabled:hover + .uikit-control-input__text {
+  cursor: not-allowed;
+}
+
+/**
+ * The label text
+ */
+.uikit-control-input__text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131;
+  line-height: 1.6;
+  font-size: 17px;
+  margin-left: 12px;
+}
+
+.uikit-control-input__text:before, .uikit-control-input__text:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 27px;
+  height: 27px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* @gov.au/cta-link v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/cta-link v0.1.0 */
+@media print {
+  .uikit-cta-link:after {
+    content: ' > ' !important;
+    border: none !important;
+    -webkit-transform: rotate(0deg) !important;
+        -ms-transform: rotate(0deg) !important;
+            transform: rotate(0deg) !important;
+  }
+}
+
+.uikit-cta-link {
+  display: inline-block;
+  position: relative;
+  font-size: 21px;
+  margin-bottom: 1.6em;
+  font-weight: bold;
+}
+
+.uikit-cta-link:after {
+  content: ' ';
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin: 0 0.4em 0 0.4em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Cpath fill='%2318788D' d='M128 64l-64 64-16-16 64-64'/%3E\a   %3Cpath fill='%2318788D' d='M128 64l-16 16-64-64L64 0'/%3E\a   %3C/svg%3E");
+  -webkit-transition: margin 0.1s ease-in;
+  transition: margin 0.1s ease-in;
+}
+
+.ie8 .uikit-cta-link:after,
+.lt-ie8 .uikit-cta-link:after {
+  content: ' > ';
+  border: none;
+}
+
+.uikit-cta-link:hover, .uikit-cta-link:focus {
+  color: #313131;
+}
+
+.uikit-cta-link:hover:after, .uikit-cta-link:focus:after {
+  margin: 0 0.16em 0 0.64em;
+}
+
+/* @gov.au/direction-links v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/body v0.1.0 */
+@media print {
+  .uikit-body * {
+    text-shadow: none !important;
+    color: #000 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    border-color: #000 !important;
+  }
+  .uikit-body a,
+  .uikit-body a:visited {
+    text-decoration: underline;
+  }
+  .uikit-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  .uikit-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .uikit-body a[href^="javascript:"]:after,
+  .uikit-body a[href^="#"]:after {
+    content: "";
+  }
+  .uikit-body a[rel~='external']:after {
+    display: none !important;
+  }
+  .uikit-body pre,
+  .uikit-body blockquote {
+    border: 1px solid #000;
+    padding: 6px;
+    page-break-inside: avoid;
+  }
+  .uikit-body thead {
+    display: table-header-group;
+  }
+  .uikit-body tr,
+  .uikit-body img {
+    page-break-inside: avoid;
+  }
+  .uikit-body img {
+    max-width: 100% !important;
+  }
+  .uikit-body p,
+  .uikit-body h2,
+  .uikit-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  .uikit-body h2,
+  .uikit-body h3 {
+    page-break-after: avoid;
+  }
+  .uikit-body p a {
+    word-wrap: break-word;
+  }
+  .uikit-body select {
+    background: #fff !important;
+  }
+}
+
+.uikit-body {
+  margin: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131;
+  /**
+	 * Text selection and `mark` styling.
+	 */
+  /**
+	 * Vertical spacing of common text elements.
+	 */
+  /**
+	 * Emphasis and alt. voice/mood/diff. from prose text.
+	 */
+  /**
+	 * Important (leaving `b` out for now (and `u` also)).
+	 */
+  /**
+	 * `small`: for less important information (not stylistic purposes).
+	 */
+  /**
+	 * `s`: represents contents no longer accurate/relevant.
+	 */
+  /**
+	 * `del` & `ins`: editorial markup.
+	 *
+	 */
+  /**
+	 * Defining definition of a term.
+	 *
+	 * The paragraph, description list group, or section that is the nearest
+	 * ancestor of the `dfn` element must also contain the definition(s) for the term
+	 * given by the `dfn` element.
+	 *
+	 * Note: `abbr` can be nested inside `dfn`.
+	 */
+  /**
+	 * Abbreviations/acronyms.
+	 *
+	 * This styling removes any custom casing (mixing of u&lc chars in the `abbr`).
+	 *
+	 * Todo: test font stack fallbacks with the font-size adj.
+	 */
+  /**
+	 * Variables, eg. as used in mathematical expressions.
+	 *
+	 * We also provide semantic support for nested vars, and things like indices.
+	 */
+  /**
+	 * Code snippets and code blocks.
+	 */
+  /**
+	 * Pre-formatted text set by typographic characters.
+	 */
+  /**
+	 * Keyboard strokes.
+	 */
+  /**
+	 * Horizontal rule, used for paragraph-level thematic breaks.
+	 */
+}
+
+.uikit-body a {
+  -webkit-text-decoration-skip: objects;
+  color: #313131;
+  text-decoration: none;
+  border-bottom: solid 1px #18788D;
+  -webkit-transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+.uikit-body a:hover, .uikit-body a:focus {
+  background-color: #5bcbe3;
+  border-color: transparent;
+}
+
+.uikit-body a[rel~='external']:after {
+  content: ' ';
+  display: inline-block;
+  width: 0.7em;
+  height: 0.8em;
+  margin: 0 0.1em 0 0.25em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%2318788D' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%2318788D' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position-y: 0.12em;
+}
+
+.ie8 .uikit-body a[rel~='external']:after,
+.lt-ie8 .uikit-body a[rel~='external']:after {
+  content: '⇗';
+  color: #18788D;
+}
+
+.uikit-body mark,
+.uikit-body ::-moz-selection {
+  background-color: rgba(229, 172, 102, 0.5);
+}
+
+.uikit-body mark,
+.uikit-body ::selection {
+  background-color: rgba(229, 172, 102, 0.5);
+}
+
+.uikit-body mark {
+  box-shadow: 0 0 1px rgba(49, 49, 49, 0.4);
+}
+
+.uikit-body p {
+  max-width: 42em;
+}
+
+.uikit-body p,
+.uikit-body ul,
+.uikit-body ol,
+.uikit-body dl,
+.uikit-body pre {
+  margin-top: 0;
+  margin-bottom: 1.6em;
+}
+
+.uikit-body ul,
+.uikit-body ol,
+.uikit-body dd {
+  margin-left: 0;
+  padding-left: 1.6em;
+}
+
+.uikit-body ul > li,
+.uikit-body ol > li {
+  margin-bottom: 0.4em;
+}
+
+.uikit-body ul > li > ul,
+.uikit-body ul > li > ol,
+.uikit-body ol > li > ul,
+.uikit-body ol > li > ol {
+  margin-top: 0.4em;
+  margin-bottom: 0.8em;
+}
+
+.uikit-body ul > ul,
+.uikit-body ol > ul {
+  list-style-type: disc;
+}
+
+.uikit-body dl > dd {
+  margin-bottom: 1.6em;
+}
+
+.uikit-body dl > dt {
+  font-weight: bold;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.uikit-body dl > dt:first-of-type {
+  margin-top: 0;
+}
+
+.uikit-body em,
+.uikit-body i {
+  font-style: italic;
+}
+
+.uikit-body strong {
+  font-weight: bold;
+}
+
+.uikit-body small {
+  font-size: 87.5%;
+  color: #464646;
+}
+
+.uikit-body s {
+  text-decoration: line-through;
+}
+
+.uikit-body del {
+  text-decoration: line-through;
+  color: #5a5a5a;
+}
+
+.uikit-body ins {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
+}
+
+.uikit-body dfn {
+  font-style: normal;
+}
+
+.uikit-body abbr,
+.uikit-body abbr[title] {
+  font-size: 18px;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-bottom: 1px dotted #555;
+  cursor: help;
+}
+
+.uikit-body a abbr {
+  padding-bottom: 1px;
+}
+
+.uikit-body var {
+  padding: 0 1px;
+  font-style: italic;
+  font-family: serif;
+}
+
+.uikit-body var sup,
+.uikit-body var sub {
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
+  font-style: normal;
+  padding: 0 1px;
+}
+
+.uikit-body sub,
+.uikit-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.uikit-body sub {
+  bottom: -0.25em;
+}
+
+.uikit-body sup {
+  top: -0.5em;
+}
+
+.uikit-body code,
+.uikit-body kbd,
+.uikit-body pre {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+.uikit-body pre code,
+.uikit-body pre samp,
+.uikit-body pre kbd {
+  font-size: 14px;
+}
+
+.uikit-body kbd {
+  display: inline-block;
+  font-size: 14px;
+  border: solid 1px #8cbcc6;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 #00bfe9;
+  background-color: #fefefe;
+  text-align: center;
+  padding: 0 0.8em;
   margin: 0 2px;
 }
 
-.progress-throbber__message,
-.ajax-progress .message {
-  padding-left: 20px;
+.uikit-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: none;
+  border-top: 1px solid #bbbbbb;
+  margin-bottom: 1.6em;
 }
 
-.resizable-textarea,
-.resizable-textarea textarea {
-  width: 100%;
-  vertical-align: bottom;
+/*! @gov.au/direction-links v0.1.0 */
+@media print {
+  .uikit-direction-link:after {
+    background: none !important;
+    content: '→' !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  .uikit-direction-link--left:before {
+    background: none !important;
+    content: '←' !important;
+    width: auto !important;
+    height: auto !important;
+  }
+  .uikit-direction-link--up:after {
+    content: '↑' !important;
+  }
+  .uikit-direction-link--down:after {
+    content: '↓' !important;
+  }
 }
 
-.resizable-textarea__grippie,
-.resizable-textarea .grippie {
-  background: url(../sass/forms/resizable-textarea/grippie.png) no-repeat center 2px #eeeeee;
-  border: 1px solid #cccccc;
-  border-top-width: 0;
-  cursor: s-resize;
-  height: 9px;
-  overflow: hidden;
+.uikit-direction-link {
+  display: inline-block;
+  color: #313131;
 }
 
-.table-drag__wrapper,
-body.drag {
-  cursor: move;
+.uikit-direction-link:after {
+  content: ' ';
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin: 0 0.16em -1px 0.4em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Cpath fill='%23313131' d='M128 64l-64 57V8'/%3E%3Cpath fill='%23313131' fill-rule='nonzero' d='M8 48h64v32H8z'/%3E\a   %3C/svg%3E");
+  background-repeat: no-repeat;
 }
 
-.table-drag__item,
-tr.drag {
-  background-color: #fffadb;
+.ie8 .uikit-direction-link:after,
+.lt-ie8 .uikit-direction-link:after {
+  content: '→';
+  width: auto;
+  height: auto;
 }
 
-.table-drag__item-previous,
-tr.drag-previous {
-  background-color: #fff7c2;
+/**
+ * LEFT
+ */
+.uikit-direction-link--left:after {
+  display: none;
 }
 
-.table-drag__handle,
-.tabledrag-handle {
-  cursor: move;
-  float: left;
-  height: 1.7em;
-  margin-left: -1em;
-  overflow: hidden;
-  text-decoration: none;
-  font-size: 12px;
+.uikit-direction-link--left:before {
+  content: ' ';
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin: 0 0.4em -1px 0.16em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Cpath fill='%23313131' d='M0 64l64 57V8'/%3E%3Cpath fill='%23313131' fill-rule='nonzero' d='M120 48H56v32h64z'/%3E\a   %3C/svg%3E");
+  background-repeat: no-repeat;
 }
 
-[dir="rtl"] .table-drag__handle,
-[dir="rtl"] .tabledrag-handle {
-  float: right;
-  margin-right: -1em;
+.ie8 .uikit-direction-link--left:before,
+.lt-ie8 .uikit-direction-link--left:before {
+  content: '←';
+  width: auto;
+  height: auto;
+}
+
+/**
+ * UP
+ */
+.uikit-direction-link--up:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Cpath fill='%23313131' d='M64 0l57 64H8'/%3E%3Cpath fill='%23313131' fill-rule='nonzero' d='M48 120V56h32v64z'/%3E\a   %3C/svg%3E");
+}
+
+.ie8 .uikit-direction-link--up:after,
+.lt-ie8 .uikit-direction-link--up:after {
+  content: '↑';
+}
+
+/**
+ * DOWN
+ */
+.uikit-direction-link--down:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Cpath fill='%23313131' d='M64 128l57-64H8'/%3E%3Cpath fill='%23313131' fill-rule='nonzero' d='M48 8v64h32V8z'/%3E\a   %3C/svg%3E");
+}
+
+.ie8 .uikit-direction-link--down:after,
+.lt-ie8 .uikit-direction-link--down:after {
+  content: '↓';
+}
+
+/* @gov.au/footer v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/footer v0.1.0 */
+@media print {
+  .uikit-footer {
+    background: #fff !important;
+    border-color: #000 !important;
+  }
+}
+
+/**
+ * Basic footer block styling.
+ */
+.uikit-footer {
+  background-color: #f0f3f5;
+  border-top: 6px solid #555;
+  padding: 1.6em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131;
+}
+
+.uikit-footer p:last-child {
+  margin: 0;
+}
+
+/**
+ * Footer `nav` navigation styling.
+ */
+.uikit-footer__navigation .uikit-link-list > li {
   margin-left: 0;
 }
 
-.table-drag__handle:focus, .table-drag__handle:hover,
-.tabledrag-handle:focus,
-.tabledrag-handle:hover {
+.uikit-footer__navigation + .uikit-footer__end {
+  padding-top: 1.6em;
+  border-top: 1px solid #bbbbbb;
+  margin-top: 1.6em;
+}
+
+/* @gov.au/grid-12 v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/grid-12 v0.1.0 */
+/**
+ * Iterates through all 12 columns (≥2) to calculate the correct amount of left
+ * and right padding for each of the classes.
+ */
+/**
+ * Iterates through the columns to create a new list and then sets the float.
+ */
+/**
+ * Calculates the correct widths as a percentage based on the column count,
+ * column breakpoint class, and type (pull or offset).
+ */
+/**
+ * Calls the above mixins and combines them.
+ */
+/**
+ * Finally, we create the grid and all the necessary classes.
+ */
+.uikit-grid .container {
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .uikit-grid .container {
+    width: 744px;
+  }
+}
+
+@media (min-width: 992px) {
+  .uikit-grid .container {
+    width: 968px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .uikit-grid .container {
+    width: 1176px;
+  }
+}
+
+.uikit-grid .container,
+.uikit-grid .container-fluid {
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.uikit-grid .container:before, .uikit-grid .container:after,
+.uikit-grid .container-fluid:before,
+.uikit-grid .container-fluid:after {
+  content: " ";
+  display: table;
+}
+
+.uikit-grid .container:after,
+.uikit-grid .container-fluid:after {
+  clear: both;
+}
+
+.uikit-grid .row {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.uikit-grid .row:before, .uikit-grid .row:after {
+  content: " ";
+  display: table;
+}
+
+.uikit-grid .row:after {
+  clear: both;
+}
+
+.uikit-grid .col-xs-1, .uikit-grid .col-sm-1, .uikit-grid .col-md-1, .uikit-grid .col-lg-1, .uikit-grid .col-xs-2, .uikit-grid .col-sm-2, .uikit-grid .col-md-2, .uikit-grid .col-lg-2, .uikit-grid .col-xs-3, .uikit-grid .col-sm-3, .uikit-grid .col-md-3, .uikit-grid .col-lg-3, .uikit-grid .col-xs-4, .uikit-grid .col-sm-4, .uikit-grid .col-md-4, .uikit-grid .col-lg-4, .uikit-grid .col-xs-5, .uikit-grid .col-sm-5, .uikit-grid .col-md-5, .uikit-grid .col-lg-5, .uikit-grid .col-xs-6, .uikit-grid .col-sm-6, .uikit-grid .col-md-6, .uikit-grid .col-lg-6, .uikit-grid .col-xs-7, .uikit-grid .col-sm-7, .uikit-grid .col-md-7, .uikit-grid .col-lg-7, .uikit-grid .col-xs-8, .uikit-grid .col-sm-8, .uikit-grid .col-md-8, .uikit-grid .col-lg-8, .uikit-grid .col-xs-9, .uikit-grid .col-sm-9, .uikit-grid .col-md-9, .uikit-grid .col-lg-9, .uikit-grid .col-xs-10, .uikit-grid .col-sm-10, .uikit-grid .col-md-10, .uikit-grid .col-lg-10, .uikit-grid .col-xs-11, .uikit-grid .col-sm-11, .uikit-grid .col-md-11, .uikit-grid .col-lg-11, .uikit-grid .col-xs-12, .uikit-grid .col-sm-12, .uikit-grid .col-md-12, .uikit-grid .col-lg-12 {
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.uikit-grid .col-xs-1, .uikit-grid .col-xs-2, .uikit-grid .col-xs-3, .uikit-grid .col-xs-4, .uikit-grid .col-xs-5, .uikit-grid .col-xs-6, .uikit-grid .col-xs-7, .uikit-grid .col-xs-8, .uikit-grid .col-xs-9, .uikit-grid .col-xs-10, .uikit-grid .col-xs-11, .uikit-grid .col-xs-12 {
+  float: left;
+}
+
+.uikit-grid .col-xs-1 {
+  width: 8.33333%;
+}
+
+.uikit-grid .col-xs-2 {
+  width: 16.66667%;
+}
+
+.uikit-grid .col-xs-3 {
+  width: 25%;
+}
+
+.uikit-grid .col-xs-4 {
+  width: 33.33333%;
+}
+
+.uikit-grid .col-xs-5 {
+  width: 41.66667%;
+}
+
+.uikit-grid .col-xs-6 {
+  width: 50%;
+}
+
+.uikit-grid .col-xs-7 {
+  width: 58.33333%;
+}
+
+.uikit-grid .col-xs-8 {
+  width: 66.66667%;
+}
+
+.uikit-grid .col-xs-9 {
+  width: 75%;
+}
+
+.uikit-grid .col-xs-10 {
+  width: 83.33333%;
+}
+
+.uikit-grid .col-xs-11 {
+  width: 91.66667%;
+}
+
+.uikit-grid .col-xs-12 {
+  width: 100%;
+}
+
+.uikit-grid .col-xs-pull-0 {
+  right: auto;
+}
+
+.uikit-grid .col-xs-pull-1 {
+  right: 8.33333%;
+}
+
+.uikit-grid .col-xs-pull-2 {
+  right: 16.66667%;
+}
+
+.uikit-grid .col-xs-pull-3 {
+  right: 25%;
+}
+
+.uikit-grid .col-xs-pull-4 {
+  right: 33.33333%;
+}
+
+.uikit-grid .col-xs-pull-5 {
+  right: 41.66667%;
+}
+
+.uikit-grid .col-xs-pull-6 {
+  right: 50%;
+}
+
+.uikit-grid .col-xs-pull-7 {
+  right: 58.33333%;
+}
+
+.uikit-grid .col-xs-pull-8 {
+  right: 66.66667%;
+}
+
+.uikit-grid .col-xs-pull-9 {
+  right: 75%;
+}
+
+.uikit-grid .col-xs-pull-10 {
+  right: 83.33333%;
+}
+
+.uikit-grid .col-xs-pull-11 {
+  right: 91.66667%;
+}
+
+.uikit-grid .col-xs-pull-12 {
+  right: 100%;
+}
+
+.uikit-grid .col-xs-push-0 {
+  left: auto;
+}
+
+.uikit-grid .col-xs-push-1 {
+  left: 8.33333%;
+}
+
+.uikit-grid .col-xs-push-2 {
+  left: 16.66667%;
+}
+
+.uikit-grid .col-xs-push-3 {
+  left: 25%;
+}
+
+.uikit-grid .col-xs-push-4 {
+  left: 33.33333%;
+}
+
+.uikit-grid .col-xs-push-5 {
+  left: 41.66667%;
+}
+
+.uikit-grid .col-xs-push-6 {
+  left: 50%;
+}
+
+.uikit-grid .col-xs-push-7 {
+  left: 58.33333%;
+}
+
+.uikit-grid .col-xs-push-8 {
+  left: 66.66667%;
+}
+
+.uikit-grid .col-xs-push-9 {
+  left: 75%;
+}
+
+.uikit-grid .col-xs-push-10 {
+  left: 83.33333%;
+}
+
+.uikit-grid .col-xs-push-11 {
+  left: 91.66667%;
+}
+
+.uikit-grid .col-xs-push-12 {
+  left: 100%;
+}
+
+.uikit-grid .col-xs-offset-0 {
+  margin-left: 0%;
+}
+
+.uikit-grid .col-xs-offset-1 {
+  margin-left: 8.33333%;
+}
+
+.uikit-grid .col-xs-offset-2 {
+  margin-left: 16.66667%;
+}
+
+.uikit-grid .col-xs-offset-3 {
+  margin-left: 25%;
+}
+
+.uikit-grid .col-xs-offset-4 {
+  margin-left: 33.33333%;
+}
+
+.uikit-grid .col-xs-offset-5 {
+  margin-left: 41.66667%;
+}
+
+.uikit-grid .col-xs-offset-6 {
+  margin-left: 50%;
+}
+
+.uikit-grid .col-xs-offset-7 {
+  margin-left: 58.33333%;
+}
+
+.uikit-grid .col-xs-offset-8 {
+  margin-left: 66.66667%;
+}
+
+.uikit-grid .col-xs-offset-9 {
+  margin-left: 75%;
+}
+
+.uikit-grid .col-xs-offset-10 {
+  margin-left: 83.33333%;
+}
+
+.uikit-grid .col-xs-offset-11 {
+  margin-left: 91.66667%;
+}
+
+.uikit-grid .col-xs-offset-12 {
+  margin-left: 100%;
+}
+
+@media (min-width: 768px) {
+  .uikit-grid .col-sm-1, .uikit-grid .col-sm-2, .uikit-grid .col-sm-3, .uikit-grid .col-sm-4, .uikit-grid .col-sm-5, .uikit-grid .col-sm-6, .uikit-grid .col-sm-7, .uikit-grid .col-sm-8, .uikit-grid .col-sm-9, .uikit-grid .col-sm-10, .uikit-grid .col-sm-11, .uikit-grid .col-sm-12 {
+    float: left;
+  }
+  .uikit-grid .col-sm-1 {
+    width: 8.33333%;
+  }
+  .uikit-grid .col-sm-2 {
+    width: 16.66667%;
+  }
+  .uikit-grid .col-sm-3 {
+    width: 25%;
+  }
+  .uikit-grid .col-sm-4 {
+    width: 33.33333%;
+  }
+  .uikit-grid .col-sm-5 {
+    width: 41.66667%;
+  }
+  .uikit-grid .col-sm-6 {
+    width: 50%;
+  }
+  .uikit-grid .col-sm-7 {
+    width: 58.33333%;
+  }
+  .uikit-grid .col-sm-8 {
+    width: 66.66667%;
+  }
+  .uikit-grid .col-sm-9 {
+    width: 75%;
+  }
+  .uikit-grid .col-sm-10 {
+    width: 83.33333%;
+  }
+  .uikit-grid .col-sm-11 {
+    width: 91.66667%;
+  }
+  .uikit-grid .col-sm-12 {
+    width: 100%;
+  }
+  .uikit-grid .col-sm-pull-0 {
+    right: auto;
+  }
+  .uikit-grid .col-sm-pull-1 {
+    right: 8.33333%;
+  }
+  .uikit-grid .col-sm-pull-2 {
+    right: 16.66667%;
+  }
+  .uikit-grid .col-sm-pull-3 {
+    right: 25%;
+  }
+  .uikit-grid .col-sm-pull-4 {
+    right: 33.33333%;
+  }
+  .uikit-grid .col-sm-pull-5 {
+    right: 41.66667%;
+  }
+  .uikit-grid .col-sm-pull-6 {
+    right: 50%;
+  }
+  .uikit-grid .col-sm-pull-7 {
+    right: 58.33333%;
+  }
+  .uikit-grid .col-sm-pull-8 {
+    right: 66.66667%;
+  }
+  .uikit-grid .col-sm-pull-9 {
+    right: 75%;
+  }
+  .uikit-grid .col-sm-pull-10 {
+    right: 83.33333%;
+  }
+  .uikit-grid .col-sm-pull-11 {
+    right: 91.66667%;
+  }
+  .uikit-grid .col-sm-pull-12 {
+    right: 100%;
+  }
+  .uikit-grid .col-sm-push-0 {
+    left: auto;
+  }
+  .uikit-grid .col-sm-push-1 {
+    left: 8.33333%;
+  }
+  .uikit-grid .col-sm-push-2 {
+    left: 16.66667%;
+  }
+  .uikit-grid .col-sm-push-3 {
+    left: 25%;
+  }
+  .uikit-grid .col-sm-push-4 {
+    left: 33.33333%;
+  }
+  .uikit-grid .col-sm-push-5 {
+    left: 41.66667%;
+  }
+  .uikit-grid .col-sm-push-6 {
+    left: 50%;
+  }
+  .uikit-grid .col-sm-push-7 {
+    left: 58.33333%;
+  }
+  .uikit-grid .col-sm-push-8 {
+    left: 66.66667%;
+  }
+  .uikit-grid .col-sm-push-9 {
+    left: 75%;
+  }
+  .uikit-grid .col-sm-push-10 {
+    left: 83.33333%;
+  }
+  .uikit-grid .col-sm-push-11 {
+    left: 91.66667%;
+  }
+  .uikit-grid .col-sm-push-12 {
+    left: 100%;
+  }
+  .uikit-grid .col-sm-offset-0 {
+    margin-left: 0%;
+  }
+  .uikit-grid .col-sm-offset-1 {
+    margin-left: 8.33333%;
+  }
+  .uikit-grid .col-sm-offset-2 {
+    margin-left: 16.66667%;
+  }
+  .uikit-grid .col-sm-offset-3 {
+    margin-left: 25%;
+  }
+  .uikit-grid .col-sm-offset-4 {
+    margin-left: 33.33333%;
+  }
+  .uikit-grid .col-sm-offset-5 {
+    margin-left: 41.66667%;
+  }
+  .uikit-grid .col-sm-offset-6 {
+    margin-left: 50%;
+  }
+  .uikit-grid .col-sm-offset-7 {
+    margin-left: 58.33333%;
+  }
+  .uikit-grid .col-sm-offset-8 {
+    margin-left: 66.66667%;
+  }
+  .uikit-grid .col-sm-offset-9 {
+    margin-left: 75%;
+  }
+  .uikit-grid .col-sm-offset-10 {
+    margin-left: 83.33333%;
+  }
+  .uikit-grid .col-sm-offset-11 {
+    margin-left: 91.66667%;
+  }
+  .uikit-grid .col-sm-offset-12 {
+    margin-left: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .uikit-grid .col-md-1, .uikit-grid .col-md-2, .uikit-grid .col-md-3, .uikit-grid .col-md-4, .uikit-grid .col-md-5, .uikit-grid .col-md-6, .uikit-grid .col-md-7, .uikit-grid .col-md-8, .uikit-grid .col-md-9, .uikit-grid .col-md-10, .uikit-grid .col-md-11, .uikit-grid .col-md-12 {
+    float: left;
+  }
+  .uikit-grid .col-md-1 {
+    width: 8.33333%;
+  }
+  .uikit-grid .col-md-2 {
+    width: 16.66667%;
+  }
+  .uikit-grid .col-md-3 {
+    width: 25%;
+  }
+  .uikit-grid .col-md-4 {
+    width: 33.33333%;
+  }
+  .uikit-grid .col-md-5 {
+    width: 41.66667%;
+  }
+  .uikit-grid .col-md-6 {
+    width: 50%;
+  }
+  .uikit-grid .col-md-7 {
+    width: 58.33333%;
+  }
+  .uikit-grid .col-md-8 {
+    width: 66.66667%;
+  }
+  .uikit-grid .col-md-9 {
+    width: 75%;
+  }
+  .uikit-grid .col-md-10 {
+    width: 83.33333%;
+  }
+  .uikit-grid .col-md-11 {
+    width: 91.66667%;
+  }
+  .uikit-grid .col-md-12 {
+    width: 100%;
+  }
+  .uikit-grid .col-md-pull-0 {
+    right: auto;
+  }
+  .uikit-grid .col-md-pull-1 {
+    right: 8.33333%;
+  }
+  .uikit-grid .col-md-pull-2 {
+    right: 16.66667%;
+  }
+  .uikit-grid .col-md-pull-3 {
+    right: 25%;
+  }
+  .uikit-grid .col-md-pull-4 {
+    right: 33.33333%;
+  }
+  .uikit-grid .col-md-pull-5 {
+    right: 41.66667%;
+  }
+  .uikit-grid .col-md-pull-6 {
+    right: 50%;
+  }
+  .uikit-grid .col-md-pull-7 {
+    right: 58.33333%;
+  }
+  .uikit-grid .col-md-pull-8 {
+    right: 66.66667%;
+  }
+  .uikit-grid .col-md-pull-9 {
+    right: 75%;
+  }
+  .uikit-grid .col-md-pull-10 {
+    right: 83.33333%;
+  }
+  .uikit-grid .col-md-pull-11 {
+    right: 91.66667%;
+  }
+  .uikit-grid .col-md-pull-12 {
+    right: 100%;
+  }
+  .uikit-grid .col-md-push-0 {
+    left: auto;
+  }
+  .uikit-grid .col-md-push-1 {
+    left: 8.33333%;
+  }
+  .uikit-grid .col-md-push-2 {
+    left: 16.66667%;
+  }
+  .uikit-grid .col-md-push-3 {
+    left: 25%;
+  }
+  .uikit-grid .col-md-push-4 {
+    left: 33.33333%;
+  }
+  .uikit-grid .col-md-push-5 {
+    left: 41.66667%;
+  }
+  .uikit-grid .col-md-push-6 {
+    left: 50%;
+  }
+  .uikit-grid .col-md-push-7 {
+    left: 58.33333%;
+  }
+  .uikit-grid .col-md-push-8 {
+    left: 66.66667%;
+  }
+  .uikit-grid .col-md-push-9 {
+    left: 75%;
+  }
+  .uikit-grid .col-md-push-10 {
+    left: 83.33333%;
+  }
+  .uikit-grid .col-md-push-11 {
+    left: 91.66667%;
+  }
+  .uikit-grid .col-md-push-12 {
+    left: 100%;
+  }
+  .uikit-grid .col-md-offset-0 {
+    margin-left: 0%;
+  }
+  .uikit-grid .col-md-offset-1 {
+    margin-left: 8.33333%;
+  }
+  .uikit-grid .col-md-offset-2 {
+    margin-left: 16.66667%;
+  }
+  .uikit-grid .col-md-offset-3 {
+    margin-left: 25%;
+  }
+  .uikit-grid .col-md-offset-4 {
+    margin-left: 33.33333%;
+  }
+  .uikit-grid .col-md-offset-5 {
+    margin-left: 41.66667%;
+  }
+  .uikit-grid .col-md-offset-6 {
+    margin-left: 50%;
+  }
+  .uikit-grid .col-md-offset-7 {
+    margin-left: 58.33333%;
+  }
+  .uikit-grid .col-md-offset-8 {
+    margin-left: 66.66667%;
+  }
+  .uikit-grid .col-md-offset-9 {
+    margin-left: 75%;
+  }
+  .uikit-grid .col-md-offset-10 {
+    margin-left: 83.33333%;
+  }
+  .uikit-grid .col-md-offset-11 {
+    margin-left: 91.66667%;
+  }
+  .uikit-grid .col-md-offset-12 {
+    margin-left: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .uikit-grid .col-lg-1, .uikit-grid .col-lg-2, .uikit-grid .col-lg-3, .uikit-grid .col-lg-4, .uikit-grid .col-lg-5, .uikit-grid .col-lg-6, .uikit-grid .col-lg-7, .uikit-grid .col-lg-8, .uikit-grid .col-lg-9, .uikit-grid .col-lg-10, .uikit-grid .col-lg-11, .uikit-grid .col-lg-12 {
+    float: left;
+  }
+  .uikit-grid .col-lg-1 {
+    width: 8.33333%;
+  }
+  .uikit-grid .col-lg-2 {
+    width: 16.66667%;
+  }
+  .uikit-grid .col-lg-3 {
+    width: 25%;
+  }
+  .uikit-grid .col-lg-4 {
+    width: 33.33333%;
+  }
+  .uikit-grid .col-lg-5 {
+    width: 41.66667%;
+  }
+  .uikit-grid .col-lg-6 {
+    width: 50%;
+  }
+  .uikit-grid .col-lg-7 {
+    width: 58.33333%;
+  }
+  .uikit-grid .col-lg-8 {
+    width: 66.66667%;
+  }
+  .uikit-grid .col-lg-9 {
+    width: 75%;
+  }
+  .uikit-grid .col-lg-10 {
+    width: 83.33333%;
+  }
+  .uikit-grid .col-lg-11 {
+    width: 91.66667%;
+  }
+  .uikit-grid .col-lg-12 {
+    width: 100%;
+  }
+  .uikit-grid .col-lg-pull-0 {
+    right: auto;
+  }
+  .uikit-grid .col-lg-pull-1 {
+    right: 8.33333%;
+  }
+  .uikit-grid .col-lg-pull-2 {
+    right: 16.66667%;
+  }
+  .uikit-grid .col-lg-pull-3 {
+    right: 25%;
+  }
+  .uikit-grid .col-lg-pull-4 {
+    right: 33.33333%;
+  }
+  .uikit-grid .col-lg-pull-5 {
+    right: 41.66667%;
+  }
+  .uikit-grid .col-lg-pull-6 {
+    right: 50%;
+  }
+  .uikit-grid .col-lg-pull-7 {
+    right: 58.33333%;
+  }
+  .uikit-grid .col-lg-pull-8 {
+    right: 66.66667%;
+  }
+  .uikit-grid .col-lg-pull-9 {
+    right: 75%;
+  }
+  .uikit-grid .col-lg-pull-10 {
+    right: 83.33333%;
+  }
+  .uikit-grid .col-lg-pull-11 {
+    right: 91.66667%;
+  }
+  .uikit-grid .col-lg-pull-12 {
+    right: 100%;
+  }
+  .uikit-grid .col-lg-push-0 {
+    left: auto;
+  }
+  .uikit-grid .col-lg-push-1 {
+    left: 8.33333%;
+  }
+  .uikit-grid .col-lg-push-2 {
+    left: 16.66667%;
+  }
+  .uikit-grid .col-lg-push-3 {
+    left: 25%;
+  }
+  .uikit-grid .col-lg-push-4 {
+    left: 33.33333%;
+  }
+  .uikit-grid .col-lg-push-5 {
+    left: 41.66667%;
+  }
+  .uikit-grid .col-lg-push-6 {
+    left: 50%;
+  }
+  .uikit-grid .col-lg-push-7 {
+    left: 58.33333%;
+  }
+  .uikit-grid .col-lg-push-8 {
+    left: 66.66667%;
+  }
+  .uikit-grid .col-lg-push-9 {
+    left: 75%;
+  }
+  .uikit-grid .col-lg-push-10 {
+    left: 83.33333%;
+  }
+  .uikit-grid .col-lg-push-11 {
+    left: 91.66667%;
+  }
+  .uikit-grid .col-lg-push-12 {
+    left: 100%;
+  }
+  .uikit-grid .col-lg-offset-0 {
+    margin-left: 0%;
+  }
+  .uikit-grid .col-lg-offset-1 {
+    margin-left: 8.33333%;
+  }
+  .uikit-grid .col-lg-offset-2 {
+    margin-left: 16.66667%;
+  }
+  .uikit-grid .col-lg-offset-3 {
+    margin-left: 25%;
+  }
+  .uikit-grid .col-lg-offset-4 {
+    margin-left: 33.33333%;
+  }
+  .uikit-grid .col-lg-offset-5 {
+    margin-left: 41.66667%;
+  }
+  .uikit-grid .col-lg-offset-6 {
+    margin-left: 50%;
+  }
+  .uikit-grid .col-lg-offset-7 {
+    margin-left: 58.33333%;
+  }
+  .uikit-grid .col-lg-offset-8 {
+    margin-left: 66.66667%;
+  }
+  .uikit-grid .col-lg-offset-9 {
+    margin-left: 75%;
+  }
+  .uikit-grid .col-lg-offset-10 {
+    margin-left: 83.33333%;
+  }
+  .uikit-grid .col-lg-offset-11 {
+    margin-left: 91.66667%;
+  }
+  .uikit-grid .col-lg-offset-12 {
+    margin-left: 100%;
+  }
+}
+
+/* @gov.au/header v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/header v0.1.0 */
+/**
+ * Basic header block styling.
+ */
+.uikit-header {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #fff;
+  background: #18788D;
+  padding: 1.6em 0.8em 2em 1.2em;
+  margin-bottom: 1.6em;
+}
+
+.uikit-header.uikit-header--hero {
+  padding: 3.2em 0.8em 4em 1.2em;
+}
+
+@media (min-width: 768px) {
+  .uikit-header {
+    padding: 3.2em 1.6em 4.8em 6.4em;
+  }
+  .uikit-header.uikit-header--hero {
+    padding: 7.2em 1.6em 13.6em 6.4em;
+  }
+}
+
+.uikit-header.uikit-header--light {
+  background-color: #f0f3f5;
+  color: #313131;
+}
+
+.uikit-header.uikit-header--dark {
+  background-color: #313131;
+}
+
+.uikit-header-heading {
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .uikit-header-heading {
+    font-size: 36px;
+  }
+}
+
+.uikit-header-subline {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 42em;
+}
+
+@media (min-width: 768px) {
+  .uikit-header-subline {
+    font-size: 20px;
+  }
+}
+
+/* @gov.au/headings v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/headings v0.1.0 */
+/**
+ * Generates .uikit-display-[1…6] classes for display headings.
+ *
+ * The magic number here reduces the leading for these heading displays, since
+ * the body text leading is too large at headings/display sizes.
+ *
+ * We also set the font-size automatically too. (:
+ */
+.uikit-display-1 {
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
+  color: #313131;
+  display: block;
+  line-height: 1.4;
+  margin: 0 0 0.5em 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.uikit-display-2 {
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
+  color: #313131;
+  display: block;
+  line-height: 1.4;
+  margin: 0 0 0.5em 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.uikit-display-3 {
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
+  color: #313131;
+  display: block;
+  line-height: 1.4;
+  margin: 0 0 0.5em 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.uikit-display-4 {
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
+  color: #313131;
+  display: block;
+  line-height: 1.4;
+  margin: 0 0 0.5em 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.uikit-display-5 {
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
+  color: #313131;
+  display: block;
+  line-height: 1.4;
+  margin: 0 0 0.5em 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.uikit-display-6 {
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
+  color: #313131;
+  display: block;
+  line-height: 1.4;
+  margin: 0 0 0.5em 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.uikit-display-2,
+.uikit-display-3,
+.uikit-display-4 {
+  font-weight: normal;
+}
+
+/* @gov.au/inpage-nav v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/body v0.1.0 */
+@media print {
+  .uikit-body * {
+    text-shadow: none !important;
+    color: #000 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    border-color: #000 !important;
+  }
+  .uikit-body a,
+  .uikit-body a:visited {
+    text-decoration: underline;
+  }
+  .uikit-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  .uikit-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .uikit-body a[href^="javascript:"]:after,
+  .uikit-body a[href^="#"]:after {
+    content: "";
+  }
+  .uikit-body a[rel~='external']:after {
+    display: none !important;
+  }
+  .uikit-body pre,
+  .uikit-body blockquote {
+    border: 1px solid #000;
+    padding: 6px;
+    page-break-inside: avoid;
+  }
+  .uikit-body thead {
+    display: table-header-group;
+  }
+  .uikit-body tr,
+  .uikit-body img {
+    page-break-inside: avoid;
+  }
+  .uikit-body img {
+    max-width: 100% !important;
+  }
+  .uikit-body p,
+  .uikit-body h2,
+  .uikit-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  .uikit-body h2,
+  .uikit-body h3 {
+    page-break-after: avoid;
+  }
+  .uikit-body p a {
+    word-wrap: break-word;
+  }
+  .uikit-body select {
+    background: #fff !important;
+  }
+}
+
+.uikit-body {
+  margin: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131;
+  /**
+	 * Text selection and `mark` styling.
+	 */
+  /**
+	 * Vertical spacing of common text elements.
+	 */
+  /**
+	 * Emphasis and alt. voice/mood/diff. from prose text.
+	 */
+  /**
+	 * Important (leaving `b` out for now (and `u` also)).
+	 */
+  /**
+	 * `small`: for less important information (not stylistic purposes).
+	 */
+  /**
+	 * `s`: represents contents no longer accurate/relevant.
+	 */
+  /**
+	 * `del` & `ins`: editorial markup.
+	 *
+	 */
+  /**
+	 * Defining definition of a term.
+	 *
+	 * The paragraph, description list group, or section that is the nearest
+	 * ancestor of the `dfn` element must also contain the definition(s) for the term
+	 * given by the `dfn` element.
+	 *
+	 * Note: `abbr` can be nested inside `dfn`.
+	 */
+  /**
+	 * Abbreviations/acronyms.
+	 *
+	 * This styling removes any custom casing (mixing of u&lc chars in the `abbr`).
+	 *
+	 * Todo: test font stack fallbacks with the font-size adj.
+	 */
+  /**
+	 * Variables, eg. as used in mathematical expressions.
+	 *
+	 * We also provide semantic support for nested vars, and things like indices.
+	 */
+  /**
+	 * Code snippets and code blocks.
+	 */
+  /**
+	 * Pre-formatted text set by typographic characters.
+	 */
+  /**
+	 * Keyboard strokes.
+	 */
+  /**
+	 * Horizontal rule, used for paragraph-level thematic breaks.
+	 */
+}
+
+.uikit-body a {
+  -webkit-text-decoration-skip: objects;
+  color: #313131;
+  text-decoration: none;
+  border-bottom: solid 1px #18788D;
+  -webkit-transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+.uikit-body a:hover, .uikit-body a:focus {
+  background-color: #5bcbe3;
+  border-color: transparent;
+}
+
+.uikit-body a[rel~='external']:after {
+  content: ' ';
+  display: inline-block;
+  width: 0.7em;
+  height: 0.8em;
+  margin: 0 0.1em 0 0.25em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%2318788D' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%2318788D' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position-y: 0.12em;
+}
+
+.ie8 .uikit-body a[rel~='external']:after,
+.lt-ie8 .uikit-body a[rel~='external']:after {
+  content: '⇗';
+  color: #18788D;
+}
+
+.uikit-body mark,
+.uikit-body ::-moz-selection {
+  background-color: rgba(229, 172, 102, 0.5);
+}
+
+.uikit-body mark,
+.uikit-body ::selection {
+  background-color: rgba(229, 172, 102, 0.5);
+}
+
+.uikit-body mark {
+  box-shadow: 0 0 1px rgba(49, 49, 49, 0.4);
+}
+
+.uikit-body p {
+  max-width: 42em;
+}
+
+.uikit-body p,
+.uikit-body ul,
+.uikit-body ol,
+.uikit-body dl,
+.uikit-body pre {
+  margin-top: 0;
+  margin-bottom: 1.6em;
+}
+
+.uikit-body ul,
+.uikit-body ol,
+.uikit-body dd {
+  margin-left: 0;
+  padding-left: 1.6em;
+}
+
+.uikit-body ul > li,
+.uikit-body ol > li {
+  margin-bottom: 0.4em;
+}
+
+.uikit-body ul > li > ul,
+.uikit-body ul > li > ol,
+.uikit-body ol > li > ul,
+.uikit-body ol > li > ol {
+  margin-top: 0.4em;
+  margin-bottom: 0.8em;
+}
+
+.uikit-body ul > ul,
+.uikit-body ol > ul {
+  list-style-type: disc;
+}
+
+.uikit-body dl > dd {
+  margin-bottom: 1.6em;
+}
+
+.uikit-body dl > dt {
+  font-weight: bold;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.uikit-body dl > dt:first-of-type {
+  margin-top: 0;
+}
+
+.uikit-body em,
+.uikit-body i {
+  font-style: italic;
+}
+
+.uikit-body strong {
+  font-weight: bold;
+}
+
+.uikit-body small {
+  font-size: 87.5%;
+  color: #464646;
+}
+
+.uikit-body s {
+  text-decoration: line-through;
+}
+
+.uikit-body del {
+  text-decoration: line-through;
+  color: #5a5a5a;
+}
+
+.uikit-body ins {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
+}
+
+.uikit-body dfn {
+  font-style: normal;
+}
+
+.uikit-body abbr,
+.uikit-body abbr[title] {
+  font-size: 18px;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-bottom: 1px dotted #555;
+  cursor: help;
+}
+
+.uikit-body a abbr {
+  padding-bottom: 1px;
+}
+
+.uikit-body var {
+  padding: 0 1px;
+  font-style: italic;
+  font-family: serif;
+}
+
+.uikit-body var sup,
+.uikit-body var sub {
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
+  font-style: normal;
+  padding: 0 1px;
+}
+
+.uikit-body sub,
+.uikit-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.uikit-body sub {
+  bottom: -0.25em;
+}
+
+.uikit-body sup {
+  top: -0.5em;
+}
+
+.uikit-body code,
+.uikit-body kbd,
+.uikit-body pre {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+.uikit-body pre code,
+.uikit-body pre samp,
+.uikit-body pre kbd {
+  font-size: 14px;
+}
+
+.uikit-body kbd {
+  display: inline-block;
+  font-size: 14px;
+  border: solid 1px #8cbcc6;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 #00bfe9;
+  background-color: #fefefe;
+  text-align: center;
+  padding: 0 0.8em;
+  margin: 0 2px;
+}
+
+.uikit-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: none;
+  border-top: 1px solid #bbbbbb;
+  margin-bottom: 1.6em;
+}
+
+/*! @gov.au/link-list v0.1.0 */
+/**
+ * Block of links.
+ */
+.uikit-link-list {
+  display: block;
+  list-style-type: none;
+}
+
+.uikit-body .uikit-link-list {
+  margin: 0;
+  padding: 0.4em 0;
+}
+
+.uikit-link-list > li {
+  display: block;
+  margin: 0.4em;
+}
+
+.uikit-link-list.uikit-link-list--inline {
+  display: inline-block;
+}
+
+.uikit-link-list.uikit-link-list--inline > li {
+  display: inline-block;
+}
+
+.uikit-link-list.uikit-link-list--inverted {
+  background-color: #313131;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.uikit-link-list.uikit-link-list--inverted > li > a {
+  color: #fff;
+  border-color: #5bcbe3;
+  -webkit-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
+}
+
+.uikit-link-list.uikit-link-list--inverted > li > a:hover, .uikit-link-list.uikit-link-list--inverted > li > a:focus {
+  background-color: #5bcbe3;
+  color: #313131;
+}
+
+/*! @gov.au/inpage-nav v0.1.0 */
+.uikit-inpage-nav-links {
+  margin: 3.2em 0;
+  border-left: 0.4em solid #fbfbfc;
+  padding: 0 0 0.8em 1.2em;
+}
+
+.uikit-body .uikit-inpage-nav-links > ul,
+.uikit-body .uikit-inpage-nav-links > ol {
+  list-style-type: none;
+  margin: 1.6em 0 0;
+  padding: 0;
+}
+
+.uikit-body .uikit-inpage-nav-links > ul > li,
+.uikit-body .uikit-inpage-nav-links > ol > li {
+  margin-left: 0;
+  margin-bottom: 0.8em;
+  font-weight: bold;
+}
+
+.uikit-body .uikit-inpage-nav-links > ul > li:last-child,
+.uikit-body .uikit-inpage-nav-links > ol > li:last-child {
+  margin-bottom: 0;
+}
+
+.uikit-inpage-nav-links__heading {
+  color: #6f6f6f;
+}
+
+/* @gov.au/keyword-list v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/body v0.1.0 */
+@media print {
+  .uikit-body * {
+    text-shadow: none !important;
+    color: #000 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    border-color: #000 !important;
+  }
+  .uikit-body a,
+  .uikit-body a:visited {
+    text-decoration: underline;
+  }
+  .uikit-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  .uikit-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .uikit-body a[href^="javascript:"]:after,
+  .uikit-body a[href^="#"]:after {
+    content: "";
+  }
+  .uikit-body a[rel~='external']:after {
+    display: none !important;
+  }
+  .uikit-body pre,
+  .uikit-body blockquote {
+    border: 1px solid #000;
+    padding: 6px;
+    page-break-inside: avoid;
+  }
+  .uikit-body thead {
+    display: table-header-group;
+  }
+  .uikit-body tr,
+  .uikit-body img {
+    page-break-inside: avoid;
+  }
+  .uikit-body img {
+    max-width: 100% !important;
+  }
+  .uikit-body p,
+  .uikit-body h2,
+  .uikit-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  .uikit-body h2,
+  .uikit-body h3 {
+    page-break-after: avoid;
+  }
+  .uikit-body p a {
+    word-wrap: break-word;
+  }
+  .uikit-body select {
+    background: #fff !important;
+  }
+}
+
+.uikit-body {
+  margin: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131;
+  /**
+	 * Text selection and `mark` styling.
+	 */
+  /**
+	 * Vertical spacing of common text elements.
+	 */
+  /**
+	 * Emphasis and alt. voice/mood/diff. from prose text.
+	 */
+  /**
+	 * Important (leaving `b` out for now (and `u` also)).
+	 */
+  /**
+	 * `small`: for less important information (not stylistic purposes).
+	 */
+  /**
+	 * `s`: represents contents no longer accurate/relevant.
+	 */
+  /**
+	 * `del` & `ins`: editorial markup.
+	 *
+	 */
+  /**
+	 * Defining definition of a term.
+	 *
+	 * The paragraph, description list group, or section that is the nearest
+	 * ancestor of the `dfn` element must also contain the definition(s) for the term
+	 * given by the `dfn` element.
+	 *
+	 * Note: `abbr` can be nested inside `dfn`.
+	 */
+  /**
+	 * Abbreviations/acronyms.
+	 *
+	 * This styling removes any custom casing (mixing of u&lc chars in the `abbr`).
+	 *
+	 * Todo: test font stack fallbacks with the font-size adj.
+	 */
+  /**
+	 * Variables, eg. as used in mathematical expressions.
+	 *
+	 * We also provide semantic support for nested vars, and things like indices.
+	 */
+  /**
+	 * Code snippets and code blocks.
+	 */
+  /**
+	 * Pre-formatted text set by typographic characters.
+	 */
+  /**
+	 * Keyboard strokes.
+	 */
+  /**
+	 * Horizontal rule, used for paragraph-level thematic breaks.
+	 */
+}
+
+.uikit-body a {
+  -webkit-text-decoration-skip: objects;
+  color: #313131;
+  text-decoration: none;
+  border-bottom: solid 1px #18788D;
+  -webkit-transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+.uikit-body a:hover, .uikit-body a:focus {
+  background-color: #5bcbe3;
+  border-color: transparent;
+}
+
+.uikit-body a[rel~='external']:after {
+  content: ' ';
+  display: inline-block;
+  width: 0.7em;
+  height: 0.8em;
+  margin: 0 0.1em 0 0.25em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%2318788D' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%2318788D' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position-y: 0.12em;
+}
+
+.ie8 .uikit-body a[rel~='external']:after,
+.lt-ie8 .uikit-body a[rel~='external']:after {
+  content: '⇗';
+  color: #18788D;
+}
+
+.uikit-body mark,
+.uikit-body ::-moz-selection {
+  background-color: rgba(229, 172, 102, 0.5);
+}
+
+.uikit-body mark,
+.uikit-body ::selection {
+  background-color: rgba(229, 172, 102, 0.5);
+}
+
+.uikit-body mark {
+  box-shadow: 0 0 1px rgba(49, 49, 49, 0.4);
+}
+
+.uikit-body p {
+  max-width: 42em;
+}
+
+.uikit-body p,
+.uikit-body ul,
+.uikit-body ol,
+.uikit-body dl,
+.uikit-body pre {
+  margin-top: 0;
+  margin-bottom: 1.6em;
+}
+
+.uikit-body ul,
+.uikit-body ol,
+.uikit-body dd {
+  margin-left: 0;
+  padding-left: 1.6em;
+}
+
+.uikit-body ul > li,
+.uikit-body ol > li {
+  margin-bottom: 0.4em;
+}
+
+.uikit-body ul > li > ul,
+.uikit-body ul > li > ol,
+.uikit-body ol > li > ul,
+.uikit-body ol > li > ol {
+  margin-top: 0.4em;
+  margin-bottom: 0.8em;
+}
+
+.uikit-body ul > ul,
+.uikit-body ol > ul {
+  list-style-type: disc;
+}
+
+.uikit-body dl > dd {
+  margin-bottom: 1.6em;
+}
+
+.uikit-body dl > dt {
+  font-weight: bold;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.uikit-body dl > dt:first-of-type {
+  margin-top: 0;
+}
+
+.uikit-body em,
+.uikit-body i {
+  font-style: italic;
+}
+
+.uikit-body strong {
+  font-weight: bold;
+}
+
+.uikit-body small {
+  font-size: 87.5%;
+  color: #464646;
+}
+
+.uikit-body s {
+  text-decoration: line-through;
+}
+
+.uikit-body del {
+  text-decoration: line-through;
+  color: #5a5a5a;
+}
+
+.uikit-body ins {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
+}
+
+.uikit-body dfn {
+  font-style: normal;
+}
+
+.uikit-body abbr,
+.uikit-body abbr[title] {
+  font-size: 18px;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-bottom: 1px dotted #555;
+  cursor: help;
+}
+
+.uikit-body a abbr {
+  padding-bottom: 1px;
+}
+
+.uikit-body var {
+  padding: 0 1px;
+  font-style: italic;
+  font-family: serif;
+}
+
+.uikit-body var sup,
+.uikit-body var sub {
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
+  font-style: normal;
+  padding: 0 1px;
+}
+
+.uikit-body sub,
+.uikit-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.uikit-body sub {
+  bottom: -0.25em;
+}
+
+.uikit-body sup {
+  top: -0.5em;
+}
+
+.uikit-body code,
+.uikit-body kbd,
+.uikit-body pre {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+.uikit-body pre code,
+.uikit-body pre samp,
+.uikit-body pre kbd {
+  font-size: 14px;
+}
+
+.uikit-body kbd {
+  display: inline-block;
+  font-size: 14px;
+  border: solid 1px #8cbcc6;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 #00bfe9;
+  background-color: #fefefe;
+  text-align: center;
+  padding: 0 0.8em;
+  margin: 0 2px;
+}
+
+.uikit-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: none;
+  border-top: 1px solid #bbbbbb;
+  margin-bottom: 1.6em;
+}
+
+/*! @gov.au/link-list v0.1.0 */
+/**
+ * Block of links.
+ */
+.uikit-link-list {
+  display: block;
+  list-style-type: none;
+}
+
+.uikit-body .uikit-link-list {
+  margin: 0;
+  padding: 0.4em 0;
+}
+
+.uikit-link-list > li {
+  display: block;
+  margin: 0.4em;
+}
+
+.uikit-link-list.uikit-link-list--inline {
+  display: inline-block;
+}
+
+.uikit-link-list.uikit-link-list--inline > li {
+  display: inline-block;
+}
+
+.uikit-link-list.uikit-link-list--inverted {
+  background-color: #313131;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.uikit-link-list.uikit-link-list--inverted > li > a {
+  color: #fff;
+  border-color: #5bcbe3;
+  -webkit-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
+}
+
+.uikit-link-list.uikit-link-list--inverted > li > a:hover, .uikit-link-list.uikit-link-list--inverted > li > a:focus {
+  background-color: #5bcbe3;
+  color: #313131;
+}
+
+/*! @gov.au/keyword-list v0.1.0 */
+.uikit-keyword-list:before, .uikit-keyword-list:after {
+  content: "";
+  display: table;
+}
+
+.uikit-keyword-list:after {
+  clear: both;
+}
+
+.uikit-body .uikit-keyword-list > li {
+  float: left;
+  clear: both;
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0.8em;
+  color: #313131;
+}
+
+.uikit-keyword-list__item {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.uikit-body .uikit-keyword-list__item__small {
+  display: block;
+  font-size: 18px;
+  color: #313131;
+}
+
+/* @gov.au/link-list v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/body v0.1.0 */
+@media print {
+  .uikit-body * {
+    text-shadow: none !important;
+    color: #000 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    border-color: #000 !important;
+  }
+  .uikit-body a,
+  .uikit-body a:visited {
+    text-decoration: underline;
+  }
+  .uikit-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  .uikit-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .uikit-body a[href^="javascript:"]:after,
+  .uikit-body a[href^="#"]:after {
+    content: "";
+  }
+  .uikit-body a[rel~='external']:after {
+    display: none !important;
+  }
+  .uikit-body pre,
+  .uikit-body blockquote {
+    border: 1px solid #000;
+    padding: 6px;
+    page-break-inside: avoid;
+  }
+  .uikit-body thead {
+    display: table-header-group;
+  }
+  .uikit-body tr,
+  .uikit-body img {
+    page-break-inside: avoid;
+  }
+  .uikit-body img {
+    max-width: 100% !important;
+  }
+  .uikit-body p,
+  .uikit-body h2,
+  .uikit-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  .uikit-body h2,
+  .uikit-body h3 {
+    page-break-after: avoid;
+  }
+  .uikit-body p a {
+    word-wrap: break-word;
+  }
+  .uikit-body select {
+    background: #fff !important;
+  }
+}
+
+.uikit-body {
+  margin: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131;
+  /**
+	 * Text selection and `mark` styling.
+	 */
+  /**
+	 * Vertical spacing of common text elements.
+	 */
+  /**
+	 * Emphasis and alt. voice/mood/diff. from prose text.
+	 */
+  /**
+	 * Important (leaving `b` out for now (and `u` also)).
+	 */
+  /**
+	 * `small`: for less important information (not stylistic purposes).
+	 */
+  /**
+	 * `s`: represents contents no longer accurate/relevant.
+	 */
+  /**
+	 * `del` & `ins`: editorial markup.
+	 *
+	 */
+  /**
+	 * Defining definition of a term.
+	 *
+	 * The paragraph, description list group, or section that is the nearest
+	 * ancestor of the `dfn` element must also contain the definition(s) for the term
+	 * given by the `dfn` element.
+	 *
+	 * Note: `abbr` can be nested inside `dfn`.
+	 */
+  /**
+	 * Abbreviations/acronyms.
+	 *
+	 * This styling removes any custom casing (mixing of u&lc chars in the `abbr`).
+	 *
+	 * Todo: test font stack fallbacks with the font-size adj.
+	 */
+  /**
+	 * Variables, eg. as used in mathematical expressions.
+	 *
+	 * We also provide semantic support for nested vars, and things like indices.
+	 */
+  /**
+	 * Code snippets and code blocks.
+	 */
+  /**
+	 * Pre-formatted text set by typographic characters.
+	 */
+  /**
+	 * Keyboard strokes.
+	 */
+  /**
+	 * Horizontal rule, used for paragraph-level thematic breaks.
+	 */
+}
+
+.uikit-body a {
+  -webkit-text-decoration-skip: objects;
+  color: #313131;
+  text-decoration: none;
+  border-bottom: solid 1px #18788D;
+  -webkit-transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+.uikit-body a:hover, .uikit-body a:focus {
+  background-color: #5bcbe3;
+  border-color: transparent;
+}
+
+.uikit-body a[rel~='external']:after {
+  content: ' ';
+  display: inline-block;
+  width: 0.7em;
+  height: 0.8em;
+  margin: 0 0.1em 0 0.25em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%2318788D' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%2318788D' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position-y: 0.12em;
+}
+
+.ie8 .uikit-body a[rel~='external']:after,
+.lt-ie8 .uikit-body a[rel~='external']:after {
+  content: '⇗';
+  color: #18788D;
+}
+
+.uikit-body mark,
+.uikit-body ::-moz-selection {
+  background-color: rgba(229, 172, 102, 0.5);
+}
+
+.uikit-body mark,
+.uikit-body ::selection {
+  background-color: rgba(229, 172, 102, 0.5);
+}
+
+.uikit-body mark {
+  box-shadow: 0 0 1px rgba(49, 49, 49, 0.4);
+}
+
+.uikit-body p {
+  max-width: 42em;
+}
+
+.uikit-body p,
+.uikit-body ul,
+.uikit-body ol,
+.uikit-body dl,
+.uikit-body pre {
+  margin-top: 0;
+  margin-bottom: 1.6em;
+}
+
+.uikit-body ul,
+.uikit-body ol,
+.uikit-body dd {
+  margin-left: 0;
+  padding-left: 1.6em;
+}
+
+.uikit-body ul > li,
+.uikit-body ol > li {
+  margin-bottom: 0.4em;
+}
+
+.uikit-body ul > li > ul,
+.uikit-body ul > li > ol,
+.uikit-body ol > li > ul,
+.uikit-body ol > li > ol {
+  margin-top: 0.4em;
+  margin-bottom: 0.8em;
+}
+
+.uikit-body ul > ul,
+.uikit-body ol > ul {
+  list-style-type: disc;
+}
+
+.uikit-body dl > dd {
+  margin-bottom: 1.6em;
+}
+
+.uikit-body dl > dt {
+  font-weight: bold;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.uikit-body dl > dt:first-of-type {
+  margin-top: 0;
+}
+
+.uikit-body em,
+.uikit-body i {
+  font-style: italic;
+}
+
+.uikit-body strong {
+  font-weight: bold;
+}
+
+.uikit-body small {
+  font-size: 87.5%;
+  color: #464646;
+}
+
+.uikit-body s {
+  text-decoration: line-through;
+}
+
+.uikit-body del {
+  text-decoration: line-through;
+  color: #5a5a5a;
+}
+
+.uikit-body ins {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
+}
+
+.uikit-body dfn {
+  font-style: normal;
+}
+
+.uikit-body abbr,
+.uikit-body abbr[title] {
+  font-size: 18px;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-bottom: 1px dotted #555;
+  cursor: help;
+}
+
+.uikit-body a abbr {
+  padding-bottom: 1px;
+}
+
+.uikit-body var {
+  padding: 0 1px;
+  font-style: italic;
+  font-family: serif;
+}
+
+.uikit-body var sup,
+.uikit-body var sub {
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
+  font-style: normal;
+  padding: 0 1px;
+}
+
+.uikit-body sub,
+.uikit-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.uikit-body sub {
+  bottom: -0.25em;
+}
+
+.uikit-body sup {
+  top: -0.5em;
+}
+
+.uikit-body code,
+.uikit-body kbd,
+.uikit-body pre {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+.uikit-body pre code,
+.uikit-body pre samp,
+.uikit-body pre kbd {
+  font-size: 14px;
+}
+
+.uikit-body kbd {
+  display: inline-block;
+  font-size: 14px;
+  border: solid 1px #8cbcc6;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 #00bfe9;
+  background-color: #fefefe;
+  text-align: center;
+  padding: 0 0.8em;
+  margin: 0 2px;
+}
+
+.uikit-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: none;
+  border-top: 1px solid #bbbbbb;
+  margin-bottom: 1.6em;
+}
+
+/*! @gov.au/link-list v0.1.0 */
+/**
+ * Block of links.
+ */
+.uikit-link-list {
+  display: block;
+  list-style-type: none;
+}
+
+.uikit-body .uikit-link-list {
+  margin: 0;
+  padding: 0.4em 0;
+}
+
+.uikit-link-list > li {
+  display: block;
+  margin: 0.4em;
+}
+
+.uikit-link-list.uikit-link-list--inline {
+  display: inline-block;
+}
+
+.uikit-link-list.uikit-link-list--inline > li {
+  display: inline-block;
+}
+
+.uikit-link-list.uikit-link-list--inverted {
+  background-color: #313131;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.uikit-link-list.uikit-link-list--inverted > li > a {
+  color: #fff;
+  border-color: #5bcbe3;
+  -webkit-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
+}
+
+.uikit-link-list.uikit-link-list--inverted > li > a:hover, .uikit-link-list.uikit-link-list--inverted > li > a:focus {
+  background-color: #5bcbe3;
+  color: #313131;
+}
+
+/* @gov.au/page-alerts v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/page-alerts v0.1.0 */
+@media print {
+  .uikit-page-alerts {
+    border-color: #000 !important;
+    background-color: #fff !important;
+    border-left: 2px solid #000 !important;
+  }
+  .uikit-page-alerts__icon {
+    display: none !important;
+  }
+}
+
+.uikit-page-alerts {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131;
+  line-height: 1.6;
+  position: relative;
+  margin: 1.6em 0;
+  padding: 1.2em 0.8em 1.2em 0.8em;
+  border: solid 2px #00bfe9;
+  border-left: 48px solid #00bfe9;
+  border-radius: 3px;
+  max-width: 42em;
+}
+
+.uikit-page-alerts :first-child {
+  margin-top: 0;
+}
+
+.uikit-page-alerts :last-child {
+  margin-bottom: 0;
+}
+
+.uikit-page-alerts:after {
+  content: ' ';
+  position: absolute;
+  display: block;
+  left: -36px;
+  top: 50%;
+  margin-top: -12px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Ccircle fill='%23fff' cx='64' cy='64' r='64'/%3E\a   %3Crect fill='%2300bfe9' width='16' height='16' x='56' y='20' rx='2'/%3E\a   %3Crect fill='%2300bfe9' width='16' height='56' x='56' y='44' rx='2'/%3E\a   %3Crect fill='%2300bfe9' width='40' height='16' x='44' y='84' rx='2'/%3E\a   %3Crect fill='%2300bfe9' width='28' height='16' x='44' y='44' rx='2'/%3E\a   %3C/svg%3E");
+}
+
+.ie8 .uikit-page-alerts:after,
+.lt-ie8 .uikit-page-alerts:after {
+  background: none;
+  text-align: center;
+  background-color: #fff;
+  color: #00bfe9;
+  font-weight: bold;
+  content: 'i';
+}
+
+/**
+ * Page alert success
+ */
+.uikit-page-alerts--success {
+  border-color: #339176;
+}
+
+.uikit-page-alerts--success:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Ccircle fill='%23fff' cx='64' cy='64' r='64'/%3E\a   %3Cpath fill='%23007554' d='M102.59 45.41c.778-.778.782-2.038-.002-2.822l-9.176-9.176c-.78-.78-2.052-.772-2.823 0L56 68\a    41.42 53.42c-.784-.784-2.048-.792-2.832-.008l-9.176 9.176c-.78.78-.775 2.05-.004 2.82l25.184 25.184c.778.778 2.04.775 2.82-.003l45.177-45.18z'/%3E\a   %3C/svg%3E");
+}
+
+.ie8 .uikit-page-alerts--success:after,
+.lt-ie8 .uikit-page-alerts--success:after {
+  color: #007554;
+  content: '✓';
+}
+
+/**
+ * Page alert warning.
+ */
+.uikit-page-alerts--warning {
+  border-color: #d47500;
+}
+
+.uikit-page-alerts--warning:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Cpath fill='%23fff' d='M71.99 12.78l54.796 99.458c1.665 2.997 1.617 7.993-.143 10.99-.808 1.38-1.914 2.473-3.317\a    3.282-1.403.808-2.914 1.213-4.53 1.213H9.206c-1.62 0-3.13-.405-4.533-1.213-1.403-.81-2.51-1.903-3.317-3.282-1.76-2.997-1.808-7.993-.143-10.99L56.01\a    12.78c.808-1.474 1.925-2.64 3.352-3.496C60.79 8.428 62.335 8 64 8s3.21.428 4.638 1.284c1.427.856 2.544 2.022 3.353 3.496z'/%3E\a   %3Crect fill='%23d47500' width='16' height='16' x='56' y='96' rx='2'/%3E\a   %3Cpath fill='%23d47500' d='M52.167 42c-.092-1.104.73-2 1.838-2h19.99c1.107 0 1.93.895 1.838 2l-3.666 44c-.092 1.104-1.062 2-2.16 2H57.993c-1.1\a    0-2.07-.895-2.16-2l-3.667-44z'/%3E\a   %3C/svg%3E");
+}
+
+.ie8 .uikit-page-alerts--warning:after,
+.lt-ie8 .uikit-page-alerts--warning:after {
+  color: #d47500;
+  content: '!';
+}
+
+/**
+ * Page alert error.
+ */
+.uikit-page-alerts--error {
+  border-color: #cc0000;
+}
+
+.uikit-page-alerts--error:after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Ccircle fill='%23fff' cx='64' cy='64' r='64'/%3E\a   %3Ccircle fill='%23cc0000' cx='64' cy='64' r='48'/%3E\a   %3Cpath fill='%23fff' fill-rule='nonzero' d='M18.745 92.284l73.54-73.54 16.97 16.972-73.54 73.54z'/%3E\a   %3C/svg%3E");
+}
+
+.ie8 .uikit-page-alerts--error:after,
+.lt-ie8 .uikit-page-alerts--error:after {
+  color: #cc0000;
+  content: 'X';
+}
+
+/**
+ * Screen-reader only class for interlinking error messages and corresponding form elements.
+ */
+.uikit-page-alerts__sronly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* @gov.au/responsive-media v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/responsive-media v0.1.0 */
+.uikit-responsive-media-vid {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 0.8em;
+}
+
+.uikit-responsive-media-vid > .uikit-responsive-media-vid__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+
+.uikit-responsive-media-vid.uikit-responsive-media-vid--16x9 {
+  padding-bottom: 56.25%;
+}
+
+.uikit-responsive-media-vid.uikit-responsive-media-vid--4x3 {
+  padding-bottom: 75%;
+}
+
+.uikit-responsive-media-img {
+  max-width: 100%;
+}
+
+/* @gov.au/skip-link v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/skip-link v0.1.0 */
+@media print {
+  .uikit-skip-link__link {
+    background: #fff !important;
+  }
+}
+
+.uikit-skip-link {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131;
+  line-height: 1.6;
+}
+
+.uikit-skip-link__link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.uikit-skip-link__link:active, .uikit-skip-link__link:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: absolute;
+  width: auto;
+  font-size: 21px;
+  top: 0.8em;
+  left: 0.8em;
+  padding: 0.4em 0.8em;
+  color: #313131;
+  background-color: #5bcbe3;
   text-decoration: none;
 }
 
-.table-drag__handle-icon,
-.tabledrag-handle .handle {
-  box-sizing: content-box;
-  background: url(../sass/forms/table-drag/handle-icon.png) no-repeat 6px 9px;
-  height: 13px;
-  margin: -.4em .5em;
-  padding: .42em .5em;
-  width: 13px;
+/* @gov.au/tags v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/tags v0.1.0 */
+@media print {
+  .uikit-tags__item {
+    border-color: #000 !important;
+  }
 }
 
-.table-drag__handle.is-hover .table-drag__handle-icon, .table-drag__handle-icon--is-hover, .is-hover.tabledrag-handle .table-drag__handle-icon,
-.tabledrag-handle-hover .handle,
-.table-drag__handle.is-hover .tabledrag-handle .handle,
-.tabledrag-handle .table-drag__handle.is-hover .handle,
-.is-hover.tabledrag-handle .handle {
-  background-position: 6px -11px;
+.uikit-tags {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131;
+  line-height: 1.6;
+  margin-bottom: 0.4em;
 }
 
-.table-drag__toggle-weight-wrapper,
-.tabledrag-toggle-weight-wrapper {
-  text-align: right;
+.uikit-body .uikit-tags {
+  margin-bottom: 0.4em;
+  padding-left: 0;
 }
 
-[dir="rtl"] .table-drag__toggle-weight-wrapper,
-[dir="rtl"] .tabledrag-toggle-weight-wrapper {
-  text-align: left;
+.uikit-tags > dt {
+  display: inline-block;
 }
 
-.table-drag__toggle-weight,
-.tabledrag-toggle-weight {
-  font-size: .9em;
+.uikit-body .uikit-tags > dt {
+  margin-bottom: 0.4em;
 }
 
-.table-drag__indentation,
-.indentation {
-  float: left;
-  height: 1.7em;
-  margin: -.4em .2em -.4em -.4em;
-  padding: .42em 0 .42em .6em;
-  width: 20px;
+.uikit-tags__item {
+  border: 1px solid #5bcbe3;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 0.4em 0.4em 0;
+  padding: 0 0.4em;
 }
 
-[dir="rtl"] .table-drag__indentation,
-[dir="rtl"] .indentation {
-  float: right;
-  margin: -.4em -.4em -.4em .2em;
-  padding: .42em .6em .42em 0;
+.uikit-body .uikit-tags__item {
+  margin-bottom: 0.4em;
+  padding-left: 0.4em;
 }
 
-.table-drag__tree-child,
-.table-drag__tree-child-last,
-.tree-child-last,
-.table-drag__tree-child-horizontal,
-.tree-child-horizontal,
-.tree-child {
-  background: url(../sass/forms/table-drag/tree-child.png) no-repeat 11px center;
+.uikit-tags__item > a {
+  display: inline-block;
+  margin: 0 -0.4em;
+  padding: 0 0.4em;
+  text-decoration: none;
+  color: #313131;
 }
 
-[dir="rtl"] .table-drag__tree-child,
-[dir="rtl"] .table-drag__tree-child-last,
-[dir="rtl"] .tree-child-last,
-[dir="rtl"] .table-drag__tree-child-horizontal,
-[dir="rtl"] .tree-child-horizontal,
-[dir="rtl"] .tree-child {
-  background-position: -65px center;
+.uikit-tags__item > a:hover, .uikit-tags__item > a:focus {
+  background-color: #5bcbe3;
 }
 
-.table-drag__tree-child-last,
-.tree-child-last {
-  background-image: url(../sass/forms/table-drag/tree-child-last.png);
+.uikit-body .uikit-tags__item > a {
+  border: none;
 }
 
-.table-drag__tree-child-horizontal,
-.tree-child-horizontal {
-  background-position: -11px center;
+/* @gov.au/text-inputs v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/text-inputs v0.1.0 */
+@media print {
+  .uikit-text-input {
+    border-color: #000 !important;
+  }
+  :disabled {
+    background-color: #ccc !important;
+    border-color: transparent;
+  }
+  [disabled] {
+    background-color: #ccc !important;
+  }
+}
+
+/**
+ * Text input labels.
+ */
+.uikit-text-input__label {
+  display: block;
+  margin-bottom: 0.8em;
+}
+
+.uikit-text-input__label > .uikit-text-input {
+  margin-top: 0.8em;
+}
+
+/**
+ * Generic text input styling.
+ *
+ * Also includes variants:
+ * - invalid
+ * - valid
+ * - :focus
+ * - :disabled/[disabled]
+ */
+.uikit-text-input {
+  border: 2px solid #bbbbbb;
+  padding: 0.4em;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131;
+}
+
+.uikit-text-input:invalid {
+  border: 2px solid #cc0000;
+}
+
+.uikit-text-input.uikit-text-input--invalid {
+  border: 2px solid #cc0000;
+}
+
+.uikit-text-input.uikit-text-input--valid {
+  border: 2px solid #339176;
+}
+
+.uikit-text-input:disabled {
+  cursor: not-allowed;
+  background: #f0f3f5;
+  border-color: transparent;
+}
+
+.uikit-text-input[disabled] {
+  cursor: not-allowed;
+  background: #f0f3f5;
+  border-color: transparent;
+}
+
+/**
+ * Block modifier
+ */
+.uikit-text-input--block {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/**
+ * Textarea styling.
+ */
+.uikit-text-input--textarea {
+  line-height: 1.6;
+}
+
+/**
+ * Number input styling.
+ *
+ * Numbers are easier to disambiguate from each other (and letters) when set in
+ * monospace.
+ */
+.uikit-text-input--number {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+  letter-spacing: 2px;
+}
+
+/**
+ * Hint text.
+ *
+ * Built so it can sit both in- and outside the `label`.
+ */
+.uikit-text-input__hint {
+  display: block;
+  margin-bottom: 0.4em;
+  font-size: 87.5%;
+}
+
+.uikit-text-input__label > .uikit-text-input__hint,
+.uikit-text-input + .uikit-text-input__hint {
+  margin-top: 0.4em;
 }
 
 /*# sourceMappingURL=styles.css.map */
