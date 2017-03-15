@@ -1,0 +1,8 @@
+.sass-cache/*
+README.txt
+build/dist
+STARTERKIT/build/dist
+ui-kit
+# node_modules folders
+node_modules
+STARTERKIT/node_modules

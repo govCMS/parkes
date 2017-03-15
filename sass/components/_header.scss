@@ -1,0 +1,160 @@
+.page-header .wrapper {
+  padding-bottom: 2em;
+}
+
+.page-header__logo,
+.page-header__site-info,
+.page-header__content {
+  text-align: center;
+}
+
+.page-header__logo {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.page-header__site-info {
+  text-align: center;
+  margin-top: 0;
+
+  a {
+    border-bottom: none !important;
+    display: block;
+
+    &:hover,
+    &:focus {
+      background-color: transparent !important;
+    }
+  }
+}
+
+.page-header__site-title {
+  font-size: 1.4em;
+  margin-bottom: 0;
+  font-weight: $bold-font-weight;
+}
+
+.page-header__site_slogan {
+  color: $non-black;
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+.page-header__content {
+  form,
+  form div {
+    display: inline-flex;
+    white-space: nowrap;
+  }
+
+  form {
+    float: none;
+    margin-top: 1.5em;
+
+    .form-item {
+      margin-bottom: 0;
+    }
+
+    [type=text], [type=submit] {
+      border: none;
+      margin: 0;
+
+      &:hover {
+        background-color: #e1e7eb;
+      }
+    }
+
+    [type=text] {
+      background-color: #f0f3f5;
+      line-height: 2.15em;
+      width: 100%;
+      border: 2px solid $light-grey;
+      border-right: none;
+
+      &:focus {
+        border: 2px solid $light-aqua;
+        outline: none;
+      }
+    }
+
+    [type=submit] {
+      border: 2px solid $light-grey;
+      border-left: none;
+    }
+
+    [type=submit] {
+      background: #f0f3f5 url("../images/icons/search-navy.svg") center center no-repeat;
+      background-size: 20px auto;
+      float: right;
+      position: relative;
+    }
+  }
+}
+
+
+@include media($tablet) {
+  .page-header .wrapper {
+    padding-bottom: 0;
+  }
+
+  .page-header__branding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .page-header__logo,
+  .page-header__site-info,
+  .page-header__content {
+    text-align: left;
+  }
+
+  .page-header__logo {
+    img {
+      margin-right: 1em;
+    }
+  }
+
+  .page-header__site-info {
+    padding: 0 1em;
+  }
+
+  .page-header__site-title {
+    margin: 0 0 .25em 0;
+  }
+
+  .page-header__site_slogan {
+    margin: 0;
+  }
+
+  .page-header__content form {
+    float: right;
+    margin: 0;
+
+    [type=text] {
+      line-height: 1.8em;
+      width: 10em;
+    }
+  }
+}
+
+@include media($desktop) {
+  .page-header__site-info {
+    margin-top: 1.5em;
+  }
+
+  .page-header__content form {
+    @include button-colours($button-bg-colour, $button-bg-colour--hover, $button-bg-colour--active, $button-text-colour, $button-bg-colour--disabled);
+
+    [type=text] {
+      width: 15em;
+    }
+
+    [type=submit] {
+      background-image: none;
+      border: none;
+    }
+  }
+}

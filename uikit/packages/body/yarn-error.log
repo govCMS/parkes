@@ -1,0 +1,134 @@
+Arguments: 
+  /usr/bin/nodejs /usr/share/yarn/bin/yarn.js add @gov.au/body@0.1.0 @gov.au/breadcrumbs@0.1.0 @gov.au/buttons@0.1.0 @gov.au/callout@0.1.0 @gov.au/control-input@0.1.0 @gov.au/cta-link@0.1.0 @gov.au/direction-links@0.1.0 @gov.au/footer@0.1.0 @gov.au/grid-12@0.1.0 @gov.au/header@0.1.0 @gov.au/headings@0.1.0 @gov.au/inpage-nav@0.1.0 @gov.au/keyword-list@0.1.0 @gov.au/link-list@0.1.0 @gov.au/page-alerts@0.1.0 @gov.au/responsive-media@0.1.0 @gov.au/skip-link@0.1.0 @gov.au/tags@0.1.0 @gov.au/text-inputs@0.1.0
+
+PATH: 
+  /home/vagrant/.npm-global/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/vagrant/.composer/vendor/bin:/home/vagrant/.node/bin
+
+Yarn version: 
+  0.21.3
+
+Node version: 
+  7.6.0
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+  	"name": "@gov.au/body",
+  	"version": "0.1.0",
+  	"description": "Basic body styles for body HTML elements",
+  	"keywords": [
+  		"uikit",
+  		"pancake-module",
+  		"pancake-sass",
+  		"pancake-sass-versioning",
+  		"scss",
+  		"css",
+  		"gov.au",
+  		"Commonwealth of Australia",
+  		"design guide",
+  		"design system",
+  		"semantic elements",
+  		"common styles",
+  		"paragraphs"
+  	],
+  	"scripts": {
+  		"postinstall": "pancake",
+  		"prepublish": "node ../../scripts/helper.js precompile publish",
+  		"build": "node ../../scripts/helper.js precompile compile",
+  		"watch:sass": "npm run build && onchange 'src/sass/*.scss' 'tests/site/*.scss' -- npm run build",
+  		"serve": "browser-sync start --server --startPath 'tests/site' --files 'tests/site/*.html, tests/site/*.css, tests/site/*.js'",
+  		"watch": "npm-run-all --parallel serve watch:*"
+  	},
+  	"dependencies": {
+  		"@gov.au/pancake": "latest",
+  		"@gov.au/core": "^0.1.0"
+  	},
+  	"peerDependencies": {
+  		"@gov.au/core": "^0.1.0"
+  	},
+  	"devDependencies": {
+  		"browser-sync": "^2.18.6",
+  		"npm-run-all": "^4.0.1",
+  		"onchange": "^3.2.1"
+  	},
+  	"files": [
+  		"lib/*"
+  	],
+  	"engines": {
+  		"node": ">=0.12.0",
+  		"npm": "^3.0.0"
+  	},
+  	"repository": {
+  		"type": "git",
+  		"url": "https://github.com/govau/uikit.git"
+  	},
+  	"homepage": "http://guides.service.gov.au/design-guide/",
+  	"bugs": {
+  		"url": "https://github.com/govau/uikit/issues",
+  		"email": "guides@digital.gov.au"
+  	},
+  	"author": {
+  		"name": "Commonwealth of Australia, DTA",
+  		"email": "guides@digital.gov.au",
+  		"url": "https://www.dta.gov.au/"
+  	},
+  	"contributors": [
+  		{
+  			"name": "Dominik Wilkowski",
+  			"email": "hi@dominik-wilkowski.com",
+  			"url": "https://dominik-wilkowski.com/"
+  		},
+  		{
+  			"name": "Simon Pascal Klein",
+  			"email": "klepas@klepas.org",
+  			"url": "http://klepas.org/"
+  		}
+  	],
+  	"license": "MIT",
+  	"pancake": {
+  		"css": {
+  			"minified": true,
+  			"modules": false,
+  			"browsers": [
+  				"last 2 versions",
+  				"ie 8",
+  				"ie 9",
+  				"ie 10"
+  			],
+  			"location": "pancake/css/",
+  			"name": "pancake.min.css"
+  		},
+  		"sass": {
+  			"modules": false,
+  			"location": "pancake/sass/",
+  			"name": "pancake.scss"
+  		},
+  		"js": {
+  			"minified": true,
+  			"modules": false,
+  			"location": "pancake/js/",
+  			"name": "pancake.min.js"
+  		}
+  	}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@gov.au%2fcore: Not found
+      at Request.params.callback [as _callback] (/usr/share/yarn/lib/util/request-manager.js:313:18)
+      at Request.self.callback (/usr/share/yarn/node_modules/request/request.js:186:22)
+      at emitTwo (events.js:106:13)
+      at Request.emit (events.js:192:7)
+      at Request.<anonymous> (/usr/share/yarn/node_modules/request/request.js:1081:10)
+      at emitOne (events.js:96:13)
+      at Request.emit (events.js:189:7)
+      at IncomingMessage.<anonymous> (/usr/share/yarn/node_modules/request/request.js:1001:12)
+      at Object.onceWrapper (events.js:291:19)
+      at emitNone (events.js:91:20)
