@@ -51,11 +51,4 @@ function govcms_parkes_form_system_theme_settings_alter(&$form, &$form_state, $f
     '#options' => $options,
     '#default_value' => theme_get_setting('footer_bottom_layout'),
   );
-
-  $form['full_width_pages'] = array(
-    '#type' => 'textarea',
-    '#title' => t('Full width pages'),
-    '#default_value' => theme_get_setting('full_width_pages'),
-    '#description' => t('Enter a list of paths on which the main content area should take up 100% of available width.  Enter one path per line, wildcards are allowed.'),
-  );
 }

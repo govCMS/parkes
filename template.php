@@ -35,15 +35,9 @@ function govcms_parkes_form_alter(&$form, &$form_state, $form_id) {
  * Implements THEME_preprocess_html().
  */
 function govcms_parkes_preprocess_html(&$variables) {
-
-  // Add full width rules
-  // @todo
-  // _govcms_parkes_full_width_styling($variables);
-
   // Add some body classes to get the body styling and grid
   $variables['classes_array'][] = 'uikit-body';
   $variables['classes_array'][] = 'uikit-grid';
-
 }
 
 /**
@@ -918,21 +912,4 @@ function _govcms_parkes_prepare_panel_layout_array_extract_layout($rows_cols) {
   }
 
   return $retval;
-}
-
-/**
- * Adds a class to make .main-content full width on user specified paths.
- *
- * @param array $variables
- *
- * @see govcms_parkes_preprocess_html().
- */
-function _govcms_parkes_full_width_styling(&$variables) {
-  $paths = trim(theme_get_setting('full_width_pages'));
-  if (
-    drupal_match_path(current_path(), $paths)
-    || drupal_match_path(drupal_get_path_alias(), $paths)
-  ) {
-    $variables['classes_array'][] = 'full-width-page';
-  }
 }
