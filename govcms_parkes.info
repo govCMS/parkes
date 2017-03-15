@@ -11,13 +11,8 @@ stylesheets[all][] = toc_filter.css
 stylesheets[all][] = workbench.block.css
 
 ; Add UI Kit and theme styles and JS
-stylesheets[all][] = uikit/pancake/css/pancake.min.css
 ; scripts[] = js/ui-kit.min.js
 
-; Add scripts
-scripts[] = js/init.js
-scripts[] = js/breakpoints.js
-scripts[] = js/header_search.js
 
 ; Regions
 regions[header]         = Header
