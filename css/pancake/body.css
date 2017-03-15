@@ -1,0 +1,455 @@
+@charset "UTF-8";
+/* @gov.au/body v0.1.0 */
+/*! @gov.au/core v0.1.0 */
+/**
+ * Sass versioning
+ *
+ * @description  Version your scss modules and test them at compile time
+ * @author       @dominikwilkowski
+ * @website      https://dominikwilkowski.github.io/sass-versioning/sassdoc/
+ * @repository   https://github.com/dominikwilkowski/sass-versioning
+ * @license      https://raw.githubusercontent.com/dominikwilkowski/sass-versioning/master/LICENSE GPL-3.0
+ */
+/**
+ * Breakpoints
+ */
+/**
+ * Line-height (‘leading’)
+ */
+/**
+ * Font stacks
+ */
+/**
+ * max-width for line lengths (the ‘measure’)
+ */
+/**
+ * Colours
+ */
+/**
+ * Border vars and styles
+ */
+/**
+ * Clearing floats
+ */
+/**
+ * Create media queries and wraps the @content code inside of it
+ *
+ * @param  {keywords} $breakpoint - Either one of the following keywords: xs, sm, md, lg
+ *
+ * @return {string}               - The code passed in via @content wrapped inside a media query
+ */
+/**
+ * Hide an element from the screen but not a screen reader
+ */
+/**
+ * Return a space value based on the line-height and the unit em
+ *
+ * @param  {number} $number - The space as a multiplier of line-height
+ * @param  {number} $number - The line-height [optional]
+ *
+ * @return {number}         - The space in ems
+ */
+/**
+ * Replace a string with a string
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $string   - The haystack string to be manipulated
+ * @param  {string} $search   - The needle to be replace
+ * @param  {string} $replace  - The replacement
+ *
+ * @return {string}           - The manipulated string with replaced values
+ */
+/**
+ * Generate an optimized SVG data-uri for
+ * https://codepen.io/tigt/post/optimizing-svgs-in-data-uris
+ * http://codepen.io/jakob-e/pen/doMoML
+ *
+ * @author @eriksen_dk <https://twitter.com/eriksen_dk>
+ *
+ * @param  {string} $svg - The SVG to be converted
+ *
+ * @return {string}      - An optimized data-uri
+ */
+/**
+ * Returns the factorial of a non-negative integer.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integer} $number - A non-negative integer.
+ *
+ * @return {integer}         - The factorial log
+ */
+/**
+ * Returns base to the exponent power.
+ * https://github.com/terkel/mathsass
+ *
+ * @author Pascal Duez @pascalduez <http://pascalduez.me/>
+ *
+ * @param  {integers} $base     - The base number
+ * @param  {integers} $exponent - The exponent to which to raise base
+ *
+ * @return {integers}           - The result of the math
+ */
+/**
+ * Calculate color luminance
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string} $colour - The color to calculate the luminance from
+ *
+ * @return {float}          - The luminance
+ */
+/**
+ * Get the contrast ratio of two colors and warn when it is below WCAG 2.0 AA standard 4.5:1
+ *
+ * https://github.com/voxpelli/sass-color-helpers/blob/master/stylesheets/color-helpers/_contrast.scss
+ * Adapted from: https://github.com/LeaVerou/contrast-ratio/blob/gh-pages/color.js
+ * Formula: http://www.w3.org/TR/2008/REC-WCAG20-20081211/#contrast-ratiodef
+ *
+ * @author Pelle Wessman @voxpelli <http://kodfabrik.se/>
+ *
+ * @param  {string}  $forground  - Color one
+ * @param  {string}  $background - Color two
+ *
+ * @return {integer}             - The contrast ratio
+ */
+/*! @gov.au/body v0.1.0 */
+@media print {
+  .uikit-body * {
+    text-shadow: none !important;
+    color: #000 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    border-color: #000 !important;
+  }
+  .uikit-body a,
+  .uikit-body a:visited {
+    text-decoration: underline;
+  }
+  .uikit-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  .uikit-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .uikit-body a[href^="javascript:"]:after,
+  .uikit-body a[href^="#"]:after {
+    content: "";
+  }
+  .uikit-body a[rel~='external']:after {
+    display: none !important;
+  }
+  .uikit-body pre,
+  .uikit-body blockquote {
+    border: 1px solid #000;
+    padding: 6px;
+    page-break-inside: avoid;
+  }
+  .uikit-body thead {
+    display: table-header-group;
+  }
+  .uikit-body tr,
+  .uikit-body img {
+    page-break-inside: avoid;
+  }
+  .uikit-body img {
+    max-width: 100% !important;
+  }
+  .uikit-body p,
+  .uikit-body h2,
+  .uikit-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  .uikit-body h2,
+  .uikit-body h3 {
+    page-break-after: avoid;
+  }
+  .uikit-body p a {
+    word-wrap: break-word;
+  }
+  .uikit-body select {
+    background: #fff !important;
+  }
+}
+
+.uikit-body {
+  margin: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #313131;
+  /**
+	 * Text selection and `mark` styling.
+	 */
+  /**
+	 * Vertical spacing of common text elements.
+	 */
+  /**
+	 * Emphasis and alt. voice/mood/diff. from prose text.
+	 */
+  /**
+	 * Important (leaving `b` out for now (and `u` also)).
+	 */
+  /**
+	 * `small`: for less important information (not stylistic purposes).
+	 */
+  /**
+	 * `s`: represents contents no longer accurate/relevant.
+	 */
+  /**
+	 * `del` & `ins`: editorial markup.
+	 *
+	 */
+  /**
+	 * Defining definition of a term.
+	 *
+	 * The paragraph, description list group, or section that is the nearest
+	 * ancestor of the `dfn` element must also contain the definition(s) for the term
+	 * given by the `dfn` element.
+	 *
+	 * Note: `abbr` can be nested inside `dfn`.
+	 */
+  /**
+	 * Abbreviations/acronyms.
+	 *
+	 * This styling removes any custom casing (mixing of u&lc chars in the `abbr`).
+	 *
+	 * Todo: test font stack fallbacks with the font-size adj.
+	 */
+  /**
+	 * Variables, eg. as used in mathematical expressions.
+	 *
+	 * We also provide semantic support for nested vars, and things like indices.
+	 */
+  /**
+	 * Code snippets and code blocks.
+	 */
+  /**
+	 * Pre-formatted text set by typographic characters.
+	 */
+  /**
+	 * Keyboard strokes.
+	 */
+  /**
+	 * Horizontal rule, used for paragraph-level thematic breaks.
+	 */
+}
+
+.uikit-body a {
+  -webkit-text-decoration-skip: objects;
+  color: #313131;
+  text-decoration: none;
+  border-bottom: solid 1px #18788D;
+  -webkit-transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+
+.uikit-body a:hover, .uikit-body a:focus {
+  background-color: #5bcbe3;
+  border-color: transparent;
+}
+
+.uikit-body a[rel~='external']:after {
+  content: ' ';
+  display: inline-block;
+  width: 0.7em;
+  height: 0.8em;
+  margin: 0 0.1em 0 0.25em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%2318788D' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%2318788D' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position-y: 0.12em;
+}
+
+.ie8 .uikit-body a[rel~='external']:after,
+.lt-ie8 .uikit-body a[rel~='external']:after {
+  content: '⇗';
+  color: #18788D;
+}
+
+.uikit-body mark,
+.uikit-body ::-moz-selection {
+  background-color: rgba(229, 172, 102, 0.5);
+}
+
+.uikit-body mark,
+.uikit-body ::selection {
+  background-color: rgba(229, 172, 102, 0.5);
+}
+
+.uikit-body mark {
+  box-shadow: 0 0 1px rgba(49, 49, 49, 0.4);
+}
+
+.uikit-body p {
+  max-width: 42em;
+}
+
+.uikit-body p,
+.uikit-body ul,
+.uikit-body ol,
+.uikit-body dl,
+.uikit-body pre {
+  margin-top: 0;
+  margin-bottom: 1.6em;
+}
+
+.uikit-body ul,
+.uikit-body ol,
+.uikit-body dd {
+  margin-left: 0;
+  padding-left: 1.6em;
+}
+
+.uikit-body ul > li,
+.uikit-body ol > li {
+  margin-bottom: 0.4em;
+}
+
+.uikit-body ul > li > ul,
+.uikit-body ul > li > ol,
+.uikit-body ol > li > ul,
+.uikit-body ol > li > ol {
+  margin-top: 0.4em;
+  margin-bottom: 0.8em;
+}
+
+.uikit-body ul > ul,
+.uikit-body ol > ul {
+  list-style-type: disc;
+}
+
+.uikit-body dl > dd {
+  margin-bottom: 1.6em;
+}
+
+.uikit-body dl > dt {
+  font-weight: bold;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+
+.uikit-body dl > dt:first-of-type {
+  margin-top: 0;
+}
+
+.uikit-body em,
+.uikit-body i {
+  font-style: italic;
+}
+
+.uikit-body strong {
+  font-weight: bold;
+}
+
+.uikit-body small {
+  font-size: 87.5%;
+  color: #464646;
+}
+
+.uikit-body s {
+  text-decoration: line-through;
+}
+
+.uikit-body del {
+  text-decoration: line-through;
+  color: #5a5a5a;
+}
+
+.uikit-body ins {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
+}
+
+.uikit-body dfn {
+  font-style: normal;
+}
+
+.uikit-body abbr,
+.uikit-body abbr[title] {
+  font-size: 18px;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  border-bottom: 1px dotted #555;
+  cursor: help;
+}
+
+.uikit-body a abbr {
+  padding-bottom: 1px;
+}
+
+.uikit-body var {
+  padding: 0 1px;
+  font-style: italic;
+  font-family: serif;
+}
+
+.uikit-body var sup,
+.uikit-body var sub {
+  font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
+  font-style: normal;
+  padding: 0 1px;
+}
+
+.uikit-body sub,
+.uikit-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.uikit-body sub {
+  bottom: -0.25em;
+}
+
+.uikit-body sup {
+  top: -0.5em;
+}
+
+.uikit-body code,
+.uikit-body kbd,
+.uikit-body pre {
+  font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+.uikit-body pre code,
+.uikit-body pre samp,
+.uikit-body pre kbd {
+  font-size: 14px;
+}
+
+.uikit-body kbd {
+  display: inline-block;
+  font-size: 14px;
+  border: solid 1px #8cbcc6;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 #00bfe9;
+  background-color: #fefefe;
+  text-align: center;
+  padding: 0 0.8em;
+  margin: 0 2px;
+}
+
+.uikit-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: none;
+  border-top: 1px solid #bbbbbb;
+  margin-bottom: 1.6em;
+}
+
+/*# sourceMappingURL=body.css.map */
