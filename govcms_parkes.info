@@ -9,6 +9,9 @@ stylesheets[all][] = css/styles.css
 ; Add UI Kit and theme styles and JS
 ; scripts[] = js/ui-kit.min.js
 
+; Remove some styling that we don't want
+stylesheets[all][] = toc_filter.css
+stylesheets[all][] = workbench.block.css
 
 ; Regions
 regions[header]         = Header
