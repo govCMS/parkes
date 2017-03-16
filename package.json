@@ -54,5 +54,7 @@
       "name": false
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "@gov.au/pancake": "^1.0.6"
+  }
 }

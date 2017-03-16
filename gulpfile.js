@@ -43,8 +43,10 @@ options.sass = {
 // Define which browsers to add vendor prefixes for.
 options.autoprefixer = {
   browsers: [
-    '> 1%',
-    'ie 9'
+    "last 2 versions",
+    "ie 8",
+    "ie 9",
+    "ie 10"
   ]
 };
 
@@ -59,7 +61,7 @@ options.eslint = {
 // Define the paths to the SASS files to lint.
 options.sasslint = {
   files: [
-    options.theme.sass + '**/*.scss', 
+    options.theme.sass + '**/*.scss',
     '!' + options.theme.sass + 'pancake/*.scss'
   ]
 };
