@@ -41,15 +41,6 @@ function govcms_parkes_preprocess_html(&$variables) {
 }
 
 /**
- * Implements THEME_preprocess_field().
- */
-function govcms_parkes_preprocess_field(&$variables) {
-//  if ($variables['element']['#field_name'] == 'field_tags') {
-//    $variables['classes_array'][] = 'tags';
-//  }
-}
-
-/**
  * Implements THEME_preprocess_node().
  */
 function govcms_parkes_preprocess_node(&$variables) {
