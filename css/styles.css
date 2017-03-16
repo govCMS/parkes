@@ -3809,7 +3809,7 @@
  *
  * We also set the font-size automatically too. (:
  */
-.uikit-display-1, h6 {
+.uikit-display-1, .uikit-body .parkes-content h6 {
   font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
   color: #313131;
   display: block;
@@ -3819,7 +3819,7 @@
   font-weight: bold;
 }
 
-.uikit-display-2, h5 {
+.uikit-display-2, .uikit-body .parkes-content h5 {
   font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
   color: #313131;
   display: block;
@@ -3829,7 +3829,7 @@
   font-weight: bold;
 }
 
-.uikit-display-3, h4 {
+.uikit-display-3, .uikit-body .parkes-content h4 {
   font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
   color: #313131;
   display: block;
@@ -3839,7 +3839,7 @@
   font-weight: bold;
 }
 
-.uikit-display-4, h3 {
+.uikit-display-4, .uikit-body .parkes-content h3 {
   font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
   color: #313131;
   display: block;
@@ -3849,7 +3849,7 @@
   font-weight: bold;
 }
 
-.uikit-display-5, h2 {
+.uikit-display-5, .uikit-body .parkes-content h2 {
   font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
   color: #313131;
   display: block;
@@ -3859,7 +3859,7 @@
   font-weight: bold;
 }
 
-.uikit-display-6, h1 {
+.uikit-display-6, .uikit-body .parkes-content h1 {
   font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
   color: #313131;
   display: block;
@@ -3869,11 +3869,11 @@
   font-weight: bold;
 }
 
-.uikit-display-2, h5,
+.uikit-display-2, .uikit-body .parkes-content h5,
 .uikit-display-3,
-h4,
+.uikit-body .parkes-content h4,
 .uikit-display-4,
-h3 {
+.uikit-body .parkes-content h3 {
   font-weight: normal;
 }
 
@@ -6397,5 +6397,3 @@ h3 {
 .uikit-text-input + .uikit-text-input__hint {
   margin-top: 0.4em;
 }
-
-/*# sourceMappingURL=styles.css.map */

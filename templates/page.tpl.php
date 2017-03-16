@@ -38,16 +38,16 @@
     </section>
   </div>
   <?php endif; ?>
-  
+
   <div class="row">
-  
+
     <?php if (!empty($page['sidebar_left'])): ?>
     <aside class="<?php print $layout_classes['sidebar_left']; ?>" role="complementary">
       <?php print render($page['sidebar_left']); ?>
     </aside>
     <?php endif; ?>
 
-    <article id="content" class="<?php print $layout_classes['content']; ?>">
+    <article id="content" class="<?php print $layout_classes['content']; ?> parkes-content">
 
       <a href="#skip-link" id="skip-content" class="element-invisible">Go to top of page</a>
 

@@ -1,25 +1,22 @@
-@import '../pancake/headings';
+// @file
+// Extend standard HTML elements so they don't need classes
+// This makes it easier for regular publishers
 
-h1 {
-  @extend .uikit-display-6;
-}
+// sass-lint:disable placeholder-in-extend
 
-h2 {
-  @extend .uikit-display-5;
-}
+.uikit-body {
+  .parkes-content {
 
-h3 {
-  @extend .uikit-display-4;
-}
+    // Headings
 
-h4 {
-  @extend .uikit-display-3;
-}
+    $heading-level-class: 6;
 
-h5 {
-  @extend .uikit-display-2;
-}
+    @for $heading-level from 1 through 6 {
+      h#{$heading-level} {
+        @extend .uikit-display-#{$heading-level-class};
+      }
+      $heading-level-class: $heading-level-class - 1;
+    }
 
-h6 {
-  @extend .uikit-display-1;
+  }
 }
