@@ -54,8 +54,8 @@
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <nav class="uikit-skip-link">
-    <a class="uikit-skip-link__link" href="#content"><?php print t('Skip to main content'); ?></a>
-    <a class="uikit-skip-link__link" href="#nav"><?php print t('Skip to main navigation'); ?></a>
+    <a class="uikit-skip-link__link" href="#main-content"><?php print t('Skip to main content'); ?></a>
+    <a class="uikit-skip-link__link" href="#main-navigation"><?php print t('Skip to main navigation'); ?></a>
   </nav>
   <?php print $page_top; ?>
   <?php print $page; ?>

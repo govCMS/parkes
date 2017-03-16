@@ -14,6 +14,7 @@
       <?php print render($page['header']); ?>
     </div>
     <div class="row">
+      <a id="main-navigation"></a>
       <?php print render($page['navigation']); ?>
     </div>
   </div>
