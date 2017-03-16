@@ -173,7 +173,7 @@ function govcms_parkes_breadcrumb($variables) {
     $breadcrumb_list .= '</ul>';
 
     // Add UI KIT tag and style to breadcrumb.
-    $output .= '<nav aria-label="breadcrumb" role="navigation" class="uikit-breadcrumbs">' . $breadcrumb_list . '</nav>';
+    $output .= '<nav class="uikit-breadcrumbs" aria-label="breadcrumb">' . $breadcrumb_list . '</nav>';
     return $output;
   }
 }
