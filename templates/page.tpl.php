@@ -47,15 +47,13 @@
     </aside>
     <?php endif; ?>
 
-    <article id="content" class="<?php print $layout_classes['content']; ?> parkes-content">
-
-      <a href="#skip-link" id="skip-content" class="element-invisible">Go to top of page</a>
+    <article id="content" class="<?php print $layout_classes['content']; ?> govcms-parkes-content">
 
       <a id="main-content"></a>
 
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
-      <h1 class="uikit-display-1"><?php print $title; ?></h1>
+      <h1><?php print $title; ?></h1>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
 

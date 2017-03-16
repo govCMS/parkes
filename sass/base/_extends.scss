@@ -1,11 +1,10 @@
 // @file
 // Extend standard HTML elements so they don't need classes
 // This makes it easier for regular publishers
-
-// sass-lint:disable placeholder-in-extend
+// Everything should be namespaced with `.uikit-body .govcms-parkes-content`
 
 .uikit-body {
-  .parkes-content {
+  .govcms-parkes-content {
 
     // Headings
 
@@ -13,7 +12,7 @@
 
     @for $heading-level from 1 through 6 {
       h#{$heading-level} {
-        @extend .uikit-display-#{$heading-level-class};
+        @extend .uikit-display-#{$heading-level-class}; // sass-lint:disable-line placeholder-in-extend
       }
       $heading-level-class: $heading-level-class - 1;
     }
