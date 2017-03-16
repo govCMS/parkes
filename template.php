@@ -38,6 +38,9 @@ function govcms_parkes_preprocess_html(&$variables) {
   // Add some body classes to get the body styling and grid
   $variables['classes_array'][] = 'uikit-body';
   $variables['classes_array'][] = 'uikit-grid';
+
+  // Load the font UI kit uses
+  drupal_add_css('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&subset=latin-ext', array('type' => 'external'));
 }
 
 /**
