@@ -14,7 +14,7 @@ include('includes/govcms_parkes.theme.contrib.inc');
 /** Core hooks ****************************************************************/
 
 /**
- * Implements THEME_form_alter().
+ * Implements hook_form_alter().
  */
 function govcms_parkes_form_alter(&$form, &$form_state, $form_id) {
 
@@ -28,6 +28,14 @@ function govcms_parkes_form_alter(&$form, &$form_state, $form_id) {
     $form['#attributes']['class'] = 'search-form';
   }
 
+}
+
+/**
+ * Implements hook_css_alter
+ */
+function govcms_parkes_css_alter(&$css) {
+  // Unset some css files we don't want
+  unset($css['modules/system/system.menus.css']);
 }
 
 
@@ -160,6 +168,13 @@ function govcms_parkes_preprocess_region(&$variables) {
   if (in_array($variables['region'], array('footer_top', 'footer_bottom'))) {
     $variables['classes_array'][] = 'region--' . theme_get_setting($variables['region'] . '_layout');
   }
+}
+
+/**
+ * Implements THEME_menu_tree().
+ */
+function govcms_parkes_menu_tree($variables) {
+  return '<ul class="uikit-link-list menu">' . $variables['tree'] . '</ul>';
 }
 
 

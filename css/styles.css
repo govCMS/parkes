@@ -9663,7 +9663,27 @@ p + .uikit-display-6, .uikit-body .govcms-parkes-content p + h1 {
 }
 
 .govcms-parkes-footer__crest {
+  display: block;
   max-width: 200px;
+}
+
+.govcms-parkes-footer__details {
+  display: block;
+}
+
+/**
+ * We have an unknown number of blocks in the navigation region as it will vary
+ * from site to site.  While we could determine the number and try and use
+ * bootstrap columns, the number or blocks may not always work in a 12 col
+ * grid.  So we'll use flexbox to achieve the same effect.
+ */
+@media (min-width: 768px) {
+  .region-footer-navigation {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
 }
 
 .form-actions .uikit-btn {
