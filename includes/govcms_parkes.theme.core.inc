@@ -325,6 +325,10 @@ function govcms_parkes_form_element_label($variables) {
     case 'textfield':
       $attributes['class'][] = 'uikit-text-input__label';
       break;
+    case 'checkbox':
+    case 'radio':
+      $attributes['class'][] = 'uikit-control-input__text';
+      break;
   }
 
   // Get the hint/description ready if it exists
@@ -355,8 +359,12 @@ function govcms_parkes_form_element_label($variables) {
 /**
  * Implements THEME_form_element().
  *
- * Has been overridden to remove the description blow the element, it's now
- * rendered as part of the label.
+ * Has been overridden:
+ *
+ * 1: to remove the description blow the element, it's now rendered as part of
+ *    the label.
+ * 2: to add classes to the form element wrapper for the purposes of control
+ *    input styling (checkboxes and radios).
  */
 function govcms_parkes_form_element($variables) {
   $element = &$variables['element'];
@@ -371,6 +379,7 @@ function govcms_parkes_form_element($variables) {
   if (isset($element['#markup']) && !empty($element['#id'])) {
     $attributes['id'] = $element['#id'];
   }
+
   // Add element's #type and #name as class to aid with JS/CSS selectors.
   $attributes['class'] = array('form-item');
   if (!empty($element['#type'])) {
@@ -379,10 +388,18 @@ function govcms_parkes_form_element($variables) {
   if (!empty($element['#name'])) {
     $attributes['class'][] = 'form-item-' . strtr($element['#name'], array(' ' => '-', '_' => '-', '[' => '-', ']' => ''));
   }
+
   // Add a class for disabled elements to facilitate cross-browser styling.
   if (!empty($element['#attributes']['disabled'])) {
     $attributes['class'][] = 'form-disabled';
   }
+
+  // Add classes for single checkbox and radio inputs.
+  if (in_array($element['#type'], array('radio', 'checkbox'))) {
+    $attributes['class'][] = 'uikit-control-input';
+  }
+
+  // Open the element wrapper
   $output = '<div' . drupal_attributes($attributes) . '>' . "\n";
 
   // If #title is not set, we don't display any label or required marker.
@@ -411,6 +428,7 @@ function govcms_parkes_form_element($variables) {
       break;
   }
 
+  // Close the element wrapper
   $output .= "</div>\n";
 
   return $output;
@@ -507,28 +525,28 @@ function govcms_parkes_checkbox($variables) {
   _form_set_class($element, array('form-checkbox'));
 
   // UI KIT: Add classes
-  _govcms_parkes_form_element_add_classes($element, 'uikit-control-input', 'input');
+  _govcms_parkes_form_element_add_classes($element, 'uikit-control-input', '', 'input');
 
   return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
 
 /**
- * Implements THEME_checkboxes().
+ * Implements THEME_radio().
  */
-function govcms_parkes_checkboxes($variables) {
+function govcms_parkes_radio($variables) {
   $element = $variables['element'];
-  $attributes = array();
-  if (isset($element['#id'])) {
-    $attributes['id'] = $element['#id'];
+  $element['#attributes']['type'] = 'radio';
+  element_set_attributes($element, array('id', 'name', '#return_value' => 'value'));
+
+  if (isset($element['#return_value']) && $element['#value'] !== FALSE && $element['#value'] == $element['#return_value']) {
+    $element['#attributes']['checked'] = 'checked';
   }
-  $attributes['class'][] = 'form-checkboxes';
-  if (!empty($element['#attributes']['class'])) {
-    $attributes['class'] = array_merge($attributes['class'], $element['#attributes']['class']);
-  }
-  if (isset($element['#attributes']['title'])) {
-    $attributes['title'] = $element['#attributes']['title'];
-  }
-  return '<div' . drupal_attributes($attributes) . '>' . (!empty($element['#children']) ? $element['#children'] : '') . '</div>';
+  _form_set_class($element, array('form-radio'));
+
+  // UI KIT: Add classes
+  _govcms_parkes_form_element_add_classes($element, 'uikit-control-input', '', 'input');
+
+  return '<input' . drupal_attributes($element['#attributes']) . ' />';
 }
 
 /**
@@ -595,6 +613,11 @@ function _govcms_parkes_form_element_add_classes(&$element, $base_class, $varian
   // Add the variant class if we have one
   if (!empty($variant)) {
     $element['#attributes']['class'][] = $base_class . '--' . $variant;
+  }
+
+  // Add the dependency class if we have one
+  if (!empty($dependency)) {
+    $element['#attributes']['class'][] = $base_class . '__' . $dependency;
   }
 
   // Add the error variant
