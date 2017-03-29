@@ -46,8 +46,8 @@
 ?>
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <div <?php print $content_attributes; ?>>
-    <nav class="local-nav">
-      <h1 class="is-visuallyhidden"><?php print t('Menu'); ?></h1>
+    <nav class="govcms-parkes-local-nav">
+      <h1 class="element-invisible"><?php print t('Menu'); ?></h1>
       <?php print $content ?>
     </nav>
   </div>

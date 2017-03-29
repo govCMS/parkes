@@ -9770,6 +9770,49 @@ html.js fieldset.collapsed .fieldset-legend a::before {
   background-color: transparent !important;
 }
 
+.govcms-parkes-local-nav {
+  overflow: hidden;
+}
+
+.govcms-parkes-local-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.govcms-parkes-local-nav ul ul {
+  margin: 0;
+  text-transform: none;
+}
+
+.govcms-parkes-local-nav ul ul li:last-child {
+  border-bottom: none;
+}
+
+.govcms-parkes-local-nav ul ul ul a {
+  padding-left: 1.6em;
+  border-bottom: 0;
+}
+
+.govcms-parkes-local-nav ul li {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #1B7991;
+}
+
+.govcms-parkes-local-nav ul li:first-child {
+  border-top: 1px solid #1B7991;
+}
+
+.govcms-parkes-local-nav ul a {
+  display: block;
+  border: none;
+  border-left: 4px solid transparent;
+  border-bottom: none;
+  padding: 0.4em;
+  text-decoration: none;
+}
+
 .govcms-parkes-node-submitted {
   margin-bottom: 1.6em;
 }

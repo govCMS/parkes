@@ -1,0 +1,74 @@
+.govcms-parkes-local-nav {
+  overflow: hidden;
+
+  ul {
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    ul {
+      margin: 0;
+      text-transform: none;
+
+      li {
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      ul {
+        a {
+          padding-left: uikit-space(1);
+          border-bottom: 0;
+        }
+
+        ul {
+          a {
+            ////@extend %icon-arrow-right;
+            //
+            //padding-left: uikit-space(1) + uikit-space(.25);
+            //background-repeat: no-repeat;
+            //background-position: uikit-space(1) center;
+            //background-size: uikit-space(.1) auto;
+          }
+        }
+      }
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid $uikit-colour-Primary;
+
+      &:first-child {
+        border-top: 1px solid $uikit-colour-Primary;
+      }
+    }
+
+    a {
+      display: block;
+      border: none;
+      border-left: 4px solid transparent;
+      border-bottom: none;
+      padding: uikit-space(.25);
+      text-decoration: none;
+      // transition: border-color $transition-timing-fast $transition-easing;
+
+      &:hover {
+        //border-color: $border-contrast-colour;
+      }
+
+      &.is-active {
+        //font-weight: $bold-font-weight;
+      }
+
+      &.is-current {
+        //background-color: $focus-colour;
+      }
+
+    }
+
+  }
+
+}
