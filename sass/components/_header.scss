@@ -1,0 +1,8 @@
+// @todo This should prob go back into the UI Kit
+.govcms-parkes-header-logo-link {
+  border-bottom-style: none !important;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+}

@@ -9757,6 +9757,14 @@ html.js fieldset.collapsed .fieldset-legend a::before {
   content: '\f139';
 }
 
+.govcms-parkes-header-logo-link {
+  border-bottom-style: none !important;
+}
+
+.govcms-parkes-header-logo-link:hover {
+  background-color: transparent !important;
+}
+
 .toc-back-to-index {
   float: right;
 }

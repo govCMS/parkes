@@ -26,29 +26,21 @@ function govcms_parkes_form_system_theme_settings_alter(&$form, &$form_state, $f
     '#description' => t('The maximum width of the logo in the header, aspect ratio will be maintained.'),
   );
 
-  // Footer layout
-  $options = array(
-    'horizontal' => t('Horizontal'),
-    'vertical' => t('Vertical'),
-  );
-
-  $form['footer_layout'] = array(
+  // Header options
+  $form['header'] = array(
     '#type' => 'fieldset',
-    '#title' => t('Footer content layout'),
-    '#description' => t('These settings control how the contents of the footer top and bottom regions are laid out.'),
+    '#title' => t('Header options'),
   );
 
-  $form['footer_layout']['footer_top_layout'] = array(
+  $form['header']['govcms_parkes_site_branding'] = array(
     '#type' => 'radios',
-    '#title' => t('Footer top content layout'),
-    '#options' => $options,
-    '#default_value' => theme_get_setting('footer_top_layout'),
-  );
-
-  $form['footer_layout']['footer_bottom_layout'] = array(
-    '#type' => 'radios',
-    '#title' => t('Footer bottom content layout'),
-    '#options' => $options,
-    '#default_value' => theme_get_setting('footer_bottom_layout'),
+    '#title' => t('Site branding'),
+    '#options' => array(
+      'logo' => t('Site logo'),
+      'name' => t('Site name and slogan'),
+    ),
+    '#default_value' => theme_get_setting('govcms_parkes_site_branding'),
+    '#description' => t('This theme supports either a logo in the header or the site name and slogan (if provided).'),
+    '#required' => TRUE,
   );
 }

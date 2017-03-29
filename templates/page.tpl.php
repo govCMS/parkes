@@ -8,15 +8,17 @@
  */
 ?>
 
-<header role="banner" class="uikit-header">
+<header role="banner" class="uikit-header uikit-header--light">
   <div class="container">
     <div class="row">
       <?php print render($page['header']); ?>
     </div>
+    <?php if (!empty($page['navigation'])): ?>
     <div class="row">
       <a id="main-navigation"></a>
       <?php print render($page['navigation']); ?>
     </div>
+    <?php endif; ?>
   </div>
 </header>
 

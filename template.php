@@ -216,58 +216,55 @@ function _govcms_parkes_process_local_tasks($children) {
  * @see govcms_parkes_preprocess_page().
  */
 function _govcms_parkes_preprocess_region_header($header_content = '') {
-  $site_name   = variable_get('site_name', '');
-  $site_slogan = variable_get('site_slogan', '');
-  $output      = '';
-  $link_text   = '';
 
-  // Do we want to show a logo?
-  if (theme_get_setting('toggle_logo')) {
+  $output          = '';
+  $branding_option = theme_get_setting('govcms_parkes_site_branding');
+  $site_name       = variable_get('site_name', '');
 
-    // Get the logo
-    $logo_path = theme_get_setting('logo');
+  switch ($branding_option) {
 
-    // Create the image using theme_image().
-    $link_text .= theme('image', array(
-      'path'   => $logo_path,
-      'alt'    => t('@site_name logo', array('@site_name' => $site_name)),
-      'title'  => filter_xss($site_name),
-      'attributes' => array('class' => array('uikit-header__logo__mark', 'uikit-responsive-img')),
-    ));
+    case 'logo':
+
+      // Get the logo
+      $logo_path = theme_get_setting('logo');
+
+      // Create the image using theme_image().
+      $link_text = theme('image', array(
+        'path'       => $logo_path,
+        'alt'        => t('@site_name logo', array('@site_name' => $site_name)),
+        'title'      => filter_xss($site_name),
+        'attributes' => array('class' => array('uikit-responsive-img')),
+      ));
+
+      $output .= l($link_text, '<front>', array('html' => TRUE, 'attributes' => array('class' => array('govcms-parkes-header-logo-link'))));
+
+      break;
+
+    case 'name':
+      $site_slogan = variable_get('site_slogan', '');
+
+      $link_text = '<h1 class="uikit-header-heading">' . $site_name . '</h1>';
+
+      $output .= l($link_text, '<front>', array('html' => TRUE, 'attributes' => array('class' => array('uikit-header__logo'))));
+
+      // Do we want to show a site slogan too?
+      if (!empty($site_slogan)) {
+        $output .= '<span class="uikit-header-subline">' . filter_xss($site_slogan) . '</span>';
+      }
+
+      break;
 
   }
-
-  // Do we need to show additional info?
-  $show_site_name   = theme_get_setting('toggle_name');
-  $show_site_slogan = theme_get_setting('toggle_slogan');
-
-  if ($show_site_name) {
-
-    $link_text .= '<span class="uikit-header__logo__type uikit-display-4">';
-
-    $link_text .= $site_name;
-
-    // Do we want to show a site slogan too?
-    if (!empty($site_slogan) && $show_site_slogan) {
-      $link_text .= '<br />' . filter_xss($site_slogan);
-    }
-
-    $link_text .= '</span>';
-
-  }
-
-  // Add the header home link
-  $output .= l($link_text, '<front>', array('html' => TRUE, 'attributes' => array('class' => array('uikit-header__logo'))));
 
   // @todo deal with header content
-//  $output .= '<div class="page-header__content">';
-//  if (is_array($header_content)) {
-//    $output .= drupal_render($header_content);
-//  }
-//  else {
-//    $output .= $header_content;
-//  }
-//  $output .= '</div>';
+  //  $output .= '<div class="page-header__content">';
+  //  if (is_array($header_content)) {
+  //    $output .= drupal_render($header_content);
+  //  }
+  //  else {
+  //    $output .= $header_content;
+  //  }
+  //  $output .= '</div>';
 
   return $output;
 }
