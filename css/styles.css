@@ -9662,6 +9662,10 @@ p + .uikit-display-6, .uikit-body .govcms-parkes-content p + h1 {
   clip: auto;
 }
 
+.govcms-parkes-footer__crest {
+  max-width: 200px;
+}
+
 .form-actions .uikit-btn {
   margin-right: 0.8em;
 }

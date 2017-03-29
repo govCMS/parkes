@@ -89,32 +89,27 @@
 
 </main>
 
-<footer role="contentinfo">
+<footer class="uikit-footer" role="contentinfo">
   <div class="container">
 
-    <?php if (!empty($page['footer_top'])): ?>
-    <div class="row">
-      <section id="footer-top">
-        <?php print render($page['footer_top']); ?>
-      </section>
-    </div>
-    <?php endif; ?>
 
-    <?php if (!empty($page['footer_bottom'])): ?>
-    <div class="row">
-      <section id="footer-bottom">
-        <?php print render($page['footer_bottom']); ?>
-      </section>
-    </div>
-    <?php endif; ?>
+  <?php if (!empty($page['footer_navigation'])): ?>
+  <div class="row">
+    <?php print render($page['footer_navigation']); ?>
+  </div>
+  <?php endif; ?>
 
-    <?php if (!empty($page['bottom'])): ?>
-    <div class="row">
-      <section id="bottom">
-        <?php print render($page['bottom']); ?>
-      </section>
-    </div>
-    <?php endif; ?>
+  <section class="uikit-footer__end row">
+    <?php if (!empty($page['footer_end'])): render($page['footer_end']); endif; ?>
+    <?php print $crest; ?>
+    <?php print $copyright; ?>
+  </section>
 
   </div>
 </footer>
+
+<?php if (!empty($page['bottom'])): ?>
+  <section id="bottom">
+    <?php print render($page['bottom']); ?>
+  </section>
+<?php endif; ?>

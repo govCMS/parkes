@@ -15,18 +15,18 @@ stylesheets[all][] = css/workbench.block.css
 stylesheets[all][] = css/system.theme.css
 
 ; Regions
-regions[header]         = Header
-regions[navigation]     = Navigation bar
-regions[hero]           = Hero
-regions[help]           = Help
-regions[content_above]  = Content above
-regions[content]        = Content
-regions[content_below]  = Content below
-regions[sidebar_left]   = Sidebar left
-regions[sidebar_right]  = Sidebar right
-regions[footer_top]     = Footer top
-regions[footer_bottom]  = Footer bottom
-regions[bottom]         = Page bottom
+regions[header]            = Header
+regions[navigation]        = Navigation bar
+regions[hero]              = Hero
+regions[help]              = Help
+regions[content_above]     = Content above
+regions[content]           = Content
+regions[content_below]     = Content below
+regions[sidebar_left]      = Sidebar left
+regions[sidebar_right]     = Sidebar right
+regions[footer_navigation] = Footer navigation
+regions[footer_end]        = Footer end
+regions[bottom]            = Page bottom
 
 ; The page_top and page_bottom regions are hidden, which means they will not
 ; show up on the blocks administration page. But they are required in order for

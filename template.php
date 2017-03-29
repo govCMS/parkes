@@ -104,6 +104,16 @@ function govcms_parkes_preprocess_page(&$variables) {
       break;
   }
 
+  // Footer crest
+  $variables['crest'] = theme('image', array(
+    'path'       => path_to_theme() . '/images/coat-of-arms.png',
+    'alt'        => t('Commonwealth Coat of Arms crest logo'),
+    'attributes' => array('class' => array('uikit-responsive-media-img', 'govcms-parkes-footer__crest')),
+  ));
+
+  // Copyright
+  $variables['copyright'] = '<div class="govcms-parkes-footer__details"><small>' . filter_xss(variable_get('govcms_parkes_footer_details', GOVCMS_PARKES_FOOTER_DETAILS)) . '</small></div>';
+
 }
 
 /**
