@@ -62,7 +62,8 @@ options.eslint = {
 options.sasslint = {
   files: [
     options.theme.sass + '**/*.scss',
-    '!' + options.theme.sass + 'pancake/*.scss'
+    '!' + options.theme.sass + 'pancake/*.scss',
+    '!' + options.theme.sass + 'vendor/**/*.scss'
   ]
 };
 
