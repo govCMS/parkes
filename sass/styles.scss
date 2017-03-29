@@ -4,6 +4,9 @@
 // We categorize our components by creating headings in this file. See the
 // description on the style guide home page for more information.
 
+// Variables
+@import 'vars';
+
 //
 // Normalize
 // @import 'base/';
@@ -38,9 +41,10 @@
 @import 'pancake/tags';
 @import 'pancake/text-inputs';
 
-//
 // Base extensions from pancake
 @import 'base/extends';
 
-//
+// Vendor
+@import 'vendor/font-awesome/scss/font-awesome';
+
 // Drupal specific components
