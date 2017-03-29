@@ -4,69 +4,54 @@
   overflow: hidden;
 
   ul {
-
     margin: 0;
     padding: 0;
     list-style: none;
 
     ul {
-      margin: 0;
+      margin: 0 !important;
+      padding: 0 !important;
       text-transform: none;
 
       li {
         &:last-child {
-          border-bottom: none;
-        }
-      }
-
-      ul {
-        a {
-          padding-left: uikit-space(1);
           border-bottom: 0;
         }
-
-        ul {
-          a {
-            ////@extend %icon-arrow-right;
-            //
-            //padding-left: uikit-space(1) + uikit-space(.25);
-            //background-repeat: no-repeat;
-            //background-position: uikit-space(1) center;
-            //background-size: uikit-space(.1) auto;
-          }
-        }
       }
+
+      a {
+        padding-left: uikit-space(1);
+        border-bottom: 0;
+      }
+
     }
 
     li {
       margin: 0;
       padding: 0;
-      border-bottom: 1px solid $uikit-colour-Primary;
+      border-bottom: 1px solid $uikit-colour-Border-50;
 
       &:first-child {
-        border-top: 1px solid $uikit-colour-Primary;
+        border-top: 1px solid $uikit-colour-Border-50;
       }
     }
 
     a {
       display: block;
-      border: none;
       border-left: 4px solid transparent;
-      border-bottom: none;
-      padding: uikit-space(.25);
-      text-decoration: none;
-      // transition: border-color $transition-timing-fast $transition-easing;
+      border-bottom: 0;
+      padding: uikit-space(.5);
+      transition: border-color .05s ease-in-out, border-color .05s ease-in-out;
 
-      &:hover {
-        //border-color: $border-contrast-colour;
-      }
-
-      &.is-active {
-        //font-weight: $bold-font-weight;
+      &:hover,
+      &:focus {
+        border-color: $uikit-colour-Primary--50;
+        background-color: $uikit-colour-Link-20;
       }
 
       &.is-current {
-        //background-color: $focus-colour;
+        font-weight: bold;
+        background-color: $uikit-colour-Link-20;
       }
 
     }
