@@ -24,5 +24,5 @@ function govcms_parkes_toc_filter($variables) {
  * Implements THEME_toc_filter_back_to_top().
  */
 function govcms_parkes_toc_filter_back_to_top($variables) {
-  return '<a class="uikit-direction-link uikit-direction-link--up" href="#">' . t('Back to contents') . '</a>';
+  return '<a class="toc-back-to-index uikit-direction-link uikit-direction-link--up" href="#">' . t('Back to contents') . '</a>';
 }

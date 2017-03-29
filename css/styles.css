@@ -9732,3 +9732,7 @@ html.js fieldset.collapsed .fieldset-legend a::before {
   font-family: FontAwesome;
   content: '\f139';
 }
+
+.toc-back-to-index {
+  float: right;
+}
