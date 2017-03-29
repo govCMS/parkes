@@ -4,6 +4,19 @@
   margin-right: uikit-space(.5);
 }
 
+// Reset form margin and padding
+// @todo replace with normalize
+form {
+  margin: 0;
+  padding: 0;
+}
+
+// Make sure fieldsets have some margin and padding
+fieldset {
+  margin-bottom: uikit-space(1);
+  padding: uikit-space(.5);
+}
+
 // Make sure nested fieldsets have margins
 fieldset fieldset {
   margin: uikit-space(.5) 0;

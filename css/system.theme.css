@@ -1,24 +1,20 @@
-
 /**
  * @file
  * Basic styling for common markup.
+ *
+ * Any styling in this file that was kept was moved to corresponding sass
+ * partials to be able to hook into UI Kits mixens and variables. The name of
+ * the sass partial is indicated in the corresponding docblock.  This file needs
+ * to be kept to override cores version or it leaks styling and conflicts with
+ * the kit.
  */
 
 /**
  * HTML elements.
  */
-fieldset {
-  margin-bottom: 1em;
-  padding: 0.5em;
-}
-form {
-  margin: 0;
-  padding: 0;
-}
-hr {
-  border: 1px solid gray;
-  height: 1px;
-}
+/* fieldset {} @see _forms.scss */
+/* form {}     @see _forms.scss */
+
 img {
   border: 0;
 }

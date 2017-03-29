@@ -9666,6 +9666,16 @@ p + .uikit-display-6, .uikit-body .govcms-parkes-content p + h1 {
   margin-right: 0.8em;
 }
 
+form {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  margin-bottom: 1.6em;
+  padding: 0.8em;
+}
+
 fieldset fieldset {
   margin: 0.8em 0;
 }
