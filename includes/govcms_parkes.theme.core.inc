@@ -44,21 +44,22 @@ function govcms_parkes_menu_local_tasks($variables) {
   // Add UI KIT class to the tabs.
   if (!empty($variables['primary'])) {
     $variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
-    $variables['primary']['#prefix'] .= '<nav class="inline-tab-nav"><ul class="tabs primary">';
+    $variables['primary']['#prefix'] .= '<nav class="govcms-parkes-tabs govcms-parkes-tabs--primary"><ul class="tabs primary">';
     $variables['primary']['#suffix'] = '</ul></nav>';
-
     $output .= drupal_render($variables['primary']);
-
   }
+  
   if (!empty($variables['secondary'])) {
     $variables['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
-    $variables['secondary']['#prefix'] .= '<nav class="inline-tab-nav"><ul class="tabs secondary">';
+    $variables['secondary']['#prefix'] .= '<nav class="govcms-parkes-tabs govcms-parkes-tabs--secondary"><ul class="tabs secondary">';
     $variables['secondary']['#suffix'] = '</ul></nav>';
     $output .= drupal_render($variables['secondary']);
   }
-
-  // Process tabs.
-  $output = _govcms_parkes_process_local_tasks($output);
+  
+  // Process the resulting markup to add additional active classes
+  $output = preg_replace_callback('/(?:class="[^"]*?\b)(active)\b/i', function($matches) {
+    return $matches[0] . ' govcms-parkes-tabs-active';
+  }, $output);
 
   return $output;
 }

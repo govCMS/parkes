@@ -1289,17 +1289,17 @@
  */
 /*! @gov.au/buttons v0.1.0 */
 @media print {
-  .uikit-btn {
+  .uikit-btn, .govcms-parkes-tabs a {
     background-color: #fff !important;
     border: 2px solid #000 !important;
     color: #000 !important;
   }
-  .uikit-btn:disabled {
+  .uikit-btn:disabled, .govcms-parkes-tabs a:disabled {
     background-color: #ccc !important;
   }
 }
 
-.uikit-btn {
+.uikit-btn, .govcms-parkes-tabs a {
   -webkit-appearance: none;
   border: none;
   background: none;
@@ -1315,16 +1315,16 @@
   transition: background 0.1s ease;
 }
 
-.uikit-btn:focus, .uikit-btn:hover {
+.uikit-btn:focus, .govcms-parkes-tabs a:focus, .uikit-btn:hover, .govcms-parkes-tabs a:hover {
   background-color: #135566;
 }
 
-.uikit-btn:focus {
+.uikit-btn:focus, .govcms-parkes-tabs a:focus {
   outline: 1px solid #313131;
   outline-offset: 1px;
 }
 
-.uikit-btn:disabled {
+.uikit-btn:disabled, .govcms-parkes-tabs a:disabled {
   background-color: #cccccc;
   font-weight: normal;
   color: #313131;
@@ -1332,7 +1332,7 @@
   cursor: not-allowed;
 }
 
-.uikit-btn:disabled:focus, .uikit-btn:disabled:hover {
+.uikit-btn:disabled:focus, .govcms-parkes-tabs a:disabled:focus, .uikit-btn:disabled:hover, .govcms-parkes-tabs a:disabled:hover {
   background-color: #cccccc;
 }
 
@@ -1350,13 +1350,13 @@
 /**
  * TERTIARY
  */
-.uikit-btn--tertiary {
+.uikit-btn--tertiary, .govcms-parkes-tabs a:not(.govcms-parkes-tabs-active) {
   background-color: #fff;
   color: #313131;
   border: 1px solid #1B7991;
 }
 
-.uikit-btn--tertiary:focus, .uikit-btn--tertiary:hover {
+.uikit-btn--tertiary:focus, .govcms-parkes-tabs a:focus:not(.govcms-parkes-tabs-active), .uikit-btn--tertiary:hover, .govcms-parkes-tabs a:hover:not(.govcms-parkes-tabs-active) {
   background-color: #e8f2f4;
 }
 
@@ -9691,7 +9691,7 @@ p + .uikit-display-6, .uikit-body .govcms-parkes-content p + h1 {
   }
 }
 
-.form-actions .uikit-btn {
+.form-actions .uikit-btn, .form-actions .govcms-parkes-tabs a, .govcms-parkes-tabs .form-actions a {
   margin-right: 0.8em;
 }
 
@@ -9772,6 +9772,33 @@ html.js fieldset.collapsed .fieldset-legend a::before {
 
 .govcms-parkes-node-submitted {
   margin-bottom: 1.6em;
+}
+
+.govcms-parkes-tabs ul {
+  margin: 0;
+  padding: 0;
+}
+
+.govcms-parkes-tabs li {
+  display: inline-block;
+  margin: 0 0.8em 1.2em 0 !important;
+}
+
+.govcms-parkes-tabs li:last-child {
+  margin-right: 0;
+}
+
+.govcms-parkes-tabs a {
+  padding: 0.4em 0.8em;
+}
+
+.govcms-parkes-tabs--secondary {
+  border-top: solid 1px #aaaaaa;
+  padding-top: 1.2em;
+}
+
+.govcms-parkes-tabs-active {
+  color: #fff !important;
 }
 
 .toc-back-to-index {

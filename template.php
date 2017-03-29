@@ -166,22 +166,6 @@ function govcms_parkes_menu_tree($variables) {
 /** Helper functions **********************************************************/
 
 /**
- * Helper function to add is-current class to the active link.
- *
- * @param $children
- *   The origin link html.
- *
- * @return mixed
- *   The processed link html.
- *
- * @todo review when doing navigation
- */
-function _govcms_parkes_process_local_tasks($children) {
-  preg_replace('/(?:class="[^"]*?\b)(active)\b/i', 'active is-current', $children);
-  return $children;
-}
-
-/**
  * Gets the header content together.
  *
  * Turn the logo from a URL into an image within a link, and also scale it so
