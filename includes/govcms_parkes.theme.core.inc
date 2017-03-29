@@ -35,6 +35,8 @@ function govcms_parkes_breadcrumb($variables) {
 
 /**
  * Implements THEME_menu_local_tasks().
+ * 
+ * @todo review when building tabs
  */
 function govcms_parkes_menu_local_tasks($variables) {
   $output = '';
@@ -92,6 +94,8 @@ function govcms_parkes_link($variables) {
 
 /**
  * Implements THEME_pager().
+ * 
+ * @todo seems like a waste to implement this just for the bit at the bottom
  */
 function govcms_parkes_pager($variables) {
   $tags = $variables['tags'];

@@ -21,6 +21,7 @@ function govcms_parkes_form_alter(&$form, &$form_state, $form_id) {
   // If this form is a search api form, we want to remove the size attribute
   // on the text input, it makes styling difficult. We also update the
   // placeholder and apply a class to the form for targeting in JS.
+  // @todo review when implementing search
   if (strpos($form_id, 'search_api') !== FALSE) {
     $search_api_form_id = $form['id']['#value'];
     unset($form['keys_' . $search_api_form_id]['#size']);
@@ -155,16 +156,6 @@ function govcms_parkes_preprocess_block(&$variables) {
 }
 
 /**
- * Implements THEME_preprocess_region().
- */
-function govcms_parkes_preprocess_region(&$variables) {
-  // Drop in the footer layout classes
-  if (in_array($variables['region'], array('footer_top', 'footer_bottom'))) {
-    $variables['classes_array'][] = 'region--' . theme_get_setting($variables['region'] . '_layout');
-  }
-}
-
-/**
  * Implements THEME_menu_tree().
  */
 function govcms_parkes_menu_tree($variables) {
@@ -182,6 +173,8 @@ function govcms_parkes_menu_tree($variables) {
  *
  * @return mixed
  *   The processed link html.
+ *
+ * @todo review when doing navigation
  */
 function _govcms_parkes_process_local_tasks($children) {
   preg_replace('/(?:class="[^"]*?\b)(active)\b/i', 'active is-current', $children);
@@ -189,7 +182,7 @@ function _govcms_parkes_process_local_tasks($children) {
 }
 
 /**
- * Get's the header content together.
+ * Gets the header content together.
  *
  * Turn the logo from a URL into an image within a link, and also scale it so
  * that it's no taller than specified in the theme settings.
