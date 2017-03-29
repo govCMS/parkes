@@ -208,7 +208,7 @@ gulp.task('clean:styleguide', function () {
 // Clean CSS files.
 gulp.task('clean:css', function () {
   return del([
-    options.theme.css + '**/*.css',
+    options.theme.css + '**/styles.css',
     options.theme.css + '**/*.map'
   ], {
     force: true
