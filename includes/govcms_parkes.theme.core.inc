@@ -331,26 +331,16 @@ function govcms_parkes_form_element_label($variables) {
       break;
   }
 
-  // Get the hint/description ready if it exists
-  $description = '';
-  if (!empty($element['#description'])) {
-    $description = '<span class="uikit-text-input__hint">' . $element['#description'] . '</span>';
-  }
-  $description_position = 'after';
-  if (in_array($element['#type'], array('radio', 'checkbox'))) {
-    $description_position = 'before';
+  $output =  '';
+  $output .= '<label' . drupal_attributes($attributes) . '>';
+  $output .= $t('!title !optional', array('!title' => $title, '!optional' => $optional_label));
+
+  // Only print the description if this is not a radio or checkbox.  The
+  // description breaks the label on single elements.
+  if (!in_array($element['#type'], array('radio', 'checkbox')) && !empty($element['#description'])) {
+    $output .= '<span class="uikit-text-input__hint">' . $element['#description'] . '</span>';
   }
 
-  // The leading whitespace helps visually separate fields from inline labels.
-  $output =  '';
-  $output .= ' <label' . drupal_attributes($attributes) . '>';
-  if ($description && $description_position == 'before') {
-    $output .= $description;
-  }
-  $output .= $t('!title !optional', array('!title' => $title, '!optional' => $optional_label));
-  if ($description && $description_position == 'after') {
-    $output .= $description;
-  }
   $output .= "</label>\n";
 
   return $output;
@@ -426,6 +416,11 @@ function govcms_parkes_form_element($variables) {
       // Output no label and no required marker, only the children.
       $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
       break;
+  }
+
+  // If this is a single radio or checkbox input, render any description text
+  if (in_array($element['#type'], array('radio', 'checkbox')) && !empty($element['#description'])) {
+    $output .= '<span class="uikit-text-input__hint">' . $element['#description'] . '</span>';
   }
 
   // Close the element wrapper
