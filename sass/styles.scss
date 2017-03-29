@@ -48,9 +48,11 @@
 @import 'vendor/font-awesome/scss/font-awesome';
 
 // Drupal specific components
+@import 'components/body';
 @import 'components/footer';
 @import 'components/forms';
 @import 'components/header';
+@import 'components/node';
 
 // Module specific styling
 @import 'modules/toc_filter';

@@ -9662,6 +9662,11 @@ p + .uikit-display-6, .uikit-body .govcms-parkes-content p + h1 {
   clip: auto;
 }
 
+.govcms-parkes-body-meta {
+  font-style: italic;
+  color: #166174;
+}
+
 .govcms-parkes-footer__crest {
   display: block;
   max-width: 200px;
@@ -9763,6 +9768,10 @@ html.js fieldset.collapsed .fieldset-legend a::before {
 
 .govcms-parkes-header-logo-link:hover {
   background-color: transparent !important;
+}
+
+.govcms-parkes-node-submitted {
+  margin-bottom: 1.6em;
 }
 
 .toc-back-to-index {

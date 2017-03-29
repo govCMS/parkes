@@ -57,13 +57,7 @@ function govcms_parkes_preprocess_html(&$variables) {
  * Implements THEME_preprocess_node().
  */
 function govcms_parkes_preprocess_node(&$variables) {
-  // Add UI KIT class to author and date information.
-  $variables['submitted'] = '<div class="meta">' . t('Submitted by !author on <time>!date</time>', array('!date' => $variables['date'], '!author' => $variables['name']));
-
-  // Add UI KIT class to readmore link in teaser view mode.
-  if (!empty($variables['content']['links']['node']['#links']['node-readmore'])) {
-    $variables['content']['links']['node']['#links']['node-readmore']['attributes']['class'] = 'see-more';
-  }
+  $variables['submitted'] = '<div class="govcms-parkes-node-submitted govcms-parkes-body-meta">' . t('Submitted by !author on <time>!date</time>', array('!date' => $variables['date'], '!author' => $variables['name']));
 }
 
 /**
