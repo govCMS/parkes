@@ -7,7 +7,9 @@ core        = 7.x
 stylesheets[all][] = css/styles.css
 
 ; Add UI Kit and theme styles and JS
-; scripts[] = js/ui-kit.min.js
+scripts[] = js/script.js
+scripts[] = js/breakpoints.js
+scripts[] = js/search.js
 
 ; Remove or override styling that we don't want
 stylesheets[all][] = css/toc_filter.css

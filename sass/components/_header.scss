@@ -8,5 +8,12 @@
 }
 
 .govcms-parkes-header__content {
-  float: right;
+  margin-top: uikit-space(1);
+}
+
+@include uikit-media('sm') {
+  .govcms-parkes-header__content {
+    float: right;
+    margin-top: 0;
+  }
 }

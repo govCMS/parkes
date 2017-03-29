@@ -1,0 +1,27 @@
+/**
+ * This file provides breakpoint information to JS
+ *
+ * https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
+ */
+body::before {
+  content: 'xs';
+  display: none;
+}
+
+@include uikit-media('sm') {
+  body::before {
+    content: 'sm';
+  }
+}
+
+@include uikit-media('md') {
+  body::before {
+    content: 'md';
+  }
+}
+
+@include uikit-media('lg') {
+  body::before {
+    content: 'lg';
+  }
+}

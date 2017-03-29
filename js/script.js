@@ -15,10 +15,11 @@
   'use strict';
 
   // To understand behaviors, see https://drupal.org/node/756722#behaviors
-  Drupal.behaviors.my_custom_behavior = {
+  Drupal.behaviors.govCMSParkes = {
     attach: function (context, settings) {
 
-      // Place your code here.
+      // Setup an initial settings object for other JS code to put things in
+      Drupal.settings.govCMSParkes = {};
 
     }
   };

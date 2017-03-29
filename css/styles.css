@@ -9667,6 +9667,34 @@ p + .uikit-display-6, .uikit-body .govcms-parkes-content p + h1 {
   color: #166174;
 }
 
+/**
+ * This file provides breakpoint information to JS
+ *
+ * https://www.lullabot.com/articles/importing-css-breakpoints-into-javascript
+ */
+body::before {
+  content: 'xs';
+  display: none;
+}
+
+@media (min-width: 768px) {
+  body::before {
+    content: 'sm';
+  }
+}
+
+@media (min-width: 992px) {
+  body::before {
+    content: 'md';
+  }
+}
+
+@media (min-width: 1200px) {
+  body::before {
+    content: 'lg';
+  }
+}
+
 .govcms-parkes-footer__crest {
   display: block;
   margin: 1.2em 0;
@@ -9772,7 +9800,14 @@ html.js fieldset.collapsed .fieldset-legend a::before {
 }
 
 .govcms-parkes-header__content {
-  float: right;
+  margin-top: 1.6em;
+}
+
+@media (min-width: 768px) {
+  .govcms-parkes-header__content {
+    float: right;
+    margin-top: 0;
+  }
 }
 
 .govcms-parkes-local-nav {
@@ -9830,6 +9865,76 @@ html.js fieldset.collapsed .fieldset-legend a::before {
 
 .govcms-parkes-node-submitted {
   margin-bottom: 1.6em;
+}
+
+.govcms-parkes-search-inline-form div {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.govcms-parkes-search-inline-form [type='text'],
+.govcms-parkes-search-inline-form [type='submit'] {
+  border: 0;
+  margin: 0;
+}
+
+.govcms-parkes-search-inline-form [type='text']:hover,
+.govcms-parkes-search-inline-form [type='submit']:hover {
+  background-color: #e1e7eb;
+}
+
+.govcms-parkes-search-inline-form [type='text'] {
+  background-color: #f0f3f5;
+  line-height: 2.15em;
+  width: 100%;
+  border: 2px solid #aaaaaa;
+  border-right: 0;
+}
+
+.govcms-parkes-search-inline-form [type='text']:focus {
+  border: 2px solid #1B7991;
+  outline: none;
+}
+
+.govcms-parkes-search-inline-form [type='submit'] {
+  background: #f0f3f5 url("../images/search.svg") center center no-repeat;
+  background-size: 20px auto;
+  border: 2px solid #aaaaaa;
+  border-left: 0;
+}
+
+@media (min-width: 768px) {
+  .govcms-parkes-search-inline-form [type='text'] {
+    line-height: 1.8em;
+    width: 10em;
+  }
+}
+
+@media (min-width: 992px) {
+  .govcms-parkes-search-inline-form [type='submit'] {
+    background-color: #1B7991;
+    background-image: none;
+    border: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .govcms-parkes-search-inline-form [type='text'] {
+    width: 15em;
+  }
+  .govcms-parkes-search-inline-form [type='submit'] {
+    background-color: #1B7991;
+    background-image: none;
+    border: 0;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .govcms-parkes-search-inline-form [type='submit'] {
+    margin-left: -1px;
+  }
 }
 
 .govcms-parkes-tabs ul {

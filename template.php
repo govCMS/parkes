@@ -21,12 +21,11 @@ function govcms_parkes_form_alter(&$form, &$form_state, $form_id) {
   // If this form is a search api form, we want to remove the size attribute
   // on the text input, it makes styling difficult. We also update the
   // placeholder and apply a class to the form for targeting in JS.
-  // @todo review when implementing search
   if (strpos($form_id, 'search_api') !== FALSE) {
     $search_api_form_id = $form['id']['#value'];
     unset($form['keys_' . $search_api_form_id]['#size']);
     unset($form['keys_' . $search_api_form_id]['#attributes']['placeholder']);
-    $form['#attributes']['class'] = 'search-form';
+    $form['#attributes']['class'] = 'govcms-parkes-search-inline-form';
   }
 
 }

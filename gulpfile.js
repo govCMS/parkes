@@ -133,7 +133,12 @@ gulp.task('lint', ['lint:sass', 'lint:js']);
 // Lint JavaScript.
 gulp.task('lint:js', function () {
   return gulp.src(options.eslint.files)
-    .pipe($.eslint())
+    .pipe($.eslint({
+      rules: {
+        'no-shadow-restricted-names': 0,
+        'no-undefined': 0
+      }
+    }))
     .pipe($.eslint.format());
 });
 
