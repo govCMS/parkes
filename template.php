@@ -227,15 +227,11 @@ function _govcms_parkes_preprocess_region_header($header_content = '') {
 
   }
 
-  // @todo deal with header content
-  //  $output .= '<div class="page-header__content">';
-  //  if (is_array($header_content)) {
-  //    $output .= drupal_render($header_content);
-  //  }
-  //  else {
-  //    $output .= $header_content;
-  //  }
-  //  $output .= '</div>';
+  if (!empty($header_content)) {
+    $output .= '<div class="govcms-parkes-header__content">';
+    $output .= (is_array($header_content)) ? drupal_render($header_content) : $header_content;
+    $output .= '</div>';
+  }
 
   return $output;
 }
