@@ -42,6 +42,12 @@
  * Hide an element from the screen but not a screen reader
  */
 /**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
+ */
+/**
  * Return a space value based on the line-height and the unit em
  *
  * @param  {number} $number - The space as a multiplier of line-height
@@ -163,6 +169,12 @@
  * Hide an element from the screen but not a screen reader
  */
 /**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
+ */
+/**
  * Return a space value based on the line-height and the unit em
  *
  * @param  {number} $number - The space as a multiplier of line-height
@@ -309,6 +321,9 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: #313131;
   /**
+	 * Highlighting in-page sections that are in focus
+	 */
+  /**
 	 * Text selection and `mark` styling.
 	 */
   /**
@@ -369,8 +384,7 @@
   -webkit-text-decoration-skip: objects;
   color: #313131;
   text-decoration: none;
-  border-bottom: solid 1px #18788D;
-  -webkit-transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  border-bottom: solid 1px #1B7991;
   transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 
@@ -379,13 +393,18 @@
   border-color: transparent;
 }
 
+.uikit-body a:focus {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
+}
+
 .uikit-body a[rel~='external']:after {
   content: ' ';
   display: inline-block;
   width: 0.7em;
   height: 0.8em;
   margin: 0 0.1em 0 0.25em;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%2318788D' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%2318788D' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%231B7991' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%231B7991' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
   background-repeat: no-repeat;
   background-position-y: 0.12em;
 }
@@ -393,28 +412,30 @@
 .ie8 .uikit-body a[rel~='external']:after,
 .lt-ie8 .uikit-body a[rel~='external']:after {
   content: '⇗';
-  color: #18788D;
+  color: #1B7991;
+}
+
+.uikit-body [tabindex="0"]:focus,
+.uikit-body :target {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
 }
 
 .uikit-body mark,
 .uikit-body ::-moz-selection {
-  background-color: rgba(229, 172, 102, 0.5);
+  background-color: rgba(250, 194, 102, 0.5);
 }
 
 .uikit-body mark,
 .uikit-body ::selection {
-  background-color: rgba(229, 172, 102, 0.5);
-}
-
-.uikit-body mark {
-  box-shadow: 0 0 1px rgba(49, 49, 49, 0.4);
+  background-color: rgba(250, 194, 102, 0.5);
 }
 
 .uikit-body p {
   max-width: 42em;
+  margin: 0 0 1.6em 0;
 }
 
-.uikit-body p,
 .uikit-body ul,
 .uikit-body ol,
 .uikit-body dl,
@@ -555,7 +576,7 @@
 .uikit-body kbd {
   display: inline-block;
   font-size: 14px;
-  border: solid 1px #8cbcc6;
+  border: solid 1px #8dbcc8;
   border-radius: 3px;
   box-shadow: 0 1px 0 0 #00bfe9;
   background-color: #fefefe;
@@ -569,7 +590,7 @@
   height: 0;
   overflow: visible;
   border: none;
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #555;
   margin-bottom: 1.6em;
 }
 
@@ -616,6 +637,12 @@
  * Hide an element from the screen but not a screen reader
  */
 /**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
+ */
+/**
  * Return a space value based on the line-height and the unit em
  *
  * @param  {number} $number - The space as a multiplier of line-height
@@ -762,6 +789,9 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: #313131;
   /**
+	 * Highlighting in-page sections that are in focus
+	 */
+  /**
 	 * Text selection and `mark` styling.
 	 */
   /**
@@ -822,8 +852,7 @@
   -webkit-text-decoration-skip: objects;
   color: #313131;
   text-decoration: none;
-  border-bottom: solid 1px #18788D;
-  -webkit-transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  border-bottom: solid 1px #1B7991;
   transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 
@@ -832,13 +861,18 @@
   border-color: transparent;
 }
 
+.uikit-body a:focus {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
+}
+
 .uikit-body a[rel~='external']:after {
   content: ' ';
   display: inline-block;
   width: 0.7em;
   height: 0.8em;
   margin: 0 0.1em 0 0.25em;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%2318788D' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%2318788D' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%231B7991' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%231B7991' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
   background-repeat: no-repeat;
   background-position-y: 0.12em;
 }
@@ -846,28 +880,30 @@
 .ie8 .uikit-body a[rel~='external']:after,
 .lt-ie8 .uikit-body a[rel~='external']:after {
   content: '⇗';
-  color: #18788D;
+  color: #1B7991;
+}
+
+.uikit-body [tabindex="0"]:focus,
+.uikit-body :target {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
 }
 
 .uikit-body mark,
 .uikit-body ::-moz-selection {
-  background-color: rgba(229, 172, 102, 0.5);
+  background-color: rgba(250, 194, 102, 0.5);
 }
 
 .uikit-body mark,
 .uikit-body ::selection {
-  background-color: rgba(229, 172, 102, 0.5);
-}
-
-.uikit-body mark {
-  box-shadow: 0 0 1px rgba(49, 49, 49, 0.4);
+  background-color: rgba(250, 194, 102, 0.5);
 }
 
 .uikit-body p {
   max-width: 42em;
+  margin: 0 0 1.6em 0;
 }
 
-.uikit-body p,
 .uikit-body ul,
 .uikit-body ol,
 .uikit-body dl,
@@ -1008,7 +1044,7 @@
 .uikit-body kbd {
   display: inline-block;
   font-size: 14px;
-  border: solid 1px #8cbcc6;
+  border: solid 1px #8dbcc8;
   border-radius: 3px;
   box-shadow: 0 1px 0 0 #00bfe9;
   background-color: #fefefe;
@@ -1022,7 +1058,7 @@
   height: 0;
   overflow: visible;
   border: none;
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #555;
   margin-bottom: 1.6em;
 }
 
@@ -1062,7 +1098,6 @@
 .uikit-link-list.uikit-link-list--inverted > li > a {
   color: #fff;
   border-color: #5bcbe3;
-  -webkit-transition: color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out;
 }
 
@@ -1168,6 +1203,12 @@
  * Hide an element from the screen but not a screen reader
  */
 /**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
+ */
+/**
  * Return a space value based on the line-height and the unit em
  *
  * @param  {number} $number - The space as a multiplier of line-height
@@ -1267,23 +1308,27 @@
   font-weight: bold;
   color: #fff;
   border-radius: 3px;
-  background-color: #18788D;
+  background-color: #1B7991;
   height: 48px;
   padding: 0 1.2em;
   cursor: pointer;
-  -webkit-transition: background 0.1s ease;
   transition: background 0.1s ease;
 }
 
 .uikit-btn:focus, .uikit-btn:hover {
-  background-color: #115463;
+  background-color: #135566;
+}
+
+.uikit-btn:focus {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
 }
 
 .uikit-btn:disabled {
   background-color: #cccccc;
   font-weight: normal;
   color: #313131;
-  border: none;
+  border: 1px dotted #313131;
   cursor: not-allowed;
 }
 
@@ -1299,7 +1344,7 @@
 }
 
 .uikit-btn--secondary:focus, .uikit-btn--secondary:hover {
-  background-color: #222222;
+  background-color: #6f6f6f;
 }
 
 /**
@@ -1308,7 +1353,7 @@
 .uikit-btn--tertiary {
   background-color: #fff;
   color: #313131;
-  border: 1px solid #18788D;
+  border: 1px solid #1B7991;
 }
 
 .uikit-btn--tertiary:focus, .uikit-btn--tertiary:hover {
@@ -1356,6 +1401,12 @@
  */
 /**
  * Hide an element from the screen but not a screen reader
+ */
+/**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
  */
 /**
  * Return a space value based on the line-height and the unit em
@@ -1456,7 +1507,7 @@
   padding: 1.2em 1.2em 1.2em 0.8em;
   border-left: 6px solid #00bfe9;
   border-radius: 3px;
-  box-shadow: 0 0 8px rgba(49, 49, 49, 0.4);
+  box-shadow: 2px 0 6px rgba(49, 49, 49, 0.7);
   max-width: 42em;
 }
 
@@ -1470,9 +1521,9 @@
 
 .ie8 .uikit-callout,
 .lt-ie8 .uikit-callout {
-  border-top: 1px solid #bbbbbb;
-  border-right: 1px solid #bbbbbb;
-  border-bottom: 1px solid #bbbbbb;
+  border-top: 1px solid #555;
+  border-right: 1px solid #555;
+  border-bottom: 1px solid #555;
 }
 
 /**
@@ -1480,13 +1531,6 @@
  */
 .uikit-callout--calendar-event {
   background-color: #f0f3f5;
-}
-
-.ie8 .uikit-callout--calendar-event,
-.lt-ie8 .uikit-callout--calendar-event {
-  border-top: none;
-  border-right: none;
-  border-bottom: none;
 }
 
 .uikit-callout--calendar-event__lede,
@@ -1556,6 +1600,12 @@
  */
 /**
  * Hide an element from the screen but not a screen reader
+ */
+/**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
  */
 /**
  * Return a space value based on the line-height and the unit em
@@ -1699,12 +1749,12 @@
 }
 
 .uikit-control-input__input:focus + .uikit-control-input__text {
-  outline: 2px solid #000;
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 1px solid #313131;
+  outline-offset: 1px;
 }
 
 .uikit-control-input__input:disabled + .uikit-control-input__text {
-  color: #989898;
+  color: #6f6f6f;
 }
 
 .uikit-control-input__input:disabled + .uikit-control-input__text:before {
@@ -1784,6 +1834,12 @@
  */
 /**
  * Hide an element from the screen but not a screen reader
+ */
+/**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
  */
 /**
  * Return a space value based on the line-height and the unit em
@@ -1869,9 +1925,8 @@
   .uikit-cta-link:after {
     content: ' > ' !important;
     border: none !important;
-    -webkit-transform: rotate(0deg) !important;
-        -ms-transform: rotate(0deg) !important;
-            transform: rotate(0deg) !important;
+    -ms-transform: rotate(0deg) !important;
+        transform: rotate(0deg) !important;
   }
 }
 
@@ -1889,8 +1944,7 @@
   width: 0.8em;
   height: 0.8em;
   margin: 0 0.4em 0 0.4em;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Cpath fill='%2318788D' d='M128 64l-64 64-16-16 64-64'/%3E\a   %3Cpath fill='%2318788D' d='M128 64l-16 16-64-64L64 0'/%3E\a   %3C/svg%3E");
-  -webkit-transition: margin 0.1s ease-in;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Cpath fill='%231B7991' d='M128 64l-64 64-16-16 64-64'/%3E\a   %3Cpath fill='%231B7991' d='M128 64l-16 16-64-64L64 0'/%3E\a   %3C/svg%3E");
   transition: margin 0.1s ease-in;
 }
 
@@ -1949,6 +2003,12 @@
  */
 /**
  * Hide an element from the screen but not a screen reader
+ */
+/**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
  */
 /**
  * Return a space value based on the line-height and the unit em
@@ -2097,6 +2157,9 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: #313131;
   /**
+	 * Highlighting in-page sections that are in focus
+	 */
+  /**
 	 * Text selection and `mark` styling.
 	 */
   /**
@@ -2157,8 +2220,7 @@
   -webkit-text-decoration-skip: objects;
   color: #313131;
   text-decoration: none;
-  border-bottom: solid 1px #18788D;
-  -webkit-transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  border-bottom: solid 1px #1B7991;
   transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 
@@ -2167,13 +2229,18 @@
   border-color: transparent;
 }
 
+.uikit-body a:focus {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
+}
+
 .uikit-body a[rel~='external']:after {
   content: ' ';
   display: inline-block;
   width: 0.7em;
   height: 0.8em;
   margin: 0 0.1em 0 0.25em;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%2318788D' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%2318788D' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%231B7991' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%231B7991' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
   background-repeat: no-repeat;
   background-position-y: 0.12em;
 }
@@ -2181,28 +2248,30 @@
 .ie8 .uikit-body a[rel~='external']:after,
 .lt-ie8 .uikit-body a[rel~='external']:after {
   content: '⇗';
-  color: #18788D;
+  color: #1B7991;
+}
+
+.uikit-body [tabindex="0"]:focus,
+.uikit-body :target {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
 }
 
 .uikit-body mark,
 .uikit-body ::-moz-selection {
-  background-color: rgba(229, 172, 102, 0.5);
+  background-color: rgba(250, 194, 102, 0.5);
 }
 
 .uikit-body mark,
 .uikit-body ::selection {
-  background-color: rgba(229, 172, 102, 0.5);
-}
-
-.uikit-body mark {
-  box-shadow: 0 0 1px rgba(49, 49, 49, 0.4);
+  background-color: rgba(250, 194, 102, 0.5);
 }
 
 .uikit-body p {
   max-width: 42em;
+  margin: 0 0 1.6em 0;
 }
 
-.uikit-body p,
 .uikit-body ul,
 .uikit-body ol,
 .uikit-body dl,
@@ -2343,7 +2412,7 @@
 .uikit-body kbd {
   display: inline-block;
   font-size: 14px;
-  border: solid 1px #8cbcc6;
+  border: solid 1px #8dbcc8;
   border-radius: 3px;
   box-shadow: 0 1px 0 0 #00bfe9;
   background-color: #fefefe;
@@ -2357,7 +2426,7 @@
   height: 0;
   overflow: visible;
   border: none;
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #555;
   margin-bottom: 1.6em;
 }
 
@@ -2496,6 +2565,12 @@
  * Hide an element from the screen but not a screen reader
  */
 /**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
+ */
+/**
  * Return a space value based on the line-height and the unit em
  *
  * @param  {number} $number - The space as a multiplier of line-height
@@ -2606,7 +2681,7 @@
 
 .uikit-footer__navigation + .uikit-footer__end {
   padding-top: 1.6em;
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #555;
   margin-top: 1.6em;
 }
 
@@ -2651,6 +2726,12 @@
  */
 /**
  * Hide an element from the screen but not a screen reader
+ */
+/**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
  */
 /**
  * Return a space value based on the line-height and the unit em
@@ -3499,7 +3580,7 @@
   }
 }
 
-/* @gov.au/header v0.1.0 */
+/* @gov.au/header v1.0.0 */
 /**
  * Sass versioning
  *
@@ -3540,6 +3621,12 @@
  */
 /**
  * Hide an element from the screen but not a screen reader
+ */
+/**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
  */
 /**
  * Return a space value based on the line-height and the unit em
@@ -3620,28 +3707,28 @@
  *
  * @return {integer}             - The contrast ratio
  */
-/*! @gov.au/header v0.1.0 */
+/*! @gov.au/header v1.0.0 */
 /**
  * Basic header block styling.
  */
 .uikit-header {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: #fff;
-  background: #18788D;
-  padding: 1.6em 0.8em 2em 1.2em;
+  background: #1B7991;
+  padding: 1.6em 0 2em 0;
   margin-bottom: 1.6em;
 }
 
 .uikit-header.uikit-header--hero {
-  padding: 3.2em 0.8em 4em 1.2em;
+  padding: 3.2em 0 4em 0;
 }
 
 @media (min-width: 768px) {
   .uikit-header {
-    padding: 3.2em 1.6em 4.8em 6.4em;
+    padding: 3.2em 0 4.8em 0;
   }
   .uikit-header.uikit-header--hero {
-    padding: 7.2em 1.6em 13.6em 6.4em;
+    padding: 7.2em 0 13.6em 0;
   }
 }
 
@@ -3657,6 +3744,7 @@
 .uikit-header-heading {
   font-size: 20px;
   line-height: 1.6;
+  font-weight: bold;
   margin: 0;
   padding: 0;
 }
@@ -3720,6 +3808,12 @@
  */
 /**
  * Hide an element from the screen but not a screen reader
+ */
+/**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
  */
 /**
  * Return a space value based on the line-height and the unit em
@@ -3819,6 +3913,10 @@
   font-weight: bold;
 }
 
+p + .uikit-display-1, .uikit-body .govcms-parkes-content p + h6 {
+  margin-top: 1.6em;
+}
+
 .uikit-display-2, .uikit-body .govcms-parkes-content h5 {
   font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
   color: #313131;
@@ -3827,6 +3925,10 @@
   margin: 0 0 0.5em 0;
   font-size: 20px;
   font-weight: bold;
+}
+
+p + .uikit-display-2, .uikit-body .govcms-parkes-content p + h5 {
+  margin-top: 1.6em;
 }
 
 .uikit-display-3, .uikit-body .govcms-parkes-content h4 {
@@ -3839,6 +3941,10 @@
   font-weight: bold;
 }
 
+p + .uikit-display-3, .uikit-body .govcms-parkes-content p + h4 {
+  margin-top: 1.6em;
+}
+
 .uikit-display-4, .uikit-body .govcms-parkes-content h3 {
   font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
   color: #313131;
@@ -3847,6 +3953,10 @@
   margin: 0 0 0.5em 0;
   font-size: 28px;
   font-weight: bold;
+}
+
+p + .uikit-display-4, .uikit-body .govcms-parkes-content p + h3 {
+  margin-top: 1.6em;
 }
 
 .uikit-display-5, .uikit-body .govcms-parkes-content h2 {
@@ -3859,6 +3969,10 @@
   font-weight: bold;
 }
 
+p + .uikit-display-5, .uikit-body .govcms-parkes-content p + h2 {
+  margin-top: 1.6em;
+}
+
 .uikit-display-6, .uikit-body .govcms-parkes-content h1 {
   font-family: "Open Sans", Verdana, "Bitstream Vera Sans", sans-serif;
   color: #313131;
@@ -3867,6 +3981,10 @@
   margin: 0 0 0.5em 0;
   font-size: 36px;
   font-weight: bold;
+}
+
+p + .uikit-display-6, .uikit-body .govcms-parkes-content p + h1 {
+  margin-top: 1.6em;
 }
 
 .uikit-display-2, .uikit-body .govcms-parkes-content h5,
@@ -3920,6 +4038,12 @@
  * Hide an element from the screen but not a screen reader
  */
 /**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
+ */
+/**
  * Return a space value based on the line-height and the unit em
  *
  * @param  {number} $number - The space as a multiplier of line-height
@@ -4066,6 +4190,9 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: #313131;
   /**
+	 * Highlighting in-page sections that are in focus
+	 */
+  /**
 	 * Text selection and `mark` styling.
 	 */
   /**
@@ -4126,8 +4253,7 @@
   -webkit-text-decoration-skip: objects;
   color: #313131;
   text-decoration: none;
-  border-bottom: solid 1px #18788D;
-  -webkit-transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  border-bottom: solid 1px #1B7991;
   transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 
@@ -4136,13 +4262,18 @@
   border-color: transparent;
 }
 
+.uikit-body a:focus {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
+}
+
 .uikit-body a[rel~='external']:after {
   content: ' ';
   display: inline-block;
   width: 0.7em;
   height: 0.8em;
   margin: 0 0.1em 0 0.25em;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%2318788D' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%2318788D' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%231B7991' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%231B7991' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
   background-repeat: no-repeat;
   background-position-y: 0.12em;
 }
@@ -4150,28 +4281,30 @@
 .ie8 .uikit-body a[rel~='external']:after,
 .lt-ie8 .uikit-body a[rel~='external']:after {
   content: '⇗';
-  color: #18788D;
+  color: #1B7991;
+}
+
+.uikit-body [tabindex="0"]:focus,
+.uikit-body :target {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
 }
 
 .uikit-body mark,
 .uikit-body ::-moz-selection {
-  background-color: rgba(229, 172, 102, 0.5);
+  background-color: rgba(250, 194, 102, 0.5);
 }
 
 .uikit-body mark,
 .uikit-body ::selection {
-  background-color: rgba(229, 172, 102, 0.5);
-}
-
-.uikit-body mark {
-  box-shadow: 0 0 1px rgba(49, 49, 49, 0.4);
+  background-color: rgba(250, 194, 102, 0.5);
 }
 
 .uikit-body p {
   max-width: 42em;
+  margin: 0 0 1.6em 0;
 }
 
-.uikit-body p,
 .uikit-body ul,
 .uikit-body ol,
 .uikit-body dl,
@@ -4312,7 +4445,7 @@
 .uikit-body kbd {
   display: inline-block;
   font-size: 14px;
-  border: solid 1px #8cbcc6;
+  border: solid 1px #8dbcc8;
   border-radius: 3px;
   box-shadow: 0 1px 0 0 #00bfe9;
   background-color: #fefefe;
@@ -4326,7 +4459,7 @@
   height: 0;
   overflow: visible;
   border: none;
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #555;
   margin-bottom: 1.6em;
 }
 
@@ -4366,7 +4499,6 @@
 .uikit-link-list.uikit-link-list--inverted > li > a {
   color: #fff;
   border-color: #5bcbe3;
-  -webkit-transition: color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out;
 }
 
@@ -4403,6 +4535,18 @@
 
 .uikit-inpage-nav-links__heading {
   color: #6f6f6f;
+}
+
+.uikit-inpage-nav-section {
+  position: relative;
+  padding-right: 120px;
+}
+
+.uikit-inpage-nav-section-link {
+  position: absolute;
+  top: 0.4em;
+  right: 0;
+  font-size: 14px;
 }
 
 /* @gov.au/keyword-list v0.1.0 */
@@ -4448,6 +4592,12 @@
  * Hide an element from the screen but not a screen reader
  */
 /**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
+ */
+/**
  * Return a space value based on the line-height and the unit em
  *
  * @param  {number} $number - The space as a multiplier of line-height
@@ -4594,6 +4744,9 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: #313131;
   /**
+	 * Highlighting in-page sections that are in focus
+	 */
+  /**
 	 * Text selection and `mark` styling.
 	 */
   /**
@@ -4654,8 +4807,7 @@
   -webkit-text-decoration-skip: objects;
   color: #313131;
   text-decoration: none;
-  border-bottom: solid 1px #18788D;
-  -webkit-transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  border-bottom: solid 1px #1B7991;
   transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 
@@ -4664,13 +4816,18 @@
   border-color: transparent;
 }
 
+.uikit-body a:focus {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
+}
+
 .uikit-body a[rel~='external']:after {
   content: ' ';
   display: inline-block;
   width: 0.7em;
   height: 0.8em;
   margin: 0 0.1em 0 0.25em;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%2318788D' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%2318788D' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%231B7991' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%231B7991' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
   background-repeat: no-repeat;
   background-position-y: 0.12em;
 }
@@ -4678,28 +4835,30 @@
 .ie8 .uikit-body a[rel~='external']:after,
 .lt-ie8 .uikit-body a[rel~='external']:after {
   content: '⇗';
-  color: #18788D;
+  color: #1B7991;
+}
+
+.uikit-body [tabindex="0"]:focus,
+.uikit-body :target {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
 }
 
 .uikit-body mark,
 .uikit-body ::-moz-selection {
-  background-color: rgba(229, 172, 102, 0.5);
+  background-color: rgba(250, 194, 102, 0.5);
 }
 
 .uikit-body mark,
 .uikit-body ::selection {
-  background-color: rgba(229, 172, 102, 0.5);
-}
-
-.uikit-body mark {
-  box-shadow: 0 0 1px rgba(49, 49, 49, 0.4);
+  background-color: rgba(250, 194, 102, 0.5);
 }
 
 .uikit-body p {
   max-width: 42em;
+  margin: 0 0 1.6em 0;
 }
 
-.uikit-body p,
 .uikit-body ul,
 .uikit-body ol,
 .uikit-body dl,
@@ -4840,7 +4999,7 @@
 .uikit-body kbd {
   display: inline-block;
   font-size: 14px;
-  border: solid 1px #8cbcc6;
+  border: solid 1px #8dbcc8;
   border-radius: 3px;
   box-shadow: 0 1px 0 0 #00bfe9;
   background-color: #fefefe;
@@ -4854,7 +5013,7 @@
   height: 0;
   overflow: visible;
   border: none;
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #555;
   margin-bottom: 1.6em;
 }
 
@@ -4894,7 +5053,6 @@
 .uikit-link-list.uikit-link-list--inverted > li > a {
   color: #fff;
   border-color: #5bcbe3;
-  -webkit-transition: color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out;
 }
 
@@ -4977,6 +5135,12 @@
  * Hide an element from the screen but not a screen reader
  */
 /**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
+ */
+/**
  * Return a space value based on the line-height and the unit em
  *
  * @param  {number} $number - The space as a multiplier of line-height
@@ -5123,6 +5287,9 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: #313131;
   /**
+	 * Highlighting in-page sections that are in focus
+	 */
+  /**
 	 * Text selection and `mark` styling.
 	 */
   /**
@@ -5183,8 +5350,7 @@
   -webkit-text-decoration-skip: objects;
   color: #313131;
   text-decoration: none;
-  border-bottom: solid 1px #18788D;
-  -webkit-transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  border-bottom: solid 1px #1B7991;
   transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
 }
 
@@ -5193,13 +5359,18 @@
   border-color: transparent;
 }
 
+.uikit-body a:focus {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
+}
+
 .uikit-body a[rel~='external']:after {
   content: ' ';
   display: inline-block;
   width: 0.7em;
   height: 0.8em;
   margin: 0 0.1em 0 0.25em;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%2318788D' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%2318788D' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a    %3Cpath fill='%231B7991' d='M24.002 8C15.155 8 8 15.164 8 24.002v79.996C8 112.845 15.164 120 24.002 120h79.996c8.847 0 16.002-7.164\a    16.002-16.002V82.005c0-1.107-.895-2.005-1.994-2.005h-12.012c-1.1 0-1.994.893-1.994 1.995v16.008c0 3.312-2.685 5.997-5.997 5.997H29.997C26.685\a    104 24 101.315 24 98.003V29.997C24 26.685 26.685 24 29.997 24h16.008C47.107 24 48 23.105 48 22.006V9.994C48 8.894 47.103 8 45.995 8H24.002z'/%3E\a    %3Cpath fill='%231B7991' d='M127.416.584c-.36-.36-.86-.584-1.41-.584H73.994C72.904 0 72 .893 72 1.994v12.012c0 1.1.892 1.994 1.993 1.994H96L49.41\a    62.59c-.777.777-.774 2.046.01 2.83l13.16 13.16c.793.793 2.052.788 2.83.01L112 32v22.007c0 1.09.893 1.993 1.994 1.993h12.012c1.1 0 1.994-.892\a    1.994-1.993V1.993c0-.545-.223-1.043-.584-1.405V.584z'/%3E\a   %3C/svg%3E");
   background-repeat: no-repeat;
   background-position-y: 0.12em;
 }
@@ -5207,28 +5378,30 @@
 .ie8 .uikit-body a[rel~='external']:after,
 .lt-ie8 .uikit-body a[rel~='external']:after {
   content: '⇗';
-  color: #18788D;
+  color: #1B7991;
+}
+
+.uikit-body [tabindex="0"]:focus,
+.uikit-body :target {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
 }
 
 .uikit-body mark,
 .uikit-body ::-moz-selection {
-  background-color: rgba(229, 172, 102, 0.5);
+  background-color: rgba(250, 194, 102, 0.5);
 }
 
 .uikit-body mark,
 .uikit-body ::selection {
-  background-color: rgba(229, 172, 102, 0.5);
-}
-
-.uikit-body mark {
-  box-shadow: 0 0 1px rgba(49, 49, 49, 0.4);
+  background-color: rgba(250, 194, 102, 0.5);
 }
 
 .uikit-body p {
   max-width: 42em;
+  margin: 0 0 1.6em 0;
 }
 
-.uikit-body p,
 .uikit-body ul,
 .uikit-body ol,
 .uikit-body dl,
@@ -5369,7 +5542,7 @@
 .uikit-body kbd {
   display: inline-block;
   font-size: 14px;
-  border: solid 1px #8cbcc6;
+  border: solid 1px #8dbcc8;
   border-radius: 3px;
   box-shadow: 0 1px 0 0 #00bfe9;
   background-color: #fefefe;
@@ -5383,7 +5556,7 @@
   height: 0;
   overflow: visible;
   border: none;
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #555;
   margin-bottom: 1.6em;
 }
 
@@ -5423,7 +5596,6 @@
 .uikit-link-list.uikit-link-list--inverted > li > a {
   color: #fff;
   border-color: #5bcbe3;
-  -webkit-transition: color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out;
 }
 
@@ -5473,6 +5645,12 @@
  */
 /**
  * Hide an element from the screen but not a screen reader
+ */
+/**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
  */
 /**
  * Return a space value based on the line-height and the unit em
@@ -5596,15 +5774,15 @@
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Ccircle fill='%23fff' cx='64' cy='64' r='64'/%3E\a   %3Crect fill='%2300bfe9' width='16' height='16' x='56' y='20' rx='2'/%3E\a   %3Crect fill='%2300bfe9' width='16' height='56' x='56' y='44' rx='2'/%3E\a   %3Crect fill='%2300bfe9' width='40' height='16' x='44' y='84' rx='2'/%3E\a   %3Crect fill='%2300bfe9' width='28' height='16' x='44' y='44' rx='2'/%3E\a   %3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Ccircle fill='%23313131' cx='64' cy='64' r='64'/%3E\a   %3Crect fill='%23fff' width='16' height='16' x='56' y='20' rx='2'/%3E\a   %3Crect fill='%23fff' width='16' height='56' x='56' y='44' rx='2'/%3E\a   %3Crect fill='%23fff' width='40' height='16' x='44' y='84' rx='2'/%3E\a   %3Crect fill='%23fff' width='28' height='16' x='44' y='44' rx='2'/%3E\a   %3C/svg%3E");
 }
 
 .ie8 .uikit-page-alerts:after,
 .lt-ie8 .uikit-page-alerts:after {
   background: none;
   text-align: center;
-  background-color: #fff;
-  color: #00bfe9;
+  background-color: #313131;
+  color: #fff;
   font-weight: bold;
   content: 'i';
 }
@@ -5613,16 +5791,15 @@
  * Page alert success
  */
 .uikit-page-alerts--success {
-  border-color: #339176;
+  border-color: #3dbd93;
 }
 
 .uikit-page-alerts--success:after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Ccircle fill='%23fff' cx='64' cy='64' r='64'/%3E\a   %3Cpath fill='%23007554' d='M102.59 45.41c.778-.778.782-2.038-.002-2.822l-9.176-9.176c-.78-.78-2.052-.772-2.823 0L56 68\a    41.42 53.42c-.784-.784-2.048-.792-2.832-.008l-9.176 9.176c-.78.78-.775 2.05-.004 2.82l25.184 25.184c.778.778 2.04.775 2.82-.003l45.177-45.18z'/%3E\a   %3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Ccircle fill='%23313131' cx='64' cy='64' r='64'/%3E\a   %3Cpath fill='%23fff' d='M102.59 45.41c.778-.778.782-2.038-.002-2.822l-9.176-9.176c-.78-.78-2.052-.772-2.823 0L56 68\a    41.42 53.42c-.784-.784-2.048-.792-2.832-.008l-9.176 9.176c-.78.78-.775 2.05-.004 2.82l25.184 25.184c.778.778 2.04.775 2.82-.003l45.177-45.18z'/%3E\a   %3C/svg%3E");
 }
 
 .ie8 .uikit-page-alerts--success:after,
 .lt-ie8 .uikit-page-alerts--success:after {
-  color: #007554;
   content: '✓';
 }
 
@@ -5630,16 +5807,15 @@
  * Page alert warning.
  */
 .uikit-page-alerts--warning {
-  border-color: #d47500;
+  border-color: #f69900;
 }
 
 .uikit-page-alerts--warning:after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Cpath fill='%23fff' d='M71.99 12.78l54.796 99.458c1.665 2.997 1.617 7.993-.143 10.99-.808 1.38-1.914 2.473-3.317\a    3.282-1.403.808-2.914 1.213-4.53 1.213H9.206c-1.62 0-3.13-.405-4.533-1.213-1.403-.81-2.51-1.903-3.317-3.282-1.76-2.997-1.808-7.993-.143-10.99L56.01\a    12.78c.808-1.474 1.925-2.64 3.352-3.496C60.79 8.428 62.335 8 64 8s3.21.428 4.638 1.284c1.427.856 2.544 2.022 3.353 3.496z'/%3E\a   %3Crect fill='%23d47500' width='16' height='16' x='56' y='96' rx='2'/%3E\a   %3Cpath fill='%23d47500' d='M52.167 42c-.092-1.104.73-2 1.838-2h19.99c1.107 0 1.93.895 1.838 2l-3.666 44c-.092 1.104-1.062 2-2.16 2H57.993c-1.1\a    0-2.07-.895-2.16-2l-3.667-44z'/%3E\a   %3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Cpath fill='%23313131' d='M71.99 12.78l54.796 99.458c1.665 2.997 1.617 7.993-.143 10.99-.808 1.38-1.914 2.473-3.317\a    3.282-1.403.808-2.914 1.213-4.53 1.213H9.206c-1.62 0-3.13-.405-4.533-1.213-1.403-.81-2.51-1.903-3.317-3.282-1.76-2.997-1.808-7.993-.143-10.99L56.01\a    12.78c.808-1.474 1.925-2.64 3.352-3.496C60.79 8.428 62.335 8 64 8s3.21.428 4.638 1.284c1.427.856 2.544 2.022 3.353 3.496z'/%3E\a   %3Crect fill='%23fff' width='16' height='16' x='56' y='96' rx='2'/%3E\a   %3Cpath fill='%23fff' d='M52.167 42c-.092-1.104.73-2 1.838-2h19.99c1.107 0 1.93.895 1.838 2l-3.666 44c-.092 1.104-1.062 2-2.16 2H57.993c-1.1\a    0-2.07-.895-2.16-2l-3.667-44z'/%3E\a   %3C/svg%3E");
 }
 
 .ie8 .uikit-page-alerts--warning:after,
 .lt-ie8 .uikit-page-alerts--warning:after {
-  color: #d47500;
   content: '!';
 }
 
@@ -5647,17 +5823,16 @@
  * Page alert error.
  */
 .uikit-page-alerts--error {
-  border-color: #cc0000;
+  border-color: #ff635c;
 }
 
 .uikit-page-alerts--error:after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Ccircle fill='%23fff' cx='64' cy='64' r='64'/%3E\a   %3Ccircle fill='%23cc0000' cx='64' cy='64' r='48'/%3E\a   %3Cpath fill='%23fff' fill-rule='nonzero' d='M18.745 92.284l73.54-73.54 16.97 16.972-73.54 73.54z'/%3E\a   %3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E\a   %3Cpath fill='%23313131' d='M71.99 12.78l54.796 99.458c1.665 2.997 1.617 7.993-.143 10.99-.808 1.38-1.914 2.473-3.317\a    3.282-1.403.808-2.914 1.213-4.53 1.213H9.206c-1.62 0-3.13-.405-4.533-1.213-1.403-.81-2.51-1.903-3.317-3.282-1.76-2.997-1.808-7.993-.143-10.99L56.01\a    12.78c.808-1.474 1.925-2.64 3.352-3.496C60.79 8.428 62.335 8 64 8s3.21.428 4.638 1.284c1.427.856 2.544 2.022 3.353 3.496z'/%3E\a   %3Crect fill='%23fff' width='16' height='16' x='56' y='96' rx='2'/%3E\a   %3Cpath fill='%23fff' d='M52.167 42c-.092-1.104.73-2 1.838-2h19.99c1.107 0 1.93.895 1.838 2l-3.666 44c-.092 1.104-1.062 2-2.16 2H57.993c-1.1\a    0-2.07-.895-2.16-2l-3.667-44z'/%3E\a   %3C/svg%3E");
 }
 
 .ie8 .uikit-page-alerts--error:after,
 .lt-ie8 .uikit-page-alerts--error:after {
-  color: #cc0000;
-  content: 'X';
+  content: '!';
 }
 
 /**
@@ -5715,6 +5890,12 @@
  */
 /**
  * Hide an element from the screen but not a screen reader
+ */
+/**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
  */
 /**
  * Return a space value based on the line-height and the unit em
@@ -5869,6 +6050,12 @@
  * Hide an element from the screen but not a screen reader
  */
 /**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
+ */
+/**
  * Return a space value based on the line-height and the unit em
  *
  * @param  {number} $number - The space as a multiplier of line-height
@@ -5985,6 +6172,8 @@
   color: #313131;
   background-color: #5bcbe3;
   text-decoration: none;
+  outline: 1px solid #313131;
+  outline-offset: 1px;
 }
 
 /* @gov.au/tags v0.1.0 */
@@ -6028,6 +6217,12 @@
  */
 /**
  * Hide an element from the screen but not a screen reader
+ */
+/**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
  */
 /**
  * Return a space value based on the line-height and the unit em
@@ -6163,6 +6358,12 @@
   background-color: #5bcbe3;
 }
 
+.uikit-tags__item > a:focus {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
+  outline-offset: 2px;
+}
+
 .uikit-body .uikit-tags__item > a {
   border: none;
 }
@@ -6208,6 +6409,12 @@
  */
 /**
  * Hide an element from the screen but not a screen reader
+ */
+/**
+ * The outline for focus
+ */
+/**
+ * Add the outline to focus
  */
 /**
  * Return a space value based on the line-height and the unit em
@@ -6324,35 +6531,64 @@
  * - :disabled/[disabled]
  */
 .uikit-text-input {
-  border: 2px solid #bbbbbb;
+  border: 2px solid #777777;
   padding: 0.4em;
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: #313131;
 }
 
+.uikit-text-input:focus {
+  outline: 1px solid #313131;
+  outline-offset: 1px;
+}
+
+.uikit-text-input:focus {
+  background-color: #effafc;
+}
+
+.uikit-text-input::-moz-selection {
+  background-color: rgba(250, 194, 102, 0.5);
+}
+
+.uikit-text-input::selection {
+  background-color: rgba(250, 194, 102, 0.5);
+}
+
 .uikit-text-input:invalid {
-  border: 2px solid #cc0000;
+  border: 2px solid #ff635c;
+}
+
+.uikit-text-input:invalid:focus {
+  background-color: #ffefef;
 }
 
 .uikit-text-input.uikit-text-input--invalid {
-  border: 2px solid #cc0000;
+  border: 2px solid #ff635c;
+}
+
+.uikit-text-input.uikit-text-input--invalid:focus {
+  background-color: #ffefef;
 }
 
 .uikit-text-input.uikit-text-input--valid {
-  border: 2px solid #339176;
+  border: 2px solid #0cac78;
+}
+
+.uikit-text-input.uikit-text-input--valid:focus {
+  background-color: #e7f7f2;
 }
 
 .uikit-text-input:disabled {
   cursor: not-allowed;
   background: #f0f3f5;
-  border-color: transparent;
+  color: #5a5a5a;
 }
 
 .uikit-text-input[disabled] {
   cursor: not-allowed;
   background: #f0f3f5;
-  border-color: transparent;
+  color: #5a5a5a;
 }
 
 /**
