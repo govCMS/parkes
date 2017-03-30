@@ -267,23 +267,17 @@ function govcms_parkes_item_list(&$variables) {
  * Implements THEME_menu_tree().
  */
 function govcms_parkes_menu_tree($variables) {
-  // Check to see if any of the links in this menu are part of the global
-  // navigation menu.  If they are, we don't want to apply any classes on the
-  // <ul>
-  // @see _govcms_parkes_process_global_navigation_links()
-  $apply_classes = TRUE;
-  foreach ($variables['#tree'] as $item) {
-    if (is_array($item) && !empty($item['#govcms_parkes_global_navigation'])) {
-      $apply_classes = FALSE;
-      break;
-    }
-  }
-
-  if (!$apply_classes) {
-    return '<ul>' . $variables['tree'] . '</ul>';
-  }
-
   return '<ul class="uikit-link-list menu">' . $variables['tree'] . '</ul>';
+}
+
+/**
+ * Implements THEME_menu_tree__global_navigation().
+ *
+ * This is a specific theme function to render the global navigation without
+ * link list classes.
+ */
+function govcms_parkes_menu_tree__global_navigation($variables) {
+  return '<ul>' . $variables['tree'] . '</ul>';
 }
 
 

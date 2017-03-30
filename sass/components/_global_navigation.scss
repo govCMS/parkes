@@ -97,14 +97,6 @@
   padding: 0;
   box-shadow: #666 2px 0 5px;
   border-top: solid 1px #ccc;
-
-  &.border-left {
-    border-left: solid 1px #ccc;
-  }
-
-  &.border-right {
-    border-right: solid 1px #ccc;
-  }
 }
 
 .govcms-parkes-global-nav nav li {
@@ -126,7 +118,7 @@
   }
 }
 
-.govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu__parent > a:after {
+.govcms-parkes-global-nav-sub-menu__parent > a:after {
   margin-left: 5px;
   font-family: FontAwesome;
   content: " \f061";
@@ -146,30 +138,15 @@
   background-color: #585858;
 }
 
-.govcms-parkes-global-nav .govcms-parkes-global-nav-sub-menu {
-  li {
-    padding-right: 0;
-    padding-left: 0;
-    text-align: left;
-    a {
-      //font-size: $small-font-size;
-      font-weight: normal;
-      //padding: $tiny-spacing $small-spacing $tiny-spacing ($small-spacing * 2);
-      //@include inline-background-image('arrow-right'); // @extend %icon-arrow-right;
-      background-repeat: no-repeat;
-      //background-position: $small-spacing 50%;
-      //background-size: $tiny-spacing auto;
-      //transition: background ($transition-timing * 2) $transition-easing; // This isn't working?!
-      &:hover,
-      &:focus {
-        //background-position: ($small-spacing * 1.25) 50%;
-      }
-    }
-  }
-}
-
 /** Desktop *************************************************************/
 @include uikit-media('sm') {
+
+  .govcms-parkes-global-nav {
+    margin-top: uikit-space(.5);
+    position: inherit;
+    top: 0;
+    width: 100%;
+  }
 
   #govcms-parkes-global-nav-toggle {
     display: none;
@@ -192,6 +169,7 @@
   .govcms-parkes-global-nav nav ul {
     align-items: center;
     border-top: none;
+    box-shadow: none;
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -201,13 +179,11 @@
     border: none;
     flex-grow: 0;
     flex-shrink: 0;
-
   }
 
   .govcms-parkes-global-nav nav li li {
     flex-basis: 25%;
   }
-
 
   /** Links *************************************************************/
   .govcms-parkes-global-nav nav a,
@@ -221,14 +197,19 @@
   }
 
   /** Sub-menu and home link **********************************************************/
-  .govcms-parkes-global-nav-sub-menu__parent:hover > .govcms-parkes-global-nav-sub-menu {
-    display: flex;
-    border-top: solid 6px red; //$border-contrast-colour;
+  .govcms-parkes-global-nav-sub-menu__parent:hover {
+    & > .govcms-parkes-global-nav-sub-menu {
+      display: flex;
+      border-top: solid 6px $uikit-colour-Primary;
+
+      & > ul {
+        display: flex;
+      }
+    }
   }
 
   .govcms-parkes-global-nav nav ul li:first-child a:hover {
-    //box-shadow: 0 -6px $border-contrast-colour inset;
-    box-shadow: 0 -6px red inset;
+    box-shadow: 0 -6px $uikit-colour-Primary inset;
   }
 
   .govcms-parkes-global-nav-sub-menu {
@@ -239,31 +220,23 @@
     width: 100%;
   }
 
-  .govcms-parkes-global-nav-sub-menu ul {
-    border-left: none;
-  }
-
-  .govcms-parkes-global-nav-sub-menu ul.border-left,
-  .govcms-parkes-global-nav-sub-menu ul.border-right {
-    border-left: none;
-  }
-
-  // Hide nested menus
+  // Hide nested menus be default
   .govcms-parkes-global-nav nav ul ul {
-    display: none !important;
-  }
-
-  .govcms-parkes-global-nav-sub-menu__parent .govcms-parkes-global-nav-sub-menu__parent > a:after {
-    content: '';
-  }
-
-  .govcms-parkes-global-nav-sub-menu__close {
     display: none;
+  }
+
+  // Hide third level menus forever...
+  .govcms-parkes-global-nav nav ul ul ul {
+    display: none !important;
   }
 
   .govcms-parkes-global-nav-sub-menu__parent > a:after {
     content: '';
     margin-left: 0;
+  }
+
+  .govcms-parkes-global-nav-sub-menu__close {
+    display: none;
   }
 
 }

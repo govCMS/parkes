@@ -47,6 +47,7 @@ function govcms_parkes_block_view_alter(&$data, $block) {
   // support our navigation UI
   // @todo support core menu blocks too
   if ($block->module == 'menu_block' && $block->region == 'navigation') {
+    $data['content']['#content']['#theme_wrappers'] = array('menu_tree__global_navigation');
     _govcms_parkes_process_global_navigation_links($data['content']['#content']);
   }
 }
@@ -440,18 +441,6 @@ function _govcms_parkes_process_global_navigation_links(&$links) {
       continue;
     }
 
-    /**
-     * Put a flag on these links that they are part of the global navigation. We
-     * look for this flag in govcms_parkes_menu_tree() and if it exists, we
-     * don't add any classes to the <ul> elements to keep our styling intact.
-     *
-     * This is not a very elegant way to do this as the flag is passed multiple
-     * times on each link, but I can't find a better way to do this.
-     *
-     * @see govcms_parkes_menu_tree();
-     */
-    $link['#govcms_parkes_global_navigation'] = TRUE;
-
     // Replace classes with our versions
     foreach ($link['#attributes']['class'] as &$class) {
       if ($class == 'active-trail') {
@@ -470,6 +459,7 @@ function _govcms_parkes_process_global_navigation_links(&$links) {
       unset($link['#attributes']['class']);
     }
 
+
     // If this is a parent menu link, add sub-menu wrapper div, add parent class
     // and then recursively process the children.
     if (!empty($link['#below'])) {
@@ -477,9 +467,13 @@ function _govcms_parkes_process_global_navigation_links(&$links) {
       $link['#below']['#prefix'] = '<div class="govcms-parkes-global-nav-sub-menu">';
       $link['#below']['#suffix'] = '</div>';
 
+      // Render this menu using the custom theme function for global navigation
+      // link lists
+      $link['#below']['#theme_wrappers'] = array('menu_tree__global_navigation');
+
       _govcms_parkes_process_global_navigation_links($link['#below']);
     }
 
-
   }
+
 }
