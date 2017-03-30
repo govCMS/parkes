@@ -9852,7 +9852,7 @@ html.js fieldset.collapsed .fieldset-legend a::before {
 /** Mobile **************************************************************/
 .govcms-parkes-global-nav {
   position: absolute;
-  top: 50px;
+  top: 60px;
   width: 100%;
 }
 
@@ -9889,6 +9889,7 @@ html.js fieldset.collapsed .fieldset-legend a::before {
 .govcms-parkes-global-nav nav ul {
   margin: 0;
   padding: 0;
+  box-shadow: #666 2px 0 5px;
   border-top: solid 1px #ccc;
 }
 
@@ -9952,9 +9953,6 @@ html.js fieldset.collapsed .fieldset-legend a::before {
 
 /** Desktop *************************************************************/
 @media (min-width: 768px) {
-  .local-nav {
-    display: block;
-  }
   #govcms-parkes-global-nav-toggle {
     display: none;
   }
@@ -9996,12 +9994,12 @@ html.js fieldset.collapsed .fieldset-legend a::before {
   .govcms-parkes-global-nav nav a:hover {
     transition: none !important;
   }
-  .govcms-parkes-global-nav nav .menu_parent:hover a,
+  .govcms-parkes-global-nav-sub-menu__parent:hover a,
   .govcms-parkes-global-nav nav a:hover {
     background-color: white;
   }
   /** Sub-menu and home link **********************************************************/
-  .govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu__parent:hover > .govcms-parkes-global-nav-sub-menu {
+  .govcms-parkes-global-nav-sub-menu__parent:hover > .govcms-parkes-global-nav-sub-menu {
     display: -ms-flexbox;
     display: flex;
     border-top: solid 6px red;
@@ -10009,31 +10007,31 @@ html.js fieldset.collapsed .fieldset-legend a::before {
   .govcms-parkes-global-nav nav ul li:first-child a:hover {
     box-shadow: 0 -6px red inset;
   }
-  .govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu {
+  .govcms-parkes-global-nav-sub-menu {
     background: #eee;
     top: 3.15em;
     left: 0;
     height: auto;
     width: 100%;
   }
-  .govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu ul {
+  .govcms-parkes-global-nav-sub-menu ul {
     border-left: none;
   }
-  .govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu ul.border-left,
-  .govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu ul.border-right {
+  .govcms-parkes-global-nav-sub-menu ul.border-left,
+  .govcms-parkes-global-nav-sub-menu ul.border-right {
     border-left: none;
   }
   .govcms-parkes-global-nav nav ul ul {
     display: none !important;
   }
-  .govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu__parent .govcms-parkes-global-nav-sub-menu__parent > a:after {
-    content: "";
+  .govcms-parkes-global-nav-sub-menu__parent .govcms-parkes-global-nav-sub-menu__parent > a:after {
+    content: '';
   }
   .govcms-parkes-global-nav-sub-menu__close {
     display: none;
   }
-  .govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu__parent > a:after {
-    content: "";
+  .govcms-parkes-global-nav-sub-menu__parent > a:after {
+    content: '';
     margin-left: 0;
   }
 }
