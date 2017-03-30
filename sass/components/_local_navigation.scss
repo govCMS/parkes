@@ -1,6 +1,14 @@
 // sass-lint:disable variable-name-format
 
 .govcms-parkes-local-nav {
+  display: none;
+
+  @include uikit-media('sm') {
+    display: block;
+  }
+}
+
+.govcms-parkes-local-nav {
   overflow: hidden;
 
   ul {

@@ -38,6 +38,19 @@ function govcms_parkes_css_alter(&$css) {
   unset($css['modules/system/system.menus.css']);
 }
 
+/**
+ * Implements hook_block_view_alter().
+ */
+function govcms_parkes_block_view_alter(&$data, $block) {
+
+  // For the menu in the navigation bar, we want to rebuild the classes to
+  // support our navigation UI
+  // @todo support core menu blocks too
+  if ($block->module == 'menu_block' && $block->region == 'navigation') {
+    _govcms_parkes_process_global_navigation_links($data['content']['#content']);
+  }
+}
+
 
 /** Core pre-process functions ************************************************/
 
@@ -152,13 +165,6 @@ function govcms_parkes_preprocess_block(&$variables) {
     }
   }
 
-}
-
-/**
- * Implements THEME_menu_tree().
- */
-function govcms_parkes_menu_tree($variables) {
-  return '<ul class="uikit-link-list menu">' . $variables['tree'] . '</ul>';
 }
 
 
@@ -418,4 +424,62 @@ function _govcms_parkes_prepare_panel_layout_array_extract_layout($rows_cols) {
   }
 
   return $retval;
+}
+
+/**
+ * Process a tree of links to provide classes for the main menu to function.
+ *
+ * @param array $links
+ */
+function _govcms_parkes_process_global_navigation_links(&$links) {
+
+  foreach ($links as &$link) {
+
+    // Check that this is actually a link
+    if (empty($link['#href'])) {
+      continue;
+    }
+
+    /**
+     * Put a flag on these links that they are part of the global navigation. We
+     * look for this flag in govcms_parkes_menu_tree() and if it exists, we
+     * don't add any classes to the <ul> elements to keep our styling intact.
+     *
+     * This is not a very elegant way to do this as the flag is passed multiple
+     * times on each link, but I can't find a better way to do this.
+     *
+     * @see govcms_parkes_menu_tree();
+     */
+    $link['#govcms_parkes_global_navigation'] = TRUE;
+
+    // Replace classes with our versions
+    foreach ($link['#attributes']['class'] as &$class) {
+      if ($class == 'active-trail') {
+        $class = 'govcms-parkes-global-nav-sub-menu__active-item';
+      }
+    }
+
+    // Remove classes we don't need
+    $remove = array('leaf', 'first', 'expanded', 'last', 'active');
+    $link['#attributes']['class'] = array_filter($link['#attributes']['class'], function($class) use ($remove) {
+      return (!in_array($class, $remove) && !(strpos($class, 'menu-mlid-') !== FALSE));
+    });
+
+    // If we have an empty class array, remove it
+    if (empty($link['#attributes']['class'])) {
+      unset($link['#attributes']['class']);
+    }
+
+    // If this is a parent menu link, add sub-menu wrapper div, add parent class
+    // and then recursively process the children.
+    if (!empty($link['#below'])) {
+      $link['#attributes']['class'][] = 'govcms-parkes-global-nav-sub-menu__parent';
+      $link['#below']['#prefix'] = '<div class="govcms-parkes-global-nav-sub-menu">';
+      $link['#below']['#suffix'] = '</div>';
+
+      _govcms_parkes_process_global_navigation_links($link['#below']);
+    }
+
+
+  }
 }

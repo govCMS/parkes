@@ -9791,6 +9791,253 @@ html.js fieldset.collapsed .fieldset-legend a::before {
   content: '\f139';
 }
 
+#govcms-parkes-global-nav-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#govcms-parkes-global-nav-toggle span {
+  float: left;
+  line-height: 1.1em;
+}
+
+#govcms-parkes-global-nav-toggle a {
+  border-bottom: none;
+  display: block;
+  padding: 0.25em;
+}
+
+#govcms-parkes-global-nav-toggle a:before, #govcms-parkes-global-nav-toggle a:after {
+  content: " ";
+  display: table;
+}
+
+#govcms-parkes-global-nav-toggle a:after {
+  clear: both;
+}
+
+#govcms-parkes-global-nav-toggle i {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: black;
+  margin-left: 3.5em;
+  transition: color 0.2s,opacity 0.4s,transform 0.6s;
+}
+
+#govcms-parkes-global-nav-toggle i + i {
+  margin-top: 4px;
+}
+
+#govcms-parkes-global-nav-toggle .open i:nth-of-type(1) {
+  -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+  margin-top: 7px !important;
+}
+
+#govcms-parkes-global-nav-toggle .open i:nth-of-type(2) {
+  opacity: 0;
+}
+
+#govcms-parkes-global-nav-toggle .open i:nth-of-type(3) {
+  -ms-transform: rotate(-225deg);
+      transform: rotate(-225deg);
+  margin-top: -10px !important;
+}
+
+/** Mobile **************************************************************/
+.govcms-parkes-global-nav {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+
+.govcms-parkes-global-nav nav {
+  display: none;
+  position: absolute;
+  left: 100%;
+  width: 90%;
+}
+
+.govcms-parkes-global-nav nav.govcms-parkes-global-nav-open {
+  display: block;
+}
+
+.govcms-parkes-global-nav nav,
+.govcms-parkes-global-nav-sub-menu {
+  background: white;
+  z-index: 1000;
+}
+
+.govcms-parkes-global-nav-sub-menu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 100%;
+}
+
+.govcms-parkes-global-nav-sub-menu--open {
+  display: block;
+  z-index: 2000;
+}
+
+.govcms-parkes-global-nav nav ul {
+  margin: 0;
+  padding: 0;
+  border-top: solid 1px #ccc;
+}
+
+.govcms-parkes-global-nav nav ul.border-left {
+  border-left: solid 1px #ccc;
+}
+
+.govcms-parkes-global-nav nav ul.border-right {
+  border-right: solid 1px #ccc;
+}
+
+.govcms-parkes-global-nav nav li {
+  list-style: none;
+  border-bottom: solid 1px #ccc;
+  margin-bottom: 0;
+}
+
+.govcms-parkes-global-nav nav a {
+  border-bottom: none;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.5s;
+}
+
+.govcms-parkes-global-nav nav a:hover {
+  text-decoration: none;
+  background-color: #eee;
+  transition: background-color 0.5s;
+}
+
+.govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu__parent > a:after {
+  margin-left: 5px;
+  font-family: FontAwesome;
+  content: " \f061";
+}
+
+.govcms-parkes-global-nav nav li > *:not(.govcms-parkes-global-nav-sub-menu) {
+  padding: 1em;
+}
+
+.govcms-parkes-global-nav-sub-menu__close a:before {
+  margin-right: 5px;
+  font-family: FontAwesome;
+  content: "\f060";
+}
+
+.govcms-parkes-global-nav-sub-menu__close a:hover {
+  background-color: #585858;
+}
+
+.govcms-parkes-global-nav .govcms-parkes-global-nav-sub-menu li {
+  padding-right: 0;
+  padding-left: 0;
+  text-align: left;
+}
+
+.govcms-parkes-global-nav .govcms-parkes-global-nav-sub-menu li a {
+  font-weight: normal;
+  background-repeat: no-repeat;
+}
+
+/** Desktop *************************************************************/
+@media (min-width: 768px) {
+  .local-nav {
+    display: block;
+  }
+  #govcms-parkes-global-nav-toggle {
+    display: none;
+  }
+  .govcms-parkes-global-nav nav {
+    display: block;
+    position: static;
+    left: auto;
+    top: auto;
+    width: 100%;
+    padding-right: 0;
+    padding-top: 0;
+    height: auto;
+    background: transparent;
+  }
+  /** Lists and items ***************************************************/
+  .govcms-parkes-global-nav nav ul {
+    -ms-flex-align: center;
+        align-items: center;
+    border-top: none;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: relative;
+  }
+  .govcms-parkes-global-nav nav li {
+    border: none;
+    -ms-flex-positive: 0;
+        flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .govcms-parkes-global-nav nav li li {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+  /** Links *************************************************************/
+  .govcms-parkes-global-nav nav a,
+  .govcms-parkes-global-nav nav a:hover {
+    transition: none !important;
+  }
+  .govcms-parkes-global-nav nav .menu_parent:hover a,
+  .govcms-parkes-global-nav nav a:hover {
+    background-color: white;
+  }
+  /** Sub-menu and home link **********************************************************/
+  .govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu__parent:hover > .govcms-parkes-global-nav-sub-menu {
+    display: -ms-flexbox;
+    display: flex;
+    border-top: solid 6px red;
+  }
+  .govcms-parkes-global-nav nav ul li:first-child a:hover {
+    box-shadow: 0 -6px red inset;
+  }
+  .govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu {
+    background: #eee;
+    top: 3.15em;
+    left: 0;
+    height: auto;
+    width: 100%;
+  }
+  .govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu ul {
+    border-left: none;
+  }
+  .govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu ul.border-left,
+  .govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu ul.border-right {
+    border-left: none;
+  }
+  .govcms-parkes-global-nav nav ul ul {
+    display: none !important;
+  }
+  .govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu__parent .govcms-parkes-global-nav-sub-menu__parent > a:after {
+    content: "";
+  }
+  .govcms-parkes-global-nav-sub-menu__close {
+    display: none;
+  }
+  .govcms-parkes-global-nav nav .govcms-parkes-global-nav-sub-menu__parent > a:after {
+    content: "";
+    margin-left: 0;
+  }
+}
+
 .govcms-parkes-header-logo-link {
   border-bottom-style: none !important;
 }
@@ -9807,6 +10054,16 @@ html.js fieldset.collapsed .fieldset-legend a::before {
   .govcms-parkes-header__content {
     float: right;
     margin-top: 0;
+  }
+}
+
+.govcms-parkes-local-nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .govcms-parkes-local-nav {
+    display: block;
   }
 }
 
