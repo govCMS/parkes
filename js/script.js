@@ -1,15 +1,8 @@
 /**
  * @file
- * A JavaScript file for the theme.
- *
- * In order for this JavaScript to be loaded on pages, see the instructions in
- * the README.txt next to this file.
+ * Basic or utility functions or code that are required for other theme scripts.
  */
 
-// JavaScript should be made compatible with libraries other than jQuery by
-// wrapping it with an "anonymous closure". See:
-// - https://drupal.org/node/1446420
-// - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 (function ($, Drupal, window, document) {
 
   'use strict';
@@ -20,6 +13,13 @@
     /**
      * Anything that needs to respond to dom ready or bind to dom events should
      * go in here.  All heavy lifting should be farmed out to functions.
+     *
+     * @param context
+     *   Reference to the DOM in play, initially this is the full DOM, this may
+     *   be part of the DOM if this is an ajax call.
+     *
+     * @param settings
+     *   The Drupal JS settings.
      */
     attach: function (context, settings) {
 
@@ -29,7 +29,7 @@
     },
 
     /**
-     * Determines if an element is within the viewport
+     * Determines if an element is within the viewport.
      *
      * @param element
      *
@@ -39,10 +39,7 @@
      */
     isElementInViewport: function (element) {
 
-      // Special bonus for those using jQuery
-      element = element[0];
-
-      var rect = element.getBoundingClientRect();
+      var rect = element[0].getBoundingClientRect();
 
       return (
         rect.top >= 0 &&
