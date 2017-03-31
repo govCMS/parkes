@@ -121,8 +121,9 @@ function govcms_parkes_preprocess_page(&$variables) {
   }
 
   // Footer crest
+  // We use drupal_get_path() istead of theme_path() in case we're "subthemed"
   $variables['crest'] = theme('image', array(
-    'path'       => path_to_theme() . '/images/coat-of-arms.png',
+    'path'       => drupal_get_path('theme', 'govcms_parkes') . '/images/coat-of-arms.png',
     'alt'        => t('Commonwealth Coat of Arms crest logo'),
     'attributes' => array('class' => array('uikit-responsive-media-img', 'govcms-parkes-footer__crest')),
   ));
