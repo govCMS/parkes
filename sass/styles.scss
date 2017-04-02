@@ -1,23 +1,17 @@
-// @file
+//------------------------------------------------------------------------------
 // The major stylesheet for this theme.
 //
-// We categorize our components by creating headings in this file. See the
-// description on the style guide home page for more information.
+// We categorise our components by type and then process them in a particular
+// order.
+//------------------------------------------------------------------------------
 
 // Variables
 @import 'vars';
 
-//
 // Normalize
-// @import 'base/';
+// @import 'base/normalize';
 
-//
-// Functions
-// @import 'init/';
-
-//
-// UI Kit base theme
-// The core component for the UI Kit base theme
+// UI Kit
 @import 'pancake/core';
 
 // Components
@@ -41,23 +35,28 @@
 @import 'pancake/tags';
 @import 'pancake/text-inputs';
 
-// Base extensions from pancake
-@import 'base/extends';
-
 // Vendor
 @import 'vendor/font-awesome/scss/font-awesome';
 
+// Extend UI Kit into Drupal
+@import 'base/extends';
+
 // Drupal specific components
 @import 'components/body';
-@import 'components/breakpoints';
+@import 'components/buttons';
 @import 'components/footer';
 @import 'components/forms';
-@import 'components/global_navigation';
+@import 'components/global-navigation';
 @import 'components/header';
-@import 'components/local_navigation';
+@import 'components/icons';
+@import 'components/local-navigation';
 @import 'components/node';
+@import 'components/sass-config';
 @import 'components/search';
+@import 'components/table';
 @import 'components/tabs';
 
 // Module specific styling
-@import 'modules/toc_filter';
+@import 'modules/admin-menu';
+@import 'modules/toc-filter';
+@import 'modules/views';

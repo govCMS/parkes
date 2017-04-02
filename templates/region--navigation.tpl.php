@@ -30,10 +30,10 @@
 
 ?>
 
-<div id="govcms-parkes-global-nav-toggle">
-  <a href="javascript:null;">
-    <span class="element-invisible">Toggle </span>
-    <span>Menu</span>
+<div class="govcms-parkes-global-nav-toggle">
+  <a class="govcms-parkes-global-nav-toggle__link" href="javascript:null;">
+    <span class="element-invisible"><?php print('Toggle'); ?> </span>
+    <span class="govcms-parkes-global-nav-toggle__label"><?php print t('Menu'); ?></span>
     <i></i>
     <i></i>
     <i></i>

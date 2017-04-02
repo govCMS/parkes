@@ -1,5 +1,15 @@
+//------------------------------------------------------------------------------
+// Component: Search
+//
+// Styling for search components.
+//
+// SASS Lint configuration
 // sass-lint:disable variable-name-format
+//------------------------------------------------------------------------------
 
+//------------------------------------------------------------------------------
+// Inline search form
+//------------------------------------------------------------------------------
 .govcms-parkes-search-inline-form {
   div {
     display: inline-flex;
@@ -72,4 +82,24 @@
        margin-left: -1px;
     }
   }
+}
+
+//------------------------------------------------------------------------------
+// Search results
+//------------------------------------------------------------------------------
+.govcms-parkes-search-summary {
+  margin-bottom: uikit-space(1);
+}
+
+.govcms-parkes-search-results {
+  margin: 0;
+  padding: 0;
+}
+
+.govcms-parkes-search-result {
+  border-bottom: solid 1px $uikit-colour-Border-30;
+  list-style: none;
+  // Override UI Kit selector which has more weight.
+  margin-bottom: uikit-space(1) !important;
+  padding-bottom: uikit-space(1);
 }

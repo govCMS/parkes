@@ -1,7 +1,8 @@
 //------------------------------------------------------------------------------
-// Variables
-//
-// Override any default variables.
+// Component: Icons
 //------------------------------------------------------------------------------
 
-$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts';
+// FontAwesome icons should not be rendered with italics.
+.uikit-body .fa {
+  font-style: normal !important;
+}

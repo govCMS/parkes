@@ -1,3 +1,11 @@
+//------------------------------------------------------------------------------
+// Component: Node
+//
+// Styling for nodes.  This should only be used for generic node stuff like
+// author information or default read more links.  Ideally, nodes should be
+// output with Display Suite using customised view modes.
+//------------------------------------------------------------------------------
+
 .govcms-parkes-node-submitted {
   margin-bottom: uikit-space(1);
 }

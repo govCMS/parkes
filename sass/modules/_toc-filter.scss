@@ -1,7 +1,8 @@
 //------------------------------------------------------------------------------
-// Variables
-//
-// Override any default variables.
+// Drupal module support: TOC Filter
 //------------------------------------------------------------------------------
 
-$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts';
+// Position the back to top links to the right of the content area
+.toc-back-to-index {
+  float: right;
+}

@@ -28,6 +28,11 @@ function govcms_parkes_form_alter(&$form, &$form_state, $form_id) {
     $form['#attributes']['class'] = 'govcms-parkes-search-inline-form';
   }
 
+  // Workbench info block has a submit button that's too YUGE
+  if ($form_id == 'workbench_moderation_moderate_form') {
+    $form['submit']['#attributes']['class'][] = 'govcms-parkes-btn--small';
+  }
+
 }
 
 /**

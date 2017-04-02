@@ -1,4 +1,11 @@
+//------------------------------------------------------------------------------
+// Component: Local Navigation
+//
+// Styling for the local navigation menus.
+//
+// SASS Lint configuration
 // sass-lint:disable variable-name-format
+//------------------------------------------------------------------------------
 
 .govcms-parkes-local-nav {
   @include uikit-media('sm') {

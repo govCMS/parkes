@@ -26,3 +26,14 @@ function govcms_parkes_toc_filter($variables) {
 function govcms_parkes_toc_filter_back_to_top($variables) {
   return '<a class="toc-back-to-index uikit-direction-link uikit-direction-link--up" href="#">' . t('Back to contents') . '</a>';
 }
+
+/**
+ * Implements THEME_select_as_checkboxes().
+ */
+function govcms_parkes_select_as_checkboxes($variables) {
+  // UI KIT: Add classes
+  _govcms_parkes_form_element_add_classes($variables['element'], 'uikit-control-input', '', 'input');
+  return theme_select_as_checkboxes($variables);
+}
+
+

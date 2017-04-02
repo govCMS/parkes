@@ -1,3 +1,25 @@
+//------------------------------------------------------------------------------
+// Component: Forms
+//
+// SASS Lint configuration
+// sass-lint:disable variable-name-format
+//------------------------------------------------------------------------------
+
+// UI Kit doesn't have support for select on usability/accessibility grounds,
+// but we have to support it within Drupal for core and contrib forms.
+select {
+  background: transparent;
+  font-size: 16px;
+  line-height: 1;
+  border: 2px solid $uikit-colour-Border-80;
+  height: 34px;
+
+  &:focus {
+    outline: solid 1px #000;
+    outline-offset: 1px;
+  }
+}
+
 // Forms often contain multiple buttons in a single "form actions" wrapper. Add
 // margin to separate the buttons.
 .form-actions .uikit-btn {
@@ -29,7 +51,8 @@ fieldset legend {
 
 // Adjust the margin on groups of radios and checkboxes
 .form-radios,
-.form-checkboxes {
+.form-checkboxes,
+.bef-checkboxes {
   margin-top: uikit-space(.25);
 
   .form-item {

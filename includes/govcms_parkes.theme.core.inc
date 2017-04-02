@@ -280,6 +280,18 @@ function govcms_parkes_menu_tree__global_navigation($variables) {
   return '<ul>' . $variables['tree'] . '</ul>';
 }
 
+/**
+ * Implements THEME_tablesort_indicator().
+ */
+function govcms_parkes_tablesort_indicator($variables) {
+  if ($variables['style'] == "asc") {
+    return ' <i class="fa fa-arrow-down"></i>';
+  }
+  else {
+    return ' <i class="fa fa-arrow-up"></i>';
+  }
+}
+
 
 /** Form: Generic *************************************************************/
 
@@ -348,6 +360,7 @@ function govcms_parkes_form_element_label($variables) {
       $attributes['class'][] = 'uikit-text-input__label';
       break;
     case 'checkbox':
+    case 'bef-checkbox':
     case 'radio':
       $attributes['class'][] = 'uikit-control-input__text';
       break;
@@ -381,6 +394,15 @@ function govcms_parkes_form_element_label($variables) {
 function govcms_parkes_form_element($variables) {
   $element = &$variables['element'];
 
+  // If this is a Better Exposed Filter checkbox, we need to to a find and
+  // replace in markup.  BEF commits the cardinal sin of outputting markup
+  // without the ability for the theme to hook into it. In this case, we can't
+  // get UI Kit classes on checkbox labels, see bef_checkbox() - which may have
+  // just called this theme function
+  if ($element['#type'] == 'bef-checkbox') {
+    $element['#children'] = str_replace("class='option'", 'class="option uikit-control-input__text"', $element['#children']);
+  }
+
   // This function is invoked as theme wrapper, but the rendered form element
   // may not necessarily have been processed by form_builder().
   $element += array(
@@ -407,7 +429,7 @@ function govcms_parkes_form_element($variables) {
   }
 
   // Add classes for single checkbox and radio inputs.
-  if (in_array($element['#type'], array('radio', 'checkbox'))) {
+  if (in_array($element['#type'], array('radio', 'checkbox', 'bef-checkbox'))) {
     $attributes['class'][] = 'uikit-control-input';
   }
 

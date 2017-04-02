@@ -1,15 +1,16 @@
-/**
- * @file
- * Styling for the global navigation menu.
- *
- * A number of selectors include the <nav> element, that's because in Drupal we
- * have contextual menus that contain menu/block management links that get
- * rendered in as part of the menu markup. Using <nav> means that we don't apply
- * styling to these links.
- */
-
-// SASS Lint complains about UI Kit variables with CAPITALS in them.
+//------------------------------------------------------------------------------
+// Component: Global Navigation
+//
+// Styling for the global navigation menu.
+//
+// A number of selectors include the <nav> element, that's because in Drupal we
+// have contextual menus that contain menu/block management links that get
+// rendered in as part of the menu markup. Using <nav> means that we don't apply
+// styling to these links.
+//
+// SASS Lint configuration
 // sass-lint:disable variable-name-format
+//------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------
 // Hamburger link that opens the menu.
