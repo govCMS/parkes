@@ -47,6 +47,20 @@
         rect.bottom <= $(window).height() &&
         rect.right <= $(window).width()
       );
+    },
+
+    /**
+     * Converts a CSS pixel based value (eg 500px) and returns an integer (eg
+     * 500).
+     *
+     * @param value
+     *   The value to convert
+     *
+     * @return {Number}
+     *   The converted value
+     */
+    convertCSSPxToInt: function (value) {
+      return parseInt(value);
     }
   };
 
