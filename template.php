@@ -13,6 +13,7 @@ include('includes/govcms_parkes.theme.contrib.inc');
 
 /** Core hooks ****************************************************************/
 
+
 /**
  * Implements hook_form_alter().
  */
@@ -64,6 +65,11 @@ function govcms_parkes_block_view_alter(&$data, $block) {
  * Implements THEME_preprocess_html().
  */
 function govcms_parkes_preprocess_html(&$variables) {
+  // Make sure that we have our util module enabled
+  if (!module_exists('govcms_parkes_util')) {
+    drupal_set_message(t('The govCMS Parkes theme requires the govCMS Parkes Util module to function correctly.  Please enable this module.'), 'error');
+  }
+
   // Add some body classes to get the body styling and grid
   $variables['classes_array'][] = 'uikit-body';
   $variables['classes_array'][] = 'uikit-grid';
