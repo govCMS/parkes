@@ -20,7 +20,7 @@
   $heading-level-class: 6;
 
   @for $heading-level from 1 through 6 {
-    h#{$heading-level} {
+    h#{$heading-level}:not([class^='uikit-display']) {
       @extend .uikit-display-#{$heading-level-class};
     }
     $heading-level-class: $heading-level-class - 1;
