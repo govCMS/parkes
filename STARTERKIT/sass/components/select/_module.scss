@@ -1,0 +1,23 @@
+//--------------------------------------------------------------
+// Select
+// The select element
+//
+//--------------------------------------------------------------
+@import 'print';
+
+.uikit-select {
+  @extend .uikit-text-input;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  appearance: none;
+	line-height: normal;
+	position: relative;
+	background-position: right 0px top 50%;
+	background-repeat: no-repeat;
+  border-radius: 5px;
+  background-image: uikit-svguri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -5 32 32">
+      <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+      <path d="M0-.75h24v24H0z" fill="none"/>
+    </svg>');
+}

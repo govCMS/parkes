@@ -1,0 +1,32 @@
+// Tabs
+//
+// The primary and secondary tabs.
+//
+// Markup: tabs.twig
+//
+// .tabs--secondary - Secondary tabs
+//
+// Style guide: navigation.tabs
+
+// Tabs (stacked)
+//
+// When the secondary tabs appear directly after the primary tabs, the styling
+// is slightly different.
+//
+// Markup: tabs--stacked.twig
+//
+// Style guide: navigation.tabs.stacked
+
+.tabs,
+%tabs {
+  @extend .uikit-tabs;
+}
+
+//
+// Drupal selectors.
+//
+
+// Views mis-uses the theme hooks for tabs.
+// .views-displays .secondary {
+//   @extend %tabs--off;
+// }

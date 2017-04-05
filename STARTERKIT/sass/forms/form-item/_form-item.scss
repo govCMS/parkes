@@ -1,0 +1,151 @@
+// Form item
+//
+// Wrapper for a form element (or group of form elements) and its label.
+//
+// .form-item--inline - Inline form items.
+// .form-item--tight  - Packs groups of form items closer together.
+// .is-error          - Highlight the form elements that caused a form
+//                      submission error.
+//
+// Markup: form-item.twig
+//
+// Style guide: forms.form-item
+
+// Form item (radio)
+//
+// Checkboxes and radios require slightly different markup; their label is after
+// their widget instead of before. Uses the `.form-item--radio` class variant of
+// the normal form item and is placed on each of the nested form items.
+//
+// .is-error - Highlight the form elements that caused a form submission error.
+//
+// Markup: form-item--radio.twig
+//
+// Style guide: forms.form-item--radio
+
+.form-item,
+%form-item {
+  margin-bottom: uikit-space(1);
+
+  // The part of the label that indicates a required field.
+  &__required {
+    color: red;
+  }
+
+  // The descriptive help text (separate from the label).
+  &__description {
+    @extend .uikit-text-input__hint;
+  }
+
+  &--inline {
+    div,
+    label {
+      display: inline;
+    }
+
+    // There's always an exception.
+    &__exception {
+      display: block;
+    }
+  }
+
+  &--tight {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  &--radio {
+    @extend %form-item--tight;
+  }
+
+  &--radio &__label,
+  &--radio__label {
+    display: inline;
+    font-weight: normal;
+    //@extend .uikit-control-input__text;
+  }
+
+  &--radio &__description,
+  &--radio__description {
+    margin-left: 1.4em;
+    @extend .uikit-text-input__hint;
+  }
+
+  &.is-error &__widget,
+  &--is-error__widget {
+    border: 1px solid color(form-error);
+  }
+
+  &.is-error,
+  &--is-error {
+    input,
+    textarea,
+    select {
+      @extend .uikit-text-input--invalid;
+    }
+  }
+}
+
+//
+// Drupal selectors.
+//
+
+.form-item {
+  input.error,
+  textarea.error {
+    @extend .uikit-text-input--invalid;
+  }
+
+  select.error {
+
+  }
+
+  .description {
+    @extend .uikit-text-input__hint;
+  }
+}
+
+.form-required {
+  @extend %form-item__required;
+}
+
+// Password confirmation.
+.password-parent,
+.confirm-parent {
+  @extend %form-item--tight;
+}
+
+table {
+  .form-item {
+    @extend %form-item--tight;
+  }
+}
+
+.form-type-radio,
+.form-type-checkbox {
+  @extend %form-item--radio;
+  input {
+    @extend .uikit-control-input__input;
+  }
+  label {
+    font-weight: 400;
+  }
+  .description {
+    @extend %form-item--radio__description;
+  }
+}
+
+label.option {
+  @extend %form-item--radio__label;
+}
+
+.container-inline {
+  .form-item {
+    @extend %form-item--inline;
+  }
+
+  // Fieldset contents always need to be rendered as block.
+  .fieldset-wrapper {
+    @extend %form-item--inline__exception;
+  }
+}

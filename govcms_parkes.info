@@ -1,59 +1,43 @@
+name        = GovCMS Parkes
+description = Based on Digital Transformation Agencies UI Kit (version 2) and Design Guide. Can be used as is or sub-themed.
 screenshot  = screenshot.png
-name        = govCMS Parkes
-description = Based on DTA's UI Kit (version 2) and Design Guide. Can be used as is or sub-themed.
 core        = 7.x
-
-; Stylesheets
-stylesheets[all][] = css/styles.css
-
-; Add UI Kit and theme styles and JS
-scripts[] = js/script.js
-scripts[] = js/breakpoints.js
-scripts[] = js/search.js
-scripts[] = js/global-navigation.js
+engine      = phptemplate
 
 ; Remove or override styling that we don't want
-stylesheets[all][] = css/toc_filter.css
-stylesheets[all][] = css/workbench.block.css
-stylesheets[all][] = css/system.theme.css
+stylesheets[all][] = system.base.css
+stylesheets[all][] = system.menus.css
+stylesheets[all][] = system.messages.css
+stylesheets[all][] = system.theme.css
+stylesheets[all][] = comment.css
+stylesheets[all][] = node.css
+stylesheets[all][] = superfish.css
 
 ; Regions
-regions[header]            = Header
-regions[navigation]        = Navigation bar
-regions[hero]              = Hero
-regions[help]              = Help
-regions[content_above]     = Content above
-regions[content]           = Content
-regions[content_below]     = Content below
-regions[sidebar_left]      = Sidebar left
-regions[sidebar_right]     = Sidebar right
-regions[footer_navigation] = Footer navigation
-regions[footer_end]        = Footer end
-regions[bottom]            = Page bottom
-
-; The page_top and page_bottom regions are hidden, which means they will not
-; show up on the blocks administration page. But they are required in order for
-; the html.tpl.php to work properly, so do not delete them.
-regions[page_top]    = Page top
-regions[page_bottom] = Page bottom
-
-; Various page elements output by the theme can be toggled on and off. The
-; "features" control which of these check boxes display on the
-; admin/appearance config page. This is useful for suppressing check boxes
-; for elements not used by your sub-theme. To suppress a check box, omit the
-; entry for it below. See the Drupal 7 Theme Guide for more info:
-; https://drupal.org/node/171205#features
-features[] = logo
-features[] = name
-features[] = slogan
-features[] = favicon
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[highlighted]    = Highlighted
+regions[help]           = Help
+regions[sidebar_first]  = First sidebar
+regions[content_top]    = Content top
+regions[content]        = Content
+regions[sidebar_second] = Second sidebar
+regions[footer_top]     = Footer top
+regions[footer_bottom]  = Footer bottom
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
 
 ; Set the default values of settings on the theme-settings.php form.
-settings[logo_max_width] = 500
-settings[logo_path] = sites/all/themes/govcms_parkes/logo.svg
-settings[default_logo] = 0
-settings[govcms_parkes_site_branding] = logo
+settings[govcms_parkes_breadcrumb]           = yes
+settings[govcms_parkes_breadcrumb_home]      = 1
+settings[govcms_parkes_breadcrumb_trailing]  = 0
+settings[govcms_parkes_breadcrumb_title]     = 0
+settings[govcms_parkes_skip_link_anchor]     = main-menu
+settings[govcms_parkes_skip_link_text]       = Jump to navigation
+settings[govcms_parkes_meta][]               = html5
+settings[govcms_parkes_meta][]               = meta
+settings[govcms_parkes_rebuild_registry]     = 0
 
 ; To add a Panels layout (which can also be used by Display Suite), uncomment
 ; the line below and see the documentation at: https://drupal.org/node/495654
-plugins[panels][layouts] = panels_layouts
+plugins[panels][layouts] = panels-layouts

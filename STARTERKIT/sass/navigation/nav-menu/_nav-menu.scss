@@ -1,0 +1,22 @@
+// Nav menu
+//
+// A "nav menu" is secondary, hierarchical navigation which can be displayed to the
+// side or below the main content.
+//
+// Markup: nav-menu.twig
+//
+// Style guide: navigation.nav-menu
+
+.menu {
+  @extend .uikit-link-list;
+}
+
+.uikit-body .sidebar {
+  .block-menu-block .block__title {
+    @extend .visually-hidden;
+  }
+  .menu {
+    @extend .uikit-localnav;
+  }
+}
+

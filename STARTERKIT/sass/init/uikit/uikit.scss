@@ -1,0 +1,26 @@
+/*! PANCAKE v1.0.8 PANCAKE-SASS v1.0.7 */
+
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/sass-versioning/dist/_index.scss";
+
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/core/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/body/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/link-list/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/breadcrumbs/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/buttons/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/callout/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/control-input/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/cta-link/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/direction-links/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/footer/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/grid-12/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/header/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/headings/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/inpage-nav/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/keyword-list/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/page-alerts/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/responsive-media/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/skip-link/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/tags/lib/sass/_module.scss";
+@import "/var/beetbox/docroot/sites/all/themes/govcms_parkes/STARTERKIT/node_modules/@gov.au/text-inputs/lib/sass/_module.scss";
+
+@include versioning-check();

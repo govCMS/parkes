@@ -1,0 +1,14 @@
+@import 'init';
+
+@import 'components/table/module';
+@import 'components/select/module';
+@import 'components/blockquote/module';
+
+@import 'base/fonts';
+@import 'base/normalize';
+
+.cke_editable {
+  padding: 20px;
+  @extend .uikit-body;
+  @extend .uikit-grid;
+}

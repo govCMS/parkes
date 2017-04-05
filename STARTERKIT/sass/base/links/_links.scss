@@ -1,0 +1,22 @@
+// Links
+//
+// Hyperlinks are used to allow the user to navigate to other resources or to
+// download a resource.
+//
+// The order of link states are based on Eric Meyer's article:
+// http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+//
+// :visited - A link that has already been visited.
+// :hover   - A link that is being hovered over.
+// :focus   - A link that has been given keyboard focus.
+// :active  - A link that is being actively clicked.
+//
+// Markup: links-a.twig
+//
+// Style guide: base.link
+
+a,
+%link {
+  // Remove gaps in links underline in iOS 8+ and Safari 8+.
+  -webkit-text-decoration-skip: objects;
+}

@@ -1,0 +1,95 @@
+// @file
+// The major stylesheet for this theme.
+//
+// We categorize our components by creating headings in this file. See the
+// description on the style guide home page for more information.
+//
+
+// Uikit and Sass
+//
+// Documentation for Uikit and Sass mixins and variables.
+//
+// Weight: -1
+//
+// Style guide: sass
+@import 'init';
+
+// Components
+//
+// Design components are reusable designs that can be applied using just the CSS
+// class names specified in the component.
+//
+// Weight: 1
+//
+// Style guide: component
+@import 'components/table/module';
+@import 'components/search/module';
+@import 'components/tabs/module';
+@import 'components/blockquote/module';
+@import 'components/sitenav/module';
+@import 'components/dropdown/module';
+@import 'components/localnav/module';
+@import 'components/select/module';
+@import 'components/footer/module';
+@import 'components/workbench/module';
+@import 'components/contextual-links/module';
+
+// Theme related components
+// @import '';
+
+// Defaults
+//
+// These are the default base styles applied to HTML elements.
+//
+// Component classes can override these styles, but if no class applies a style
+// to an HTML element, these styles will be the ones displayed.
+//
+// Style guide: base
+
+// Ensure fonts get loaded first to minimize front-end performance impact
+@import 'base/fonts';
+@import 'base/normalize';
+
+// Layouts
+//
+// The layout styling for major parts of the page that are included with the
+// theme. Note: some Panels layouts are included in other parts of the system
+// and are not documented.
+//
+@import 'layout/layout';
+
+// Navigation
+//
+// Navigation components are specialized design components that are used for
+// page navigation.
+//
+// Weight: 2
+//
+// Style guide: navigation
+@import 'navigation/breadcrumb/breadcrumb';
+@import 'navigation/more-link/more-link';
+@import 'navigation/nav-menu/nav-menu';
+@import 'navigation/navbar/navbar';
+@import 'navigation/pager/pager';
+@import 'navigation/skip-link/skip-link';
+@import 'navigation/tabs/tabs';
+@import 'navigation/contextual-links/contextual-links';
+
+// Forms
+//
+// Form components are specialized design components that are applied to forms
+// or form elements.
+//
+// Weight: 3
+//
+// Style guide: forms
+@import 'forms/autocomplete/autocomplete';
+@import 'forms/button/button';
+@import 'forms/collapsible-fieldset/collapsible-fieldset';
+@import 'forms/form-item/form-item';
+@import 'forms/form-table/form-table';
+@import 'forms/progress-bar/progress-bar';
+@import 'forms/progress-throbber/progress-throbber';
+@import 'forms/resizable-textarea/resizable-textarea';
+@import 'forms/table-drag/table-drag';
+@import 'forms/search/search';

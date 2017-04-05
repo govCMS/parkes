@@ -1,61 +1,35 @@
 <?php
-
 /**
  * @file
- * Default theme implementation to display the basic html structure of a single
- * Drupal page.
+ * Returns the HTML for the basic html structure of a single Drupal page.
  *
- * Variables:
- * - $css: An array of CSS files for the current page.
- * - $language: (object) The language the site is being displayed in.
- *   $language->language contains its textual representation.
- *   $language->dir contains the language direction. It will either be 'ltr' or 'rtl'.
- * - $rdf_namespaces: All the RDF namespace prefixes used in the HTML document.
- * - $grddl_profile: A GRDDL profile allowing agents to extract the RDF data.
- * - $head_title: A modified version of the page title, for use in the TITLE
- *   tag.
- * - $head_title_array: (array) An associative array containing the string parts
- *   that were used to generate the $head_title variable, already prepared to be
- *   output as TITLE tag. The key/value pairs may contain one or more of the
- *   following, depending on conditions:
- *   - title: The title of the current page, if any.
- *   - name: The name of the site.
- *   - slogan: The slogan of the site, if any, and if there is no title.
- * - $head: Markup for the HEAD section (including meta tags, keyword tags, and
- *   so on).
- * - $styles: Style tags necessary to import all CSS files for the page.
- * - $scripts: Script tags necessary to load the JavaScript files and settings
- *   for the page.
- * - $page_top: Initial markup from any modules that have altered the
- *   page. This variable should always be output first, before all other dynamic
- *   content.
- * - $page: The rendered page content.
- * - $page_bottom: Final closing markup from any modules that have altered the
- *   page. This variable should always be output last, after all other dynamic
- *   content.
- * - $classes String of classes that can be used to style contextually through
- *   CSS.
- *
- * @see template_preprocess()
- * @see template_preprocess_html()
- * @see template_process()
- *
- * @ingroup themeable
+ * Complete documentation for this file is available online.
+ * @see https://drupal.org/node/1728208
  */
 ?><!DOCTYPE html>
-<html lang="<?php print $language->language; ?>" dir="<?php print $language->dir; ?>">
-
+<html <?php print $html_attributes . $rdf_namespaces; ?>>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
+
+  <?php if ($default_mobile_metatags): ?>
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+  <?php endif; ?>
+
   <?php print $styles; ?>
   <?php print $scripts; ?>
+  <?php if ($add_html5_shim): ?>
+    <!--[if lt IE 9]>
+    <script src="<?php print $base_path . $path_to_govcms_parkes; ?>/js/html5shiv.min.js"></script>
+    <![endif]-->
+  <?php endif; ?>
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
-  <nav class="uikit-skip-link">
-    <a class="uikit-skip-link__link" href="#main-content"><?php print t('Skip to main content'); ?></a>
-    <a class="uikit-skip-link__link" href="#main-navigation"><?php print t('Skip to main navigation'); ?></a>
+  <nav class="uikit-skip-link" id="skip-link">
+    <a class="uikit-skip-link__link" href="#content">Skip to main content</a>
+    <a class="uikit-skip-link__link" href="#nav">Skip to main navigation</a>
   </nav>
   <?php print $page_top; ?>
   <?php print $page; ?>

@@ -1,0 +1,42 @@
+//--------------------------------------------------------------
+// Table module
+// Tables help users view tabular data.
+//
+//--------------------------------------------------------------
+@import 'print';
+
+// Need to use body otherwise padding gets hit with uikitbody ul
+.uikit-tabs {
+  @extend .uikit-link-list;
+  @extend .uikit-link-list--inline;
+  border-bottom: $uikit-borderize;
+  width: 100%;
+  .uikit-body & {
+    padding-bottom: 0;
+    margin-bottom: uikit-space(.25);
+    li {
+      margin: 0 uikit-space(.25) 0 0;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+	}
+  li {
+    display: block;
+    float: left;
+    a {
+      border: 0;
+      display: block;
+      padding: uikit-space(.5) uikit-space(.5);
+      border-bottom: 4px solid #fff;
+      &:hover,
+      &:focus,
+      &.is-active {
+        border-bottom: 4px solid #18788D;
+      }
+      &.is-active {
+        background-color: #def4f9;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "zen-subtheme",
+  "author": "You!",
+  "description": "The node.js requirements to build this project.",
+  "version": "1.0.0",
+  "repository": {},
+  "devDependencies": {
+    "@gov.au/pancake": "^1.0.6",
+    "@gov.au/pancake-sass": "^1.0.7",
+    "browser-sync": "^2.18.8",
+    "browsersync": "0.0.1-security",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-sass": "^2.3.2",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "kss": "^3.0.0-beta.18",
+    "path": "^0.12.7",
+    "sass-versioning": "^0.2.2"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "private": true,
+  "//": "The postinstall script is needed to work-around this Drupal core bug: https://www.drupal.org/node/2329453",
+  "scripts": {
+    "postinstall": "npm rebuild node-sass && find node_modules/ -name '*.info' -type f -delete",
+    "test": "gulp",
+    "pancake": "node node_modules/@gov.au/pancake/bin/pancake"
+  },
+  "pancake": {
+    "auto-save": true,
+    "plugins": true,
+    "ignore": [],
+    "css": {
+      "minified": true,
+      "modules": false,
+      "browsers": [
+        "last 2 versions",
+        "ie 8",
+        "ie 9",
+        "ie 10"
+      ],
+      "location": "css/",
+      "name": false
+    },
+    "sass": {
+      "modules": false,
+      "location": "sass/init/uikit/",
+      "name": "uikit.scss"
+    }
+  }
+}

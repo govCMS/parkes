@@ -1,0 +1,15 @@
+//--------------------------------------------------------------
+// Table module print styles
+//
+//-------------------------------------------------------------
+
+@media print {
+  .uikit-table {
+    td,
+    th,
+    thead {
+      border-color: #000 !important;
+      background: #fff !important;
+   }
+ }
+}
