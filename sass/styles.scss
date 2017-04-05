@@ -56,6 +56,9 @@
 @import 'components/table';
 @import 'components/tabs';
 
+// Layouts
+@import 'layouts_ds/card-compact';
+
 // Module specific styling
 @import 'modules/admin-menu';
 @import 'modules/toc-filter';
