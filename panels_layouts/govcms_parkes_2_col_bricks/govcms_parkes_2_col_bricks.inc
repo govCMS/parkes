@@ -15,7 +15,7 @@
  */
 
 $human_name   = '2 col bricks';
-$machine_name = 'uikit_2_col_bricks';
+$machine_name = 'govcms_parkes_2_col_bricks';
 
 $rows_cols = array(
   array(

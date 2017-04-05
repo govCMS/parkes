@@ -2,37 +2,37 @@
 
 /**
  * @file
- * Panels brick layout with 2 columns for the top bricks and 3 columns for the
+ * Panels brick layout with 3 columns for the top bricks and 2 columns for the
  * bottom bricks using UI Kit grid.
  *
- * +-----------+
- * +-----------+
- * |     |     |
  * +-----------+
  * +-----------+
  * |   |   |   |
  * +-----------+
  * +-----------+
+ * |     |     |
+ * +-----------+
+ * +-----------+
  */
 
-$human_name   = '2 and 3 col bricks';
-$machine_name = 'uikit_2_3_col_bricks';
+$human_name   = '3 and 2 col bricks';
+$machine_name = 'govcms_parkes_3_2_col_bricks';
 
 $rows_cols = array(
   array(
     'top'           => array('name' => t('Top'),           'grid' => 'col-md-12'),
   ),
   array(
-    'top_left'      => array('name' => t('Top left'),      'grid' => 'col-md-6'),
-    'top_right'     => array('name' => t('Top right'),     'grid' => 'col-md-6'),
+    'top_left'      => array('name' => t('Top left'),      'grid' => 'col-md-4'),
+    'top_middle'    => array('name' => t('Top middle'),    'grid' => 'col-md-4'),
+    'top_right'     => array('name' => t('Top right'),     'grid' => 'col-md-4'),
   ),
   array(
     'middle'        => array('name' => t('Middle'),        'grid' => 'col-md-12'),
   ),
   array(
-    'bottom_left'   => array('name' => t('Bottom left'),   'grid' => 'col-md-4'),
-    'bottom_middle' => array('name' => t('Bottom middle'), 'grid' => 'col-md-4'),
-    'bottom_right'  => array('name' => t('Bottom right'),  'grid' => 'col-md-4'),
+    'bottom_left'   => array('name' => t('Bottom left'),   'grid' => 'col-md-6'),
+    'bottom_right'  => array('name' => t('Bottom right'),  'grid' => 'col-md-6'),
   ),
   array(
     'bottom'        => array('name' => t('Bottom'),        'grid' => 'col-md-12'),

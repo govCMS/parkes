@@ -2,31 +2,25 @@
 
 /**
  * @file
- * Panels layout with 2 stacked columns using UI Kit grid.
+ * Panels layout with 2 columns using UI Kit grid.
  *
  * +-----------+
- * |           |
- * +-----------+
  * |     |     |
  * |     |     |
- * +-----------+
- * |           |
+ * |     |     |
+ * |     |     |
+ * |     |     |
+ * |     |     |
  * +-----------+
  */
 
-$human_name   = '2 col stacked';
-$machine_name = 'uikit_2_col_stacked';
+$human_name   = '2 col';
+$machine_name = 'govcms_parkes_2_col';
 
 $rows_cols = array(
   array(
-    'top'    => array('name' => t('Top'),    'grid' => 'col-md-12'),
-  ),
-  array(
-    'left'   => array('name' => t('Left'),   'grid' => 'col-md-6'),
-    'right'  => array('name' => t('Right'),  'grid' => 'col-md-6'),
-  ),
-  array(
-    'bottom' => array('name' => t('Bottom'), 'grid' => 'col-md-12'),
+    'left'  => array('name' => t('Left'),  'grid' => 'col-md-6'),
+    'right' => array('name' => t('Right'), 'grid' => 'col-md-6'),
   ),
 );
 

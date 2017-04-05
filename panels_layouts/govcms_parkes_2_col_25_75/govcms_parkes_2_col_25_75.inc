@@ -2,26 +2,26 @@
 
 /**
  * @file
- * Panels layout with 2 columns the first 75% and the second 25% using UI Kit
+ * Panels layout with 2 columns the first 25% and the second 75% using UI Kit
  * grid.
  *
  * +-----------+
- * |       |   |
- * |       |   |
- * |       |   |
- * |       |   |
- * |       |   |
- * |       |   |
+ * |   |       |
+ * |   |       |
+ * |   |       |
+ * |   |       |
+ * |   |       |
+ * |   |       |
  * +-----------+
  */
 
-$human_name   = '2 col - 75% 25%';
-$machine_name = 'uikit_2_col_75_25';
+$human_name   = '2 col - 25% 75%';
+$machine_name = 'govcms_parkes_2_col_25_75';
 
 $rows_cols = array(
   array(
-    'left'  => array('name' => t('Left'),  'grid' => 'col-md-9'),
-    'right' => array('name' => t('Right'), 'grid' => 'col-md-3'),
+    'left'  => array('name' => t('Left'),  'grid' => 'col-md-3'),
+    'right' => array('name' => t('Right'), 'grid' => 'col-md-9'),
   ),
 );
 
