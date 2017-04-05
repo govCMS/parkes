@@ -37,6 +37,10 @@ form {
 fieldset {
   margin-bottom: uikit-space(1);
   padding: uikit-space(.5);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Make sure nested fieldsets have margins
