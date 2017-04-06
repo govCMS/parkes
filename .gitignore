@@ -1,11 +1,7 @@
 .sass-cache/*
 README.txt
-build/dist
-STARTERKIT/build/dist
-ui-kit
 # node_modules folders
 node_modules
 .DS_Store
-STARTERKIT/node_modules
-sass/pancake
-!sass/vendor
+# Theme directories
+sass/init/uikit

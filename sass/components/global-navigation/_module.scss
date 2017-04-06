@@ -1,0 +1,321 @@
+//------------------------------------------------------------------------------
+// Component: Global Navigation
+//
+// Styling for the global navigation menu.
+//
+// A number of selectors include the <nav> element, that's because in Drupal we
+// have contextual menus that contain menu/block management links that get
+// rendered in as part of the menu markup. Using <nav> means that we don't apply
+// styling to these links.
+//
+// SASS Lint configuration
+// sass-lint:disable variable-name-format
+//------------------------------------------------------------------------------
+
+//------------------------------------------------------------------------------
+// Hamburger link that opens the menu.
+//------------------------------------------------------------------------------
+.govcms-parkes-global-nav-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-transform: uppercase;
+  z-index: 1000;
+
+  // The <i> elements are the hamburger components
+  i {
+    background: #000;
+    display: block;
+    height: 3px;
+    margin-left: 3.5em;
+    transition: color .2s, opacity .4s, transform .6s;
+    width: 24px;
+  }
+
+  i+i {
+    margin-top: 4px;
+  }
+
+  // The menu has been opened
+  .govcms-parkes-global-nav-toggle--open {
+    i:nth-of-type(1) {
+      margin-top: 7px !important;
+      transform: rotate(45deg);
+    }
+
+    i:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    i:nth-of-type(3) {
+      margin-top: -10px !important;
+      transform: rotate(-225deg);
+    }
+  }
+}
+
+// The link that toggles the menu
+.govcms-parkes-global-nav-toggle__link {
+  @include uikit-clearfix();
+
+  border-bottom: 0 !important;
+  display: block;
+  padding: .25em;
+}
+
+// The text for the link that toggles the menu
+.govcms-parkes-global-nav-toggle__label {
+  float: left;
+  line-height: 1.2em;
+}
+
+//------------------------------------------------------------------------------
+// Main menu: Mobile
+//------------------------------------------------------------------------------
+
+// Make the menu full width and pop it near the top of the page.
+// @todo is there a better way to do this than 60px? This is to clear the
+// hamburger.
+.govcms-parkes-global-nav {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+}
+
+// Hide the menu by default, set it's width and position it just off screen.
+.govcms-parkes-global-nav nav {
+  display: none;
+  position: absolute;
+  left: 100%;
+  width: 90%;
+
+  // Show the sub-menu when it's opened.
+  &.govcms-parkes-global-nav--open {
+    display: block;
+  }
+}
+
+// Give the menu components a white background and set the z-index high so that
+// it's above all page elements (assuming no one goes higher than 1000).
+.govcms-parkes-global-nav nav,
+.govcms-parkes-global-nav-sub-menu {
+  background: #fff;
+  z-index: 1000;
+}
+
+// Setup the sub-menus off screen.  As these are nested they are positioned
+// relative to each other so each is further off screen than the last.  At least
+// that's what I assume is going on.
+.govcms-parkes-global-nav-sub-menu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 100%;
+
+  // Show the sub-menu when it's opened.
+  &.govcms-parkes-global-nav-sub-menu--open {
+    display: block;
+  }
+}
+
+// Make sure that menu lists have no margin or padding, that messes with our
+// styling.  We set a box-shadow to provide a border effect to the left and
+// right of the menus.
+.govcms-parkes-global-nav nav ul {
+  box-shadow: $uikit-colour-Border-70 0 0 1px;
+  margin: 0;
+  padding: 0;
+}
+
+// Finish the menu border and separate the menu items. Ensure there is no list
+// styling.  Also remove bottom margin provided by UI Kit.
+.govcms-parkes-global-nav nav li {
+  border-top: solid 1px $uikit-colour-Border-30;
+  list-style: none;
+  margin-bottom: 0;
+
+  // No border on the top, it's covered by the box-shadow on the <ul>
+  &:first-child {
+    border-top: 0;
+  }
+}
+
+// No border on the links, make them blocks and give a nice transition to the
+// hover state.
+.govcms-parkes-global-nav nav a {
+  border-bottom: 0;
+  display: block;
+  transition: background-color .5s;
+
+  // There is a 1px offset on the mobile links, we need to remove it or the
+  // links look odd as they are stacked.
+  &:focus {
+    outline-offset: 0;
+  }
+
+  // Set a hover colour inline with the local navigation.
+  &:hover {
+    background-color: $uikit-colour-Link-20;
+  }
+}
+
+// For items that are a parent, apply a direction arrow --> to the link
+.govcms-parkes-global-nav-sub-menu__parent > a:after {
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  float: right;
+  content: " ";
+  display: block;
+  background-image: uikit-svguri('<svg fill="#{ $uikit-colour-Border }" xmlns="http://www.w3.org/2000/svg" viewBox="2 2 24 24">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+  </svg>');
+}
+
+// For menu close links, apply a direction arrow <-- to the link
+.govcms-parkes-global-nav-sub-menu__close a:before {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  content: " ";
+  display: block;
+  background-image: uikit-svguri('<svg fill="#{ $uikit-colour-Border }" xmlns="http://www.w3.org/2000/svg" viewBox="2 2 24 24">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+  </svg>');
+}
+
+// Make sure all of the links in the menu get padding, but not any of the
+// sub-menu divs.  Because this menu is also designed to take content, we user a
+// selector to sure we target links that are a direct child of a menu item.
+.govcms-parkes-global-nav nav li > *:not(.govcms-parkes-global-nav-sub-menu) {
+  padding: uikit-space(.5);
+}
+
+.govcms-parkes-global-nav-sub-menu__close a:hover {
+  background-color: #585858;
+}
+
+
+//------------------------------------------------------------------------------
+// Main menu: Desktop
+//------------------------------------------------------------------------------
+
+@include uikit-media('sm') {
+
+  // Don't show the mobile menu hamburger on desktop
+  .govcms-parkes-global-nav-toggle {
+    display: none;
+  }
+
+  // Reset the positioning of the menu, give it some top margin to give the site
+  // branding some breathing room.
+  .govcms-parkes-global-nav {
+    margin-top: uikit-space(.5);
+    position: inherit;
+  }
+
+  // Reset the position and display of the menu
+  .govcms-parkes-global-nav nav {
+    background: transparent;
+    display: block;
+    position: static;
+    width: 100%;
+    //padding-right: 0;
+    //padding-top: 0;
+    //height: auto;
+    //left: auto;
+  }
+
+  // Remove mobile menu box shadow, setup flexbox
+  .govcms-parkes-global-nav nav ul {
+    box-shadow: none;
+    display: flex;
+    flex-wrap: wrap;
+    //position: relative;
+    // align-items: center;
+    //border-top: none;
+
+    // Hide second level menus, they are shown on mouse over
+    ul {
+      display: none;
+    }
+
+    // Third level items are banished!
+    ul ul {
+      display: none !important;
+    }
+  }
+
+  // Remove borders to separate menu items on mobile
+  .govcms-parkes-global-nav nav li {
+    border: 0;
+  }
+
+  // Setup flex on sub-menu items, we'll roll with inline items. This is a "Hail
+  // Mary" setting and may not work in all instances.
+  .govcms-parkes-global-nav nav li li {
+    flex-basis: 25%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  // Remove the transition effect on the mobile menu links.
+  .govcms-parkes-global-nav nav a {
+    transition: none !important;
+  }
+
+  // Set a hover state on the top level menu items.  We detect hover on the <li>
+  // element because the user will hover to open a sub-menu and then mouse into
+  // it.  Setting hover state on the link would mean that the hover indicator
+  // would be lost at that point, but because the sub-menu is within the <li>
+  // it's retained.
+  .govcms-parkes-global-nav nav li:hover > a {
+    background-color: #fff;
+  }
+
+  // Set a different hover state on sub-menu items
+  .govcms-parkes-global-nav nav li li:hover a {
+    background-color: $uikit-colour-Link-20;
+  }
+
+  // Show the sub-menu when the user hovers over a sub-menu parent item
+  .govcms-parkes-global-nav-sub-menu__parent:hover > .govcms-parkes-global-nav-sub-menu {
+    display: block;
+    border-top: 6px solid $uikit-colour-Border;
+
+    // Don't show border on sub-sub-menus
+    .govcms-parkes-global-nav-sub-menu {
+      border-top: 0;
+    }
+
+    // Display the sub-menu list
+    & > ul {
+      display: flex;
+    }
+  }
+
+  // Set the new position of the sub-menu items
+  .govcms-parkes-global-nav-sub-menu {
+    background: #fff;
+    box-shadow: $uikit-colour-Border-70 0 0 1px;
+    top: 3.15em;
+    left: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  // Hide the mobile directional indicators on the sub-menu parent links
+  .govcms-parkes-global-nav-sub-menu__parent > a::after {
+    display: none;
+  }
+
+  // Hide the mobile sub-menu close links.
+  .govcms-parkes-global-nav-sub-menu__close {
+    display: none;
+  }
+
+}

@@ -5,58 +5,31 @@
 // order.
 //------------------------------------------------------------------------------
 
-// Variables
-@import 'vars';
-
-// Normalize
-// @import 'base/normalize';
-
-// UI Kit
-@import 'pancake/core';
+// Uikit and Sass
+//
+// Documentation for Uikit and Sass mixins and variables.
+@import 'init';
 
 // Components
-@import 'pancake/body';
-@import 'pancake/breadcrumbs';
-@import 'pancake/buttons';
-@import 'pancake/callout';
-@import 'pancake/control-input';
-@import 'pancake/cta-link';
-@import 'pancake/direction-links';
-@import 'pancake/footer';
-@import 'pancake/grid-12';
-@import 'pancake/header';
-@import 'pancake/headings';
-@import 'pancake/inpage-nav';
-@import 'pancake/keyword-list';
-@import 'pancake/link-list';
-@import 'pancake/page-alerts';
-@import 'pancake/responsive-media';
-@import 'pancake/skip-link';
-@import 'pancake/tags';
-@import 'pancake/text-inputs';
-
-// Vendor
-@import 'vendor/font-awesome/scss/font-awesome';
+//
+// Design components are reusable designs that can be applied using just the CSS
+// class names specified in the component.
+@import 'components/body/module';
+@import 'components/buttons/module';
+@import 'components/footer/module';
+@import 'components/forms/module';
+@import 'components/global-navigation/module';
+@import 'components/header/module';
+@import 'components/lists/module';
+@import 'components/local-navigation/module';
+@import 'components/node/module';
+@import 'components/sass-config/module';
+@import 'components/search/module';
+@import 'components/table/module';
+@import 'components/tabs/module';
 
 // Extend UI Kit into Drupal
 @import 'base/extends';
-
-// Drupal specific components
-@import 'components/body';
-@import 'components/buttons';
-@import 'components/footer';
-@import 'components/forms';
-@import 'components/global-navigation';
-@import 'components/header';
-@import 'components/icons';
-@import 'components/local-navigation';
-@import 'components/node';
-@import 'components/sass-config';
-@import 'components/search';
-@import 'components/table';
-@import 'components/tabs';
-
-// Module specific styling
-@import 'modules/admin-menu';
-@import 'modules/toc-filter';
-@import 'modules/views';
+@import 'base/admin-menu';
+@import 'base/toc-filter';
+@import 'base/views';

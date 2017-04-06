@@ -1,0 +1,28 @@
+//------------------------------------------------------------------------------
+// Component: Tables
+//
+// SASS Lint complains about UI Kit variables with CAPITALS in them.
+// sass-lint:disable variable-name-format
+//------------------------------------------------------------------------------
+
+.govcms-parkes-table {
+  border-collapse: collapse;
+
+  thead {
+    border-bottom: solid 2px $uikit-colour-Secondary;
+    font-weight: bold;
+  }
+
+  tbody tr {
+    border-bottom: solid 1px $uikit-colour-Secondary-30;
+
+    &:nth-child(even) {
+      background-color: $uikit-colour-Background;
+    }
+  }
+
+  th,
+  td {
+    padding: uikit-space(.4);
+  }
+}
