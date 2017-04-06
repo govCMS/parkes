@@ -2,30 +2,28 @@
 
 /**
  * @file
- * Panels layout with 3 stacked columns the left and right 25% wide and the
- * center column 50% wide using UI Kit grid.
+ * Panels layout with 2 stacked columns using UI Kit grid.
  *
  * +-----------+
  * |           |
  * +-----------+
- * |  |     |  |
- * |  |     |  |
+ * |     |     |
+ * |     |     |
  * +-----------+
  * |           |
  * +-----------+
  */
 
-$human_name   = '3 col stacked - 25% 50% 25%';
-$machine_name = 'uikit_3_col_25_50_25_stacked';
+$human_name   = '2 col stacked';
+$machine_name = 'govcms_parkes_2_col_stacked';
 
 $rows_cols = array(
   array(
     'top'    => array('name' => t('Top'),    'grid' => 'col-md-12'),
   ),
   array(
-    'left'   => array('name' => t('Left'),   'grid' => 'col-md-3'),
-    'middle' => array('name' => t('Middle'), 'grid' => 'col-md-6'),
-    'right'  => array('name' => t('Right'),  'grid' => 'col-md-3'),
+    'left'   => array('name' => t('Left'),   'grid' => 'col-md-6'),
+    'right'  => array('name' => t('Right'),  'grid' => 'col-md-6'),
   ),
   array(
     'bottom' => array('name' => t('Bottom'), 'grid' => 'col-md-12'),

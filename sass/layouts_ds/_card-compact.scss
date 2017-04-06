@@ -1,0 +1,9 @@
+//------------------------------------------------------------------------------
+// Display Suite Layout: Compact Card
+//------------------------------------------------------------------------------
+
+// Make sure that we don't have a margin on the title element or the title will
+// not align to the image.
+.govcms-parkes-layout-card-compact__title > * {
+  margin-top: 0 !important;
+}

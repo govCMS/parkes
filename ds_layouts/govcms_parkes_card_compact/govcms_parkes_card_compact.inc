@@ -1,7 +1,7 @@
 <?php
-function ds_uikit_list_horizontal() {
+function ds_govcms_parkes_card_compact() {
   return array(
-    'label' => t('UI KIT: List - Horizontal'),
+    'label' => t('govCMS Parkes: Card (Compact)'),
     'regions' => array(
       'figure'  => t('Figure'),
       'title' => t('Title'),

@@ -15,7 +15,7 @@
  */
 
 $human_name   = '3 col';
-$machine_name = 'uikit_3_col';
+$machine_name = 'govcms_parkes_3_col';
 
 $rows_cols = array(
   array(

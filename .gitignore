@@ -4,4 +4,4 @@ README.txt
 node_modules
 .DS_Store
 # Theme directories
-sass/init/uikit
+sass/init/uikit/*
